@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aura Pro product and architecture handbook"
+    />
+    <title>Hierarchical planning under uncertainty · Aura Pro</title>
+    <link rel="stylesheet" href="../assets/handbook.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="index.html" class="section-active" aria-current="true">Examples</a>
+          <a href="../capabilities/index.html">Capabilities</a>
+          <a href="../capabilities/construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Examples</a> <span aria-hidden="true">/</span> <b aria-current="page">Billion-dollar skyscraper</b></nav>
+      <div class="paperhead">
+        <h1>Which detail changes the whole plan?</h1>
+        <p>Hierarchical planning under uncertainty</p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav class="contents" aria-label="On this page">
+            <strong>On this page</strong>
+            <a href="#example">A billion-dollar skyscraper — refining the whole plan as the facts change</a>
+            <a href="#question">The question</a>
+            <a href="#logic">Decision path</a>
+            <a href="#capabilities">Related system capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="example">
+            <h2>
+              A billion-dollar skyscraper — refining the whole plan as the facts
+              change
+            </h2>
+            <p>
+              The owner wants tenants to move into the lower floors on October 1
+              while construction continues above. Aura Pro builds a dated
+              picture of the development from approved plans, permits, work in
+              place, purchases, crew commitments, crane availability, and
+              remaining budget. Working back from opening day, the model shows
+              that the elevators and protected entrance should be ready in
+              September. The interiors have time to spare if the façade keeps
+              winter weather out. Ventilation controls the date. The
+              air-handling unit must be in place for a booked round of system
+              testing that finishes September 30.
+            </p>
+            <p>
+              Aura Pro simulates two sequences using lift records and
+              crew production rates from comparable jobs. Waiting for the air
+              handler before installing the façade gives the mechanical crew
+              easy access, but leaves too much interior work exposed through
+              winter. The better sequence gives the façade crew the crane first.
+              It encloses the floors, leaving one panel out for the later
+              equipment lift. That sequence supports October 1 on one assumption
+              the team can check now: the air handler will pass through the
+              opening on its lifting frame.
+            </p>
+            <p>
+              Before the panels go up, the foreman measures the one-panel opening and
+              the supplier confirms the width of the unit on its lifting frame. The
+              lift lead repeats the reading and accepts that the straight lift through
+              one bay cannot fit. The superintendent holds the lift and chooses to
+              send the crew to the next approved bay. The foreman proposes holding
+              back two panels. Before the scheduler can compare that sequence with
+              indoor assembly, the lift lead needs to establish whether the framed
+              unit can pass through the wider route. The team checks the route and the
+              lead confirms it will fit.
+            </p>
+            <p>
+              With clearance settled, the scheduler compares both sequences in the
+              whole development model. Indoor assembly misses the testing slot. The
+              next booking moves the opening forecast three weeks to October 22. With
+              two panels held back, temporary protection lets the façade crew enclose
+              the other bays in time to keep interior work moving. With the revised
+              detail reviewed and the GC project executive’s spending commitment in
+              place, the superintendent releases the crew. The foreman follows the
+              revised instruction: hold back both panels, protect the opening, and
+              close it after the lift. The mechanical team keeps its booked testing
+              slot, preserving the October 1 forecast. The scheduler updates that
+              forecast as work proceeds. The owner’s representative checks the actual
+              lower-floor occupancy date against October 1 to settle whether the
+              opening objective was met. Years later, the facilities manager can
+              retrieve the frame dimensions and the record of which panels went in
+              after the lift.
+            </p>
+          </section>
+          <section class="article-section" id="question">
+            <h2>The question</h2>
+            <p>
+              <strong>Starting condition.</strong> A whole outcome depends on
+              interacting components, shared resources, and decisions taken at
+              different times. <strong>Central question.</strong> Which local
+              decisions or unknowns can change the best path for the whole
+              undertaking?
+            </p>
+          </section>
+          <section class="article-section" id="logic">
+            <h2>Decision path</h2>
+            <figure class="diagram">
+              <figcaption>
+                <strong>Hierarchical planning under uncertainty</strong>
+                <a href="../assets/map-hierarchical-planning.svg"
+                  >Full-size diagram ↗</a
+                >
+              </figcaption>
+              <div
+                class="diagram-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="Hierarchical planning under uncertainty"
+              >
+                <img
+                  src="../assets/map-hierarchical-planning.svg"
+                  alt="Hierarchical planning under uncertainty. The reasoning is also described in the surrounding text."
+                />
+              </div>
+            </figure>
+            <p>
+              <strong>Output.</strong> A coordinated course of action, a
+              forecast tied to its assumptions, and a reason to acquire the next
+              piece of information. The model gains detail where that detail
+              could change a decision. An unresolved choice about priorities can
+              send the process back to goal discovery.
+            </p>
+          </section>
+          <section class="article-section" id="capabilities">
+            <h2>Related system capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="../capabilities/intent-authority.html"
+                ><div>
+                  <h3>Intent and authority</h3>
+                  <p>
+                    Define the desired result, the decisions people retain, and
+                    the work they delegate.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../capabilities/world-model.html"
+                ><div>
+                  <h3>Project and asset model</h3>
+                  <p>
+                    Represent what exists, where it is, what depends on it, and
+                    what is known as of a date.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../capabilities/planning.html"
+                ><div>
+                  <h3>Planning and simulation</h3>
+                  <p>
+                    Compare feasible paths and identify the local unknown that
+                    could change the whole plan.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../capabilities/logistics.html"
+                ><div>
+                  <h3>Resources and logistics</h3>
+                  <p>
+                    Make the needed people, materials, equipment, and access
+                    available together.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../capabilities/execution.html"
+                ><div>
+                  <h3>Work coordination and execution</h3>
+                  <p>
+                    Carry an authorized choice into physical work and follow it
+                    through handoffs.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../capabilities/learning.html"
+                ><div>
+                  <h3>Project memory and learning</h3>
+                  <p>
+                    Retain the reasons, evidence, and conditions that can
+                    improve a later decision.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue reading</h3>
+            <a href="../capabilities/construction-simulation.html">Whole-building simulation with NVIDIA →</a>
+            <a class="" href="../map.html#shared-map">The 11-step process ↗</a
+            ><a class="" href="index.html#overlap"
+              >Compare all seven patterns ↗</a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Verification and acceptance · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Verification and acceptance</b></nav>
+      <div class="paperhead">
+        <h1>Verification and acceptance</h1>
+        <p>
+          Determine what a specific check establishes and who may accept the
+          result.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#responsibility">Inputs and outputs</a
+            ><a href="#approach">Approach</a
+            ><a href="#execution">How it works</a
+            ><a href="#technology-stack">Technology choices</a
+            ><a href="#ownership">Integration and native ownership</a
+            ><a href="#patterns">Where this capability is used</a
+            ><a href="#connections">Connected capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="responsibility">
+            <h2>Inputs and outputs</h2>
+            <dl class="io">
+              <dt>Inputs</dt>
+              <dd>
+                Agreed criteria, reported work, observed checks, unresolved
+                exceptions, and reviewer authority.
+              </dd>
+              <dt>Expected output</dt>
+              <dd>
+                A scoped acceptance, a failed check requiring action, or an
+                explicit unknown.
+              </dd>
+            </dl>
+          </section>
+          <div class="related" id="analysis">
+            <h3>Across the architecture</h3>
+            <a href="integration.html"
+              >Construction tools, data ownership, and migration ↗</a
+            >
+          </div>
+          <section class="article-section" id="approach">
+            <h2>Approach</h2>
+            <p>
+              Tie acceptance to a specific requirement, location, revision,
+              evidence method, and authorized reviewer. A passing dimensional
+              check, a design review, and permission to commission have
+              different scopes. A failed check calls for corrective work; a
+              missing check calls for someone to perform it.
+            </p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>How it works</h2>
+            <p>
+              Receive the measured clearance and supplier dimensions. The
+              reviewer records what they establish. After installation, collect
+              the required installation or functional evidence; commissioning
+              and occupancy each follow their applicable acceptance path. A
+              later correction can reopen a dependent decision while preserving
+              what was accepted and known on the earlier date.
+            </p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>Technology choices</h2>
+            <p>
+              Use versioned criteria and check results in PostgreSQL,
+              access-controlled object storage for evidence, and deterministic
+              comparisons for units and tolerances. Link client inspection
+              records from the designated Procore project workflow.
+              Alternatives include a native mobile checklist and reviewed
+              inspector-signed document import. Use recognition models for draft
+              extraction with source references.
+              <a
+                href="https://supabase.com/docs/guides/database/postgres/row-level-security"
+                >Supabase row-level security</a
+              >
+            </p>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>Integration and native ownership</h2>
+            <p>
+              Aura Pro can first assemble review packets and later own
+              acceptance for explicitly assigned checks. Keep external
+              professional or agency decisions with the appropriate issuer and
+              retain their references. Test wrong-floor evidence, an unperformed
+              check, and a superseded acceptance. None should silently release
+              adjoining work.
+            </p>
+          </section>
+          <section class="article-section" id="patterns">
+            <h2>Where this capability is used</h2>
+            <div class="entries">
+              <a class="entry" href="../patterns/restoration.html"
+                ><div>
+                  <h3>Restoration and verification</h3>
+                  <p>When can you stop?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/invention.html"
+                ><div>
+                  <h3>Invention and experimental search</h3>
+                  <p>Which trial would teach you the most?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/operations.html"
+                ><div>
+                  <h3>Continuous operations and exception handling</h3>
+                  <p>What needs attention now?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <section class="article-section" id="connections">
+            <h2>Connected capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="evidence.html"
+                ><div>
+                  <h3>Field observation and evidence</h3>
+                  <p>
+                    Acquire the observation that can settle a physical question.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="learning.html"
+                ><div>
+                  <h3>Project memory and learning</h3>
+                  <p>
+                    Retain the reasons, evidence, and conditions that can
+                    improve a later decision.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue through the capabilities</h3>
+            <a href="learning.html">Project memory and learning →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

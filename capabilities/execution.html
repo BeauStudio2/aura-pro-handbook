@@ -1,0 +1,186 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Work coordination and execution · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Work coordination and execution</b></nav>
+      <div class="paperhead">
+        <h1>Work coordination and execution</h1>
+        <p>
+          Carry an authorized choice into physical work and follow it through
+          handoffs.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#responsibility">Inputs and outputs</a
+            ><a href="#approach">Approach</a
+            ><a href="#execution">How it works</a
+            ><a href="#technology-stack">Technology choices</a
+            ><a href="#ownership">Integration and native ownership</a
+            ><a href="#patterns">Where this capability is used</a
+            ><a href="#connections">Connected capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="responsibility">
+            <h2>Inputs and outputs</h2>
+            <dl class="io">
+              <dt>Inputs</dt>
+              <dd>
+                An accepted scope, responsible people, work instructions,
+                prerequisites, and authority.
+              </dd>
+              <dt>Expected output</dt>
+              <dd>
+                Assigned work, a visible exception or completion report, and a
+                handoff to the person who checks it.
+              </dd>
+            </dl>
+          </section>
+          <div class="related" id="analysis">
+            <h3>Across the architecture</h3>
+            <a href="integration.html"
+              >Construction tools, data ownership, and migration ↗</a
+            >
+          </div>
+          <section class="article-section" id="approach">
+            <h2>Approach</h2>
+            <p>
+              Make every action carry an owner, scope, prerequisite, due
+              condition, and agreed completion check. Model instructions issued,
+              acknowledged, performed, and accepted as separate facts. Keep
+              handoffs open across shift changes.
+            </p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>How it works</h2>
+            <p>
+              After approval, the superintendent assigns the two-panel hold to
+              the foreman and the lift reservation to the lift director. The
+              crew acknowledges the current revision. If a later change
+              supersedes it, affected crews receive a replacement and stale
+              instructions are marked. Unrelated work proceeds. Capture a field
+              completion report and route the required check.
+            </p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>Technology choices</h2>
+            <p>
+              Keep assignments and command history in the existing app and
+              PostgreSQL. Use a transactional outbox and retrying worker for
+              notifications and agreed Procore handoffs. Capture field results
+              through Raken or a Aura Pro mobile web form with offline
+              drafts. A durable workflow engine can replace the simple worker
+              when long-running timers, retries, and compensating actions
+              justify it.
+              <a
+                href="https://developers.procore.com/documentation/content/payload-formats"
+                >Procore webhook behavior</a
+              >
+              ·
+              <a
+                href="https://help.rakenapp.com/en/articles/14514004-integrating-procore-with-raken"
+                >Raken–Procore sync</a
+              >
+            </p>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>Integration and native ownership</h2>
+            <p>
+              Start by linking into the tools crews already check. Move
+              briefing, acknowledgment, and exception follow-up into Aura Pro one team at a time. Test lost acknowledgment, offline
+              submission, and a stale instruction arriving after its
+              replacement. A notification delivery alone cannot close the
+              assignment.
+            </p>
+          </section>
+          <section class="article-section" id="patterns">
+            <h2>Where this capability is used</h2>
+            <div class="entries">
+              <a class="entry" href="../patterns/restoration.html"
+                ><div>
+                  <h3>Restoration and verification</h3>
+                  <p>When can you stop?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/operations.html"
+                ><div>
+                  <h3>Continuous operations and exception handling</h3>
+                  <p>What needs attention now?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/hierarchical-planning.html"
+                ><div>
+                  <h3>Hierarchical planning under uncertainty</h3>
+                  <p>Which detail changes the whole plan?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <section class="article-section" id="connections">
+            <h2>Connected capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="intent-authority.html"
+                ><div>
+                  <h3>Intent and authority</h3>
+                  <p>
+                    Define the desired result, the decisions people retain, and
+                    the work they delegate.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="verification.html"
+                ><div>
+                  <h3>Verification and acceptance</h3>
+                  <p>
+                    Determine what a specific check establishes and who may
+                    accept the result.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue through the capabilities</h3>
+            <a href="verification.html">Verification and acceptance →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

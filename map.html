@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aura Pro product and architecture handbook"
+    />
+    <title>The 11-step process and cognitive map · Aura Pro</title>
+    <link rel="stylesheet" href="assets/handbook.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="#shared-map" aria-current="page">11-step process</a>
+          <a href="patterns/index.html">Examples</a>
+          <a href="capabilities/index.html">Capabilities</a>
+          <a href="capabilities/construction-simulation.html">Construction simulation</a>
+          <a href="tech-stack.html">Tech stack</a>
+          <a href="index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">11-step process</b></nav>
+      <div class="paperhead">
+        <h1>How Aura Pro works</h1>
+        <p>
+          The cognitive map starts with the 11-step process. A worked example follows one tower
+          team from an opening-day forecast to a field check and a revised plan.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav class="contents" aria-label="On this page">
+            <strong>On this page</strong
+            ><a href="#shared-map">The 11-step process</a
+            ><a href="#tower-decision">One tower decision</a
+            ><a href="#layers">Obligation, question, and method</a
+            ><a href="#result">Who acts on a result?</a
+            ><a href="#decide-what-deserves-attention"
+              >Decide what deserves attention</a
+            ><a href="#choose-the-next-move">Choose the next move</a
+            ><a href="#establish-what-is-true">Establish what is true</a
+            ><a href="#generate-alternatives">Generate alternatives</a
+            ><a href="#manage-the-question-while-choosing-a-method"
+              >Manage the question while choosing a method</a
+            ><a href="#learn-from-the-outcome">Learn from the outcome</a
+            ><a href="#examples">The seven examples</a
+            ><a href="#review">Open architecture questions</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="shared-map">
+            <h2>The 11-step process</h2>
+            <ol>
+            <li><strong>Identify the objective or problem.</strong> State the objective and who owns it. Set a provisional success criterion: what observable result would count as success? Use it to guide the first assessment.</li>
+            <li><strong>Assess the current state.</strong> Establish current conditions, available resources, and constraints. For evidence that could change a decision, record its source, what it measures, and when it applies.</li>
+            <li><strong>Discovery.</strong> State what the evidence establishes and what remains unknown. Identify each choice that depends on the finding, who can make that choice, and which assumption needs another look.</li>
+            <li><strong>Define success and selection criteria.</strong> Confirm or revise the provisional criterion in light of the evidence. Specify how to check the outcome and how to compare viable solutions.</li>
+            <li><strong>Design possible solutions.</strong> Work backward from the desired outcome and forward from current conditions. Include the likely outcome of continuing on the current course.</li>
+            <li><strong>Evaluate the risk of each solution.</strong> Identify what could go wrong with each option, how likely it is, what the consequences would be, and what could reduce the risk.</li>
+            <li><strong>Test, compare, and refine.</strong> Test the assumption most likely to change the choice. The tester reports what the trial establishes. If the result distinguishes the options as expected, the decision owner can choose at 8. If it undermines the comparison itself, reopen that decision at 3.</li>
+            <li><strong>Select a solution and plan execution.</strong> The authorized decision-maker chooses a course. Agree on the sequence and resources, who will act, who will check the outcome, and who can accept the answer. For an agreed fallback, name its trigger and the person authorized to carry it out.</li>
+            <li><strong>Execute and monitor.</strong> The person doing the work compares actual conditions with the plan. Carry out an agreed response when its trigger occurs. Send a finding that puts a decision in doubt to the person who owns that decision while there is still time to act.</li>
+            <li><strong>Evaluate the outcome.</strong> The checker reports what passed, failed, or still needs a check. The person responsible for the question accepts the answer when the evidence meets its criterion and states what it settles. The same person can do both. A failed trial can settle its test question and leave the larger objective open.</li>
+            <li><strong>Record and learn.</strong> Keep the result with its source, the expected outcome, and the conditions actually observed. Record what each owner did with the finding. Later checks show whether the action worked and where the lesson applies.</li>
+            </ol>
+            <h3>Where work can skip ahead</h3>
+            <p>Start with the first decision or action still open. For a new objective, begin at step 1. For work already underway, carry forward the evidence, decisions, and permissions that still apply.</p>
+            <ul>
+            <li><strong>The objective is understood.</strong> If current conditions are missing, start at 2. If a finding already calls a decision into question, start at 3.</li>
+            <li><strong>A proposal or test is ready for comparison.</strong> Enter at 7 with the criterion and assumptions it tests. If the evidence is already sufficient and a choice is due, the decision owner starts at 8.</li>
+            <li><strong>An action is authorized and ready.</strong> The assigned person starts at 9. This includes scheduled routines and agreed fallbacks. If work is complete and a check is due, the checker starts at 10.</li>
+            <li><strong>The answer is already established.</strong> Return it to whoever needs it and record it at 11. If a check must wait, name who will do it, the trigger, and the latest useful time. When the trigger arrives, resume the assigned step. If the deadline comes first, the decision owner decides whether to wait longer or act with the evidence available.</li>
+            </ul>
+            <div class="actions">
+              <a class="under" href="#tower-decision">Follow one tower decision →</a>
+            </div>
+          </section>
+          <section class="article-section" id="tower-decision">
+            <div class="label">Worked example</div>
+            <h2>How will the tower crew get the air handler inside?</h2>
+            <p>
+              <strong>The owner’s representative sets October 1 as the target for lower-floor occupancy.</strong>
+              Aura Pro and the scheduler use the project schedule, crane bookings,
+              and production rates from comparable jobs to simulate two construction sequences.
+              Lifting the air handler before installing the façade gives the mechanical
+              crew open access, but leaves interior work exposed through winter.
+              Giving the façade crew the crane first encloses the floors sooner. The team
+              prefers that sequence because it protects interior work and keeps ventilation
+              testing on track to finish September 30. Aura Pro flags the
+              assumption behind that forecast for the foreman: the framed unit must
+              fit through the one bay left open. The foreman checks the clearance
+              while the crew can still leave out the adjoining panel.
+            </p>
+            <p>
+              <strong>The foreman brings back a measurement and an alternative.</strong>
+              An installed bracket leaves 99½ inches clear. The foreman records the
+              reading and photo in Raken and radios the superintendent. The lift lead
+              repeats the check. Even allowing ¼ inch for uncertainty, the opening is too
+              narrow for the supplier’s 100-inch minimum frame width. The superintendent
+              holds the lift and sends the crew to the next approved bay. The foreman
+              proposes leaving two panels out.
+            </p>
+            <p>
+              <strong>The scheduler compares what each route does to opening day.</strong>
+              The lift lead checks the wider route and confirms the framed unit can pass.
+              Aura Pro reruns the schedule with two options. The other work
+              needed for occupancy is on track, so the ventilation testing calendar
+              controls opening day. Delivering the unit
+              in sections solves the access problem, but assembling it indoors makes it
+              too late for the booked ventilation tests. The next available round is
+              three weeks later and finishes October 21. The lower floors can open the
+              following day, moving the forecast to October 22. Lifting the assembled
+              unit through two bays on the booked crane date keeps the September tests
+              and the October 1 opening forecast. The design reviewer accepts the wider
+              opening and its temporary weather protection. The project manager prepares
+              the $4,000 change in Procore.
+            </p>
+            <p>
+              <strong>The project executive commits the money. The superintendent releases
+              the crew.</strong> The superintendent has $3,000 left in the delegated
+              allowance, so the general contractor’s project executive signs the change
+              and the subcontractor countersigns. The superintendent then issues the
+              revised instruction. The foreman acknowledges which panels to hold and
+              records the protection, lift, and close-in. The accountant verifies the
+              commitment in Sage. The scheduler updates the forecast from actual progress,
+              and the owner’s representative checks the actual occupancy date against
+              October 1.
+            </p>
+            <p>
+              Years later, a facilities manager planning a replacement can retrieve the
+              frame dimensions, which panels were left out, and what the crew observed
+              during the lift. That history tells the manager where a fresh survey is
+              needed.
+            </p>
+            <div class="actions">
+              <a class="under" href="tech-stack.html#coordination">How the team uses Procore, Raken, and Sage →</a>
+              <a class="under" href="patterns/index.html">Explore the seven examples →</a>
+              <a class="under" href="capabilities/construction-simulation.html">How the whole building is simulated →</a>
+              <a class="under" href="capabilities/index.html">Explore the ten system capabilities →</a>
+            </div>
+          </section>
+          <section class="article-section" id="layers">
+            <h2>Obligation, question, and method</h2>
+            <p>
+              An inquiry can begin with <strong>intent</strong>: someone wants
+              to create, change, understand, or sustain something. It can also
+              begin with <strong>a finding</strong>: someone encounters a
+              condition that calls a goal, an assumption, or an earlier result
+              into question. Either way, Aura Pro asks what decision this
+              could change and who is responsible for it.
+            </p>
+            <p>
+              At a car wash, the opening check finds a pump that will not start. The shift
+              lead opens the working bays, and the technician investigates the failed
+              pump. Once the repaired bay passes a test wash, it can reopen. The next
+              morning’s checks still come due.
+            </p>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Scrollable comparison"
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th>Layer</th>
+                    <th>What Aura Pro keeps track of</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Obligation</strong></td>
+                    <td>
+                      The outcome someone is responsible for, who can change it,
+                      and what would count as fulfilling it. A finite obligation
+                      can close. A standing obligation continues across
+                      individual decisions and repairs.
+                    </td>
+                    <td>Keep a facility ready for customers each morning.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Question</strong></td>
+                    <td>
+                      The answer currently owed, who needs it, what decision it
+                      would change, and what evidence or judgment would settle
+                      it. Several questions can serve one obligation.
+                    </td>
+                    <td>Can the shift lead return this unit to service?</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Method</strong></td>
+                    <td>
+                      The way to obtain that answer with the evidence, time, and
+                      access available. Several methods can serve one question.
+                    </td>
+                    <td>
+                      Read the repair report, then observe a functional test
+                      under operating conditions.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              In this example the obligation continues, the question closes when
+              readiness is established, and the method changes as evidence comes
+              in. The seven
+              <a href="patterns/index.html">examples</a>
+              illustrate recurring combinations of these layers.
+            </p>
+          </section>
+          <section class="article-section" id="result">
+            <h2>Who acts on a result?</h2>
+            <h3>What does the finding settle, and for whom?</h3>
+            <p>The person responsible for the question compares the finding with its criterion. State the answer they accept, the conditions it applies to, and anything still unresolved. Close a question when the evidence settles it. If the evidence is inconclusive, keep the question open and state what the observation did establish. Keep the finding with its source at step 11.</p>
+            <h3>Who acts next, and why?</h3>
+            <p>If the finite job is complete and nobody else needs to act, stop. Otherwise, consider each affected person separately. One finding can trigger an agreed response for one person and open an inquiry for another. Both can proceed as soon as they have what they need.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Which action follows from the finding?">
+            <table>
+            <thead>
+            <tr>
+            <th>Reason for a next step</th>
+            <th>Who acts and where the work resumes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><strong>Triggers an agreed action</strong></td>
+            <td>The trigger has occurred and the response is already authorized. The assigned person performs the planned test (7) or work (9). The checker verifies the effect (10).</td>
+            </tr>
+            <tr>
+            <td><strong>Calls for a fresh decision</strong></td>
+            <td>The facts and tradeoffs are understood, but someone still has to choose. The owner settles a preference or success criterion at 4. The person with authority selects or approves a course at 8 and tells the executor what to do. If the owner requests another design under known constraints, the designer starts at 5.</td>
+            </tr>
+            <tr>
+            <td><strong>Gives a reason to return to Discovery</strong></td>
+            <td>A premise failed, evidence conflicts, or a material fact is missing. The decision owner names the unknown, who can resolve it, and which choice depends on it (3). Once the answer is sufficient for that choice, resume design or comparison (5–7), selection (8), or the agreed action it triggers.</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            <p>An outstanding check stays with its checker. A result that has no present consequence can be kept with its source at 11. In shared work, Aura Pro identifies the recipient and keeps a handoff open until someone accepts the next action. On a solo job the same person can observe, decide, act, and check.</p>
+            <figure class="diagram">
+              <figcaption>
+                <strong>From a finding to the next decision</strong>
+                <a href="assets/map-shared.svg">Full-size diagram ↗</a>
+              </figcaption>
+              <div
+                class="diagram-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="From a finding to the next decision"
+              >
+                <img
+                  src="assets/map-shared.svg"
+                  alt="First establish what the finding settles, for whom, and under what conditions. Then identify any next actor. Each can follow an agreed action, make a choice, or return to Discovery for a specific unknown. Work can also end here."
+                />
+              </div>
+            </figure>
+          </section>
+          <section class="article-section" id="decide-what-deserves-attention">
+            <h2>Decide what deserves attention</h2>
+            <p>
+              For an intent, identify the outcome and the first decision needed
+              to advance it. For a finding, establish what was observed, where,
+              and when; then identify the assumption, obligation, or prior
+              answer it might affect. It can reopen a settled question, raise an
+              entirely new one, or simply add context. A finding can warrant
+              telling the responsible person before anyone has authority to do
+              additional work.
+            </p>
+            <p>
+              Three judgments determine priority.
+              <strong>Consequence:</strong> would plausible answers change the
+              action or expose an important unmet obligation?
+              <strong>Timing:</strong> when will the choice become expensive to
+              reverse, and what happens if we wait?
+              <strong>Effort:</strong> which available check would give
+              sufficiently useful evidence in time? A frame measurement before
+              the façade goes up scores high on all three. A fourth heater can
+              be checked at an already scheduled visit. Running the tap shows
+              whether the sink now drains during normal use. If the consequences hinge on
+              a human preference, the relevant inquiry is a conversation with
+              the person who owns the choice.
+            </p>
+          </section>
+          <section class="article-section" id="choose-the-next-move">
+            <h2>Choose the next move</h2>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Scrollable comparison"
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th>Move</th>
+                    <th>When it makes sense</th>
+                    <th>What happens next</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Investigate</strong></td>
+                    <td>
+                      Plausible answers favor different actions, and a check can
+                      distinguish them at worthwhile effort.
+                    </td>
+                    <td>
+                      State the competing possibilities and what observation
+                      would change the decision. Choose a method for the current
+                      question. Open a child only if a distinct answer is owed.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Act</strong></td>
+                    <td>
+                      The evidence supports a choice, or one action works across
+                      the remaining plausible conditions. A reversible
+                      commitment can preserve options while more is learned.
+                    </td>
+                    <td>
+                      State the expected effect, the check, and who carries the
+                      work. In self-operated work the person coordinates it. In
+                      shared or delegated work the assigned coordinator follows
+                      through on each accepted handoff. A choice outside granted
+                      authority goes to the person who can decide.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wait</strong></td>
+                    <td>
+                      A known event, measurement, approval, or scheduled visit
+                      will improve the choice, and delay is acceptable.
+                    </td>
+                    <td>
+                      Keep the question open with an owner, a trigger, and a
+                      latest useful decision time. If the deadline comes first,
+                      reconsider acting under uncertainty or take the tradeoff
+                      to the owner. Independent work continues.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stop</strong></td>
+                    <td>
+                      The criterion is met, an answer has been delivered, or
+                      further inquiry would have too little value. The owner may
+                      also withdraw the objective.
+                    </td>
+                    <td>
+                      Say which outcome applies. A verified result can close a
+                      finite obligation. An inconclusive inquiry can end with an
+                      explicit unknown returned to its parent. A standing
+                      obligation resumes observation. A withdrawn objective
+                      records why work ceased.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="article-section" id="establish-what-is-true">
+            <h2>Establish what is true</h2>
+            <p>
+              Start with a claim precise enough to check: which object, in what
+              state, at what place and time? Compare the sources against that
+              claim. A purchase order establishes a commitment. A receiving
+              ticket identifies something delivered. A serial number observed on
+              site can connect that delivery to the unit the plan requires.
+            </p>
+            <p>
+              When sources disagree, preserve the competing accounts and ask
+              what observation would distinguish them. A schedule can say the
+              equipment arrived while the crew is still waiting. The wrong unit
+              may have arrived, it may be in another area, or the schedule may
+              carry a planned date as an actual. Checking the ticket, location,
+              and serial number can establish which unit is present. Explaining
+              why the schedule diverged is a separate question if that
+              explanation matters to another decision. Record an unresolved
+              state where the evidence runs out. When a correction arrives,
+              revisit the decisions that relied on the earlier claim.
+            </p>
+          </section>
+          <section class="article-section" id="generate-alternatives">
+            <h2>Generate alternatives</h2>
+            <p>
+              When familiar options all perform poorly, identify the constraint
+              each encounters. Work backward from the effect that must be
+              achieved and ask what could vary: the method, sequence, timing,
+              resource, physical arrangement, or division of work. People close
+              to the work may see a possibility the model has never represented.
+              Ask them what they could change while preserving the owner's goal.
+            </p>
+            <p>
+              For each credible alternative, state how it would work, what must
+              be true, and what it costs or puts at risk. Compare it with the
+              current course under common assumptions. If a feasible choice
+              already serves the goal, the owner can commit. If one unknown
+              could reverse the choice, investigate it while the choice is still
+              open. A forecast supplies reasons to choose; a later observation
+              establishes what actually happened.
+            </p>
+          </section>
+          <section
+            class="article-section"
+            id="manage-the-question-while-choosing-a-method"
+          >
+            <h2>Manage the question while choosing a method</h2>
+            <p>
+              Use the <strong>answer owed</strong> to distinguish the moves. Use
+              the obligation's <strong>success criterion</strong> to recognize
+              when the frame itself has changed.
+            </p>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Scrollable comparison"
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th>Move</th>
+                    <th>Decision rule</th>
+                    <th>What Aura Pro preserves or changes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Continue</strong></td>
+                    <td>
+                      The same answer is owed and the current method can still
+                      settle it.
+                    </td>
+                    <td>
+                      Keep the question and method. Identify the next
+                      observation or step.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Switch methods</strong></td>
+                    <td>
+                      The same answer is owed, but another method can establish
+                      it more directly or reliably.
+                    </td>
+                    <td>
+                      Keep the question, owner, and answer criterion. Carry
+                      forward what earlier methods established.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Nest a question</strong></td>
+                    <td>
+                      A distinct answer can be obtained and returned while the
+                      parent decision remains open.
+                    </td>
+                    <td>
+                      Record what the child owes, what would settle it, and
+                      which parent choice it affects. A child can open children
+                      of its own. One result can serve several decisions;
+                      independent work continues.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Reframe</strong></td>
+                    <td>
+                      A discovery changes the premise of the question enough to
+                      make its old answer beside the point, or the owner revises
+                      what counts as success.
+                    </td>
+                    <td>
+                      Revise the smallest affected question or obligation,
+                      preserve the reason, and revisit only choices that
+                      depended on the former premise or criterion. A change in
+                      the owner's priorities goes back to the owner.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Return, close, or monitor</strong></td>
+                    <td>
+                      The evidence settles the question for its stated scope, or
+                      establishes the limit of what can be known now.
+                    </td>
+                    <td>
+                      Return a child result with its uncertainty. Close a finite
+                      obligation when its criterion is met. Keep a recurring
+                      obligation active and carry unresolved exceptions forward.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              In the <a href="#tower-decision">tower decision</a>, the clearance check is
+              a nested question. The lift lead can settle it while the scheduler still
+              owes the team a sequence. Switching from a comparable installation with a
+              different lifting frame to a field measurement changes the method. The
+              answer owed stays the same.
+            </p>
+            <p>
+              A <strong>reframe</strong> would occur if the owner withdrew the
+              phased-opening requirement and chose a single opening for the
+              entire building. Aura Pro would revisit the sequencing
+              question and reconsider whether the early lift still merited
+              investigation. Discovering that one bay is too narrow changes the
+              means; the owner's hypothetical choice changes what the plan is
+              trying to achieve.
+            </p>
+          </section>
+          <section class="article-section" id="learn-from-the-outcome">
+            <h2>Learn from the outcome</h2>
+            <p>
+              Before a consequential choice, keep the expected result, the
+              assumptions that support it, and what would count as success or
+              failure. After the work or trial, compare that expectation with
+              dated observations under the conditions that actually occurred.
+              Ask which part of the reasoning the outcome tests. Did the
+              intervention work? Was a prerequisite missing? Did the world
+              change? Could the check itself be misleading? Preserve competing
+              explanations while the evidence leaves them open.
+            </p>
+            <p>
+              Update knowledge at the scope the evidence supports. A measured
+              clearance can remain valid even if an unrelated delay defeats the
+              opening forecast. An installation detail seen in three failures
+              can justify checking a fourth unit; finding it commonly in healthy
+              units would weaken its value as a predictor. A changed goal calls
+              for judging the work against the criterion in force when each
+              decision was made. Link the result, rationale, remaining
+              uncertainty, and scope to the relevant asset, method, or project
+              so someone else can recover them years later.
+            </p>
+            <p>
+              Learning also applies to attention. Did the observation
+              distinguish the alternatives? Did it arrive while a choice was
+              still available? Did acting on it improve the decision, or merely
+              confirm what the team would have done anyway? Keep useful negative
+              results. Across comparable cases, use this history to improve both
+              forecasts and the choice of what to investigate next.
+            </p>
+          </section>
+          <section class="article-section" id="examples">
+            <h2>The seven examples</h2>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="What each finding settles and who acts next">
+            <table>
+            <thead>
+            <tr>
+            <th>Example and entry</th>
+            <th>Who accepts the answer and what it settles</th>
+            <th>Who acts next</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><a href="patterns/restoration.html#example">Clogged sink</a> · Pooling starts the job at 1. After clearing the stopper, enter at 10.</td>
+            <td>The person at the sink runs the tap at handwashing flow and accepts that the drain keeps up. That settles whether normal use has been restored.</td>
+            <td>That person closes the job. If water still pools, they return to 3 to find what is still restricting flow.</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/goal-discovery.html#example">’67 Chevy</a> · The discovery behind the dash brings the restoration goal into question (3).</td>
+            <td>Comparing the modification with the factory layout settles a factual question for the owner. Returning to factory wiring would remove their father’s work.</td>
+            <td>The owner pauses removal, makes a fresh choice to preserve the modification (4), and gives the restorer the revised instruction. The restorer follows it (9).</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/design.html#example">Attached garage</a> · Compare the proposed door location at 7.</td>
+            <td>The designer accepts the survey evidence that runoff collects at the proposed threshold. The owner accepts the assessment if identifying the consequences was the assignment. If a recommendation was requested, the designer still owes one.</td>
+            <td>With grading and access tradeoffs understood, the owner can keep the current opening at 8 or ask for another layout at 5. If the drainage depends on an unmeasured elevation, the designer goes to 3 and requests that measurement.</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/analogy.html#example">Duplex portfolio</a> · Three repairs prompt a question about a fourth heater at 3.</td>
+            <td>At the scheduled visit the technician performs the agreed inspection (7). The manager accepts the photo as establishing that this heater lacks the suspected installation detail.</td>
+            <td>The manager closes the local inquiry and leaves the heater in service. For the portfolio, the manager agrees to review the next comparable service record that shows both the installation detail and whether the heater was working. That record triggers the comparison (7).</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/invention.html#example">Iron Man suit</a> · Enter at 7 with a loaded bench test.</td>
+            <td>The builder accepts a repeatable result as the answer to whether the joint binds under that bench load and mounting. The cause of the assembled failure can still be open.</td>
+            <td>The builder follows the planned test branch: inspect under load if it binds, check the assembled mounting if it moves freely. If identical recorded setups give opposite results, the builder goes to 3 to find what differed.</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/operations.html#example">Car wash</a> · The attendant starts the opening checks at 9.</td>
+            <td>The shift lead accepts that bay three cannot open now because the pump failed its check. The cause and the bay’s readiness after repair are still open.</td>
+            <td>Under the standing plan the lead keeps bay three closed and opens the ready bays (9). The technician investigates why the pump failed (3). After repair the incoming lead runs the test wash (10), accepts a pass, returns the bay to service, and closes the exception.</td>
+            </tr>
+            <tr>
+            <td><a href="patterns/hierarchical-planning.html#example">Skyscraper</a> · The opening objective (1) leads to a framed-clearance check (7).</td>
+            <td>The lift lead accepts that the framed unit cannot pass through one bay as planned. That settles the one-bay question. The opening date remains a forecast.</td>
+            <td>The superintendent chooses another approved bay for the crew. The scheduler needs the lift lead to establish whether two bays will admit the framed unit (3). Once confirmed, the scheduler compares dates (5–7). After review and funding, the crew follows the revised instruction (9). The owner’s representative checks actual occupancy against October 1 (10).</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+          </section>
+          <section class="article-section" id="review">
+            <h2>Open architecture questions</h2>
+            <p>
+              The last design review identified three questions for further
+              work.
+            </p>
+            <ul>
+              <li>
+                When a finding’s relevance is uncertain, what small check or
+                later observation should bring it back into consideration?
+              </li>
+              <li>
+                When two inquiries need the same person or resource, what would
+                be lost by doing either one second?
+              </li>
+              <li>
+                What can later evidence establish about a decision to act, wait,
+                or stop, given that only one path was taken?
+              </li>
+            </ul>
+          </section>
+          <div class="related">
+            <h3>Explore the map in practice</h3>
+            <a class="" href="patterns/index.html">Seven reasoning patterns ↗</a
+            ><a class="" href="capabilities/inquiry.html"
+              >Reasoning and inquiry capability ↗</a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

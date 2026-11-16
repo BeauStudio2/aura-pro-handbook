@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="655" viewBox="0 0 880 655" role="img" aria-labelledby="title desc">
+  <title id="title">From a finding to the next decision</title>
+  <desc id="desc">First identify what the finding establishes, who accepts it, and the conditions it covers. Then ask who still needs to act. The work can end, or different people can follow an agreed action, make a new choice, or investigate an unknown at Discovery.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#52695e"/></marker>
+  </defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #26392e }
+    .head { font-size: 18px; font-weight: 600 }
+    .body { font-size: 16px }
+    .box { fill: #fffef9; stroke: #9faea2 }
+    .route { fill: none; stroke: #52695e; stroke-width: 1.7; marker-end: url(#arrow) }
+    .result { fill: #e1ece1; stroke: #65846d }
+    .rule { fill: none; stroke: #52695e; stroke-width: 1.7 }
+  </style>
+  <rect width="880" height="655" fill="#faf8f1"/>
+  <path class="route" d="M266 86H310"/>
+  <path class="route" d="M550 86H594"/>
+  <path class="route" d="M715 132V166"/>
+  <path class="route" d="M594 208H550"/>
+  <path class="route" d="M310 208H266"/>
+  <path class="route" d="M145 250V300H216"/>
+  <path class="route" d="M715 250V300H644"/>
+  <path class="route" d="M430 341V367"/>
+  <path class="route" d="M246 401H208"/>
+  <path class="rule" d="M430 438V458 M153 458H707"/>
+  <path class="route" d="M153 458V479"/>
+  <path class="route" d="M430 458V479"/>
+  <path class="route" d="M707 458V479"/>
+  <path class="route" d="M834 536H862V18H430V43"/>
+  <g>
+    <rect class="box" x="26" y="43" width="240" height="89" rx="6"/>
+    <text class="head" x="40" y="69">1–2  Frame the work</text>
+    <text class="body" x="40" y="92">Set a provisional criterion.</text>
+    <text class="body" x="40" y="115">Assess current conditions.</text>
+  </g>
+  <g>
+    <rect class="box" x="310" y="43" width="240" height="89" rx="6"/>
+    <text class="head" x="324" y="69">3–4  Discovery &amp; criteria</text>
+    <text class="body" x="324" y="92">Which choice is affected?</text>
+    <text class="body" x="324" y="115">What would count as success?</text>
+  </g>
+  <g>
+    <rect class="box" x="594" y="43" width="242" height="89" rx="6"/>
+    <text class="head" x="608" y="69">5–6  Develop options</text>
+    <text class="body" x="608" y="92">Design possible solutions.</text>
+    <text class="body" x="608" y="115">Evaluate the risk of each.</text>
+  </g>
+  <g>
+    <rect class="box" x="594" y="166" width="242" height="84" rx="6"/>
+    <text class="head" x="608" y="192">7  Test and compare</text>
+    <text class="body" x="608" y="215">Test the assumption that</text>
+    <text class="body" x="608" y="238">could change the choice.</text>
+  </g>
+  <g>
+    <rect class="box" x="310" y="166" width="240" height="84" rx="6"/>
+    <text class="head" x="324" y="192">8  Choose and authorize</text>
+    <text class="body" x="324" y="215">Name the people, triggers,</text>
+    <text class="body" x="324" y="238">and agreed responses.</text>
+  </g>
+  <g>
+    <rect class="box" x="26" y="166" width="240" height="84" rx="6"/>
+    <text class="head" x="40" y="192">9–10  Act and check</text>
+    <text class="body" x="40" y="215">Monitor the work. Check</text>
+    <text class="body" x="40" y="238">what actually happened.</text>
+  </g>
+  <g>
+    <rect class="result" x="216" y="263" width="428" height="78" rx="6"/>
+    <text class="head" x="230" y="287">What does this finding settle, and for whom?</text>
+    <text class="body" x="230" y="308">Name who accepts the answer and where it applies.</text>
+    <text class="body" x="230" y="329">Close the questions the evidence settles.</text>
+  </g>
+  <g>
+    <rect class="result" x="246" y="367" width="368" height="71" rx="6"/>
+    <text class="head" x="260" y="391">Who still needs to act?</text>
+    <text class="body" x="260" y="412">Follow each affected person’s route.</text>
+  </g>
+  <g>
+    <rect class="box" x="26" y="367" width="182" height="71" rx="6"/>
+    <text class="head" x="40" y="391">No next action</text>
+    <text class="body" x="40" y="412">Keep the result (11).</text>
+  </g>
+  <g>
+    <rect class="box" x="26" y="479" width="254" height="113" rx="6"/>
+    <text class="head" x="40" y="503">Follow the agreed action</text>
+    <text class="body" x="40" y="524">The agreed trigger occurred.</text>
+    <text class="body" x="40" y="545">The assigned person tests (7)</text>
+    <text class="body" x="40" y="566">or carries out the work (9).</text>
+  </g>
+  <g>
+    <rect class="box" x="303" y="479" width="254" height="113" rx="6"/>
+    <text class="head" x="317" y="503">Make a choice</text>
+    <text class="body" x="317" y="524">The tradeoffs are understood.</text>
+    <text class="body" x="317" y="545">The owner sets a criterion (4)</text>
+    <text class="body" x="317" y="566">or selects a course (8).</text>
+  </g>
+  <g>
+    <rect class="box" x="580" y="479" width="254" height="113" rx="6"/>
+    <text class="head" x="594" y="503">Return to Discovery (3)</text>
+    <text class="body" x="594" y="524">Name the unknown that could</text>
+    <text class="body" x="594" y="545">change the choice and who can</text>
+    <text class="body" x="594" y="566">establish the answer.</text>
+  </g>
+  <text class="head" x="26" y="631">11  Record and learn</text>
+  <text class="body" x="220" y="631">Keep the evidence, each response, and what later checks establish.</text>
+</svg>

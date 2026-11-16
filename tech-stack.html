@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How Aura Pro works with Procore, Raken, and Sage, and which workflows it can take over." />
+    <title>Tech stack · Aura Pro</title>
+    <link rel="stylesheet" href="assets/handbook.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="map.html#shared-map">11-step process</a>
+          <a href="patterns/index.html">Examples</a>
+          <a href="capabilities/index.html">Capabilities</a>
+          <a href="capabilities/construction-simulation.html">Construction simulation</a>
+          <a href="tech-stack.html" aria-current="page">Tech stack</a>
+          <a href="index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">Tech stack</b></nav>
+      <div class="paperhead">
+        <h1>Tech stack</h1>
+        <p>Aura Pro connects the platforms a project uses so information recorded in one can guide work in another. Users keep control of their project data. They decide where the official record lives, who can use it, and what to share across systems.</p>
+        <p>The construction client uses Procore, Raken, and Sage today. The proposed Aura Pro workflow starts with exports the team reviews. These bring together field measurements from Raken, drawings and decisions from Procore, and costs from Sage. In the tower example, the team would combine those records with production rates from earlier jobs to compare two ways to install the air handler, forecast the cost and opening date for each, and send the approved sequence to the crew.</p>
+        <p>Over time, users choose which tasks Aura Pro takes on directly, from collecting observations to planning and coordinating the work. They can keep a function in the tool that serves them best and share just the information another team needs. The aim is a complete system for planning, carrying out, and learning from projects at any scale, from a repair one person handles to a development involving thousands.</p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav class="contents" aria-label="On this page">
+            <strong>On this page</strong>
+            <a href="#coordination">One tower decision</a>
+            <a href="#project-data">What the client shares and keeps</a>
+            <a href="#transfer">Who approves a handoff?</a>
+            <a href="#schedule">Schedule and forecasts</a>
+            <a href="#procore">Procore · Project decisions</a>
+            <a href="#raken">Raken · Field records</a>
+            <a href="#sage">Sage · Cost and accounting</a>
+            <a href="#platform">Inside Aura Pro</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="coordination">
+            <h2>One tower decision</h2>
+            <p>The foreman records a narrow opening in Raken. Aura Pro links
+              that measurement to the issued drawing in Procore. The lift lead
+              records the wider route’s checked dimensions with the field report in
+              Raken. The scheduler opens the linked finding in Aura Pro and
+              compares two ways to install the air handler.</p>
+            <ul>
+              <li><strong>Lift the assembled unit through two bays.</strong> Holding
+                back a second façade panel and protecting the opening costs $4,000.
+                The crew keeps the booked lift and ventilation tests. The opening
+                forecast stays October 1.</li>
+              <li><strong>Deliver the unit in sections and assemble it indoors.</strong>
+                Assembly misses the booked tests. The next available round finishes
+                October 21, moving the opening forecast to October 22.</li>
+            </ul>
+            <p>Aura Pro flags the $4,000 request because the superintendent
+              has $3,000 left. The executive receives the proposal with the two
+              forecasts and the protection detail. The parties sign through the
+              client’s agreed signing process, and the project manager records the
+              executed change in Procore. With the detail reviewed and the change
+              signed, the selected sequence goes through schedule approval and field release.
+              Accounting posts the commitment in Sage. Aura Pro tracks the
+              foreman’s acknowledgment and connects the posting to the signed
+              change. <a href="map.html#tower-decision">Follow the tower decision →</a></p>
+          </section>
+          <section class="article-section" id="project-data">
+            <h2>What the client shares and keeps</h2>
+            <p>In the proposed workflow, the client chooses what each role can see.
+              For the air-handler decision, the scheduler gets the checked opening
+              dimensions, the drawing revision, the testing dates, and the $4,000
+              price for temporary protection. Those inputs are enough to compare the
+              two sequences. Individual time cards stay in Raken, and wage rates and
+              payroll stay within accounting. The foreman receives the approved
+              instruction identifying which panels to hold and when to close them.</p>
+            <p>If the client switches platforms, it should be able to take the decision
+              and its evidence together. For this lift, that means the measurement
+              and photo, the issued drawing revision, both forecasts with their
+              assumptions and test dates, the signed change, the corresponding
+              Sage commitment, and the crew’s acknowledged instruction. The export should include the files the
+              client is entitled to transfer and an index linking each record by
+              identifier, source, date, and revision. In the new platform, the
+              scheduler should be able to start at the approved two-bay lift and
+              trace why the team still expected to open on October 1. That is the test for a usable export.</p>
+          </section>
+          <section class="article-section" id="transfer">
+            <h2>Who approves a handoff?</h2>
+            <p>The client names the person authorized to move each function. That
+              person approves the scope, the switch date, and where the next official
+              entry goes. Until that date, the team keeps using its current register.</p>
+            <p>For example, to move formal design questions, the client’s designated
+              design lead approves the handoff. The project manager brings across
+              open questions, pending responses, current drawing revisions, and
+              reviewer permissions. The reviewer checks that a crew can retrieve the
+              latest answer. From the switch date, the reviewer issues the next
+              official answer in Aura Pro. The Procore question links to it.</p>
+          </section>
+          <div id="today"></div>
+          <section class="article-section" id="schedule">
+            <h2>Schedule and forecasts</h2>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>The scheduler maintains the approved working schedule in the
+                  client’s designated schedule register. At project setup, identify
+                  that register, its current revision, and who has authority to approve
+                  a new sequence.</dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>The scheduler compares forecasts in Aura Pro against the
+                  same approved schedule. Each option shows the field evidence,
+                  testing slot, cost, and effect on opening day. The scheduler
+                  submits the recommended sequence for approval.</dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>The client’s designated schedule authority approves moving the
+                  register. The scheduler transfers the approved revision, calendars,
+                  dependencies, and pending changes and checks that dates and
+                  approvals match. After the switch, the scheduler publishes the
+                  next approved revision in Aura Pro.</dd>
+              </div>
+            </dl>
+            <p><strong>How the forecast becomes crew work.</strong> In this example,
+              assume the project manager has delegated authority to approve a schedule
+              revision. The project manager approves the two-bay sequence. The scheduler
+              publishes that revision in the official register. The superintendent
+              then issues the field instruction in Procore, naming the panels to hold
+              and when to close them. The foreman acknowledges the revision and directs
+              the crew. If crew instructions have also moved, the superintendent issues
+              it and the foreman acknowledges it in Aura Pro.</p>
+          </section>
+          <section class="article-section" id="procore">
+            <h2>Procore · Project decisions</h2>
+            <h3>Issued drawings</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The project manager keeps the issued sheets and revision history in
+                  Procore.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Links a measurement, affected work, and the scheduler’s forecast to the
+                  exact sheet revision.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  Procore remains the drawing register in this design. Crews use the issued
+                  sheet there even after work instructions move.
+                </dd>
+              </div>
+            </dl>
+            <h3>Takeoffs and estimates</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The estimator reviews drawing quantities in Procore Estimating where
+                  enabled. Otherwise the estimator supplies a checked takeoff.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Matches design quantities to comparable production in Raken and posted
+                  costs in Sage. Shows how a revision changes the estimate.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  The estimator keeps the official takeoff in the existing workflow. A later
+                  move requires the estimator to reproduce a reviewed package and its
+                  addendum in Aura Pro, trace changed quantities to the revised
+                  sheets, and explain differences from the accepted estimate. After
+                  handoff, the estimator enters the next revision in Aura Pro.
+                </dd>
+              </div>
+            </dl>
+            <h3>Design questions and answers</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The project manager logs the question against the drawing in Procore. The
+                  designated reviewer issues the technical answer.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Brings the drawing, field discrepancy, and decision deadline to the
+                  reviewer. Sends the answer to the people whose work depends on it.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  The design lead authorizes the switch once the reviewer can revise
+                  an answer and the crew can find it. The next official response is
+                  issued in Aura Pro. <a href="#transfer">Design handoff</a>
+                </dd>
+              </div>
+            </dl>
+            <h3>Crew instructions</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The superintendent issues the approved instruction through Procore. The
+                  foreman acknowledges the revision.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Links the instruction to its approval and flags a missing acknowledgment or
+                  a superseded revision.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  When the superintendent can issue and revise instructions and the foreman
+                  can acknowledge the current one, transfer open instructions and
+                  acknowledgments. The project then designates Aura Pro as the place
+                  to issue them.
+                </dd>
+              </div>
+            </dl>
+            <h3>Signed changes</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The project manager records the signed change in Procore. The authorized
+                  signatories commit the parties to its terms.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Routes the proposal to the signer and links the signed revision to the
+                  field instruction and the Sage posting.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  Signed changes stay in Procore under the proposed handoff. Moving field
+                  instructions or spending checks leaves signature authority with the
+                  signatories.
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section class="article-section" id="raken">
+            <h2>Raken · Field records</h2>
+            <h3>Measurements and photos</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The foreman records the reading, location, and photo in Raken.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Connects the observation to the drawing and planning assumption it tests. A
+                  copy of the same report in Procore counts as one observation.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  In Aura Pro the foreman could open the scheduler’s request
+                  for that exact bay and drawing revision, then answer it on site
+                  with one reading and photo. The scheduler could see immediately
+                  which lift forecast needs another look, while the crew still has
+                  time to hold the next panel. That saves matching a daily report
+                  to the open question later. Move clearance checks when the crew can
+                  capture, correct, and retrieve them with author, date, and revision
+                  intact and the project accepts Aura Pro as their official record.
+                </dd>
+              </div>
+            </dl>
+            <h3>Daily reports and time cards</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The field team submits its daily reports and crew hours in Raken.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Uses dated reports to explain delays and matches hours to the activity and
+                  cost code used in the estimate.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  These records stay in Raken when clearance checks move. The foreman can
+                  record the opening in Aura Pro and submit that day’s time cards in
+                  Raken.
+                </dd>
+              </div>
+            </dl>
+            <h3>Installed quantities</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  Where Production Tracking is enabled, the crew records quantities installed
+                  by activity and cost code in Raken.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Pairs checked quantities with hours for the same work to calculate a
+                  production rate for the next plan.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  Raken remains the source for installed quantities. If the crew’s records
+                  lack the quantity needed for a rate, the estimator asks for supporting
+                  field evidence.
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section class="article-section" id="sage">
+            <h2>Sage · Cost and accounting</h2>
+            <h3>Spending against an allowance</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  The contractor’s delegation sets the limit. Procore holds signed changes
+                  and Sage holds posted commitments. Accounting reconciles them to establish
+                  what has been spent or committed.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Flags requests that appear to exceed the available balance and sends them
+                  to the authorized signer. A signed change that has yet to post can already
+                  use the allowance.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  Aura Pro can reserve funds or block a request once opening balances
+                  and outstanding commitments are reconciled and every way to commit funds
+                  checks the same available balance before signature.
+                </dd>
+              </div>
+            </dl>
+            <h3>Job-cost postings and payroll</h3>
+            <dl class="study function-record">
+              <div>
+                <dt>Official record today</dt>
+                <dd>
+                  Accounting posts commitments and actual costs in Sage by job and cost code
+                  and maintains the financial books. Payroll follows accounting’s approved
+                  process.
+                </dd>
+              </div>
+              <div>
+                <dt>What Aura Pro adds</dt>
+                <dd>
+                  Matches a posting to the signed change, checks the posted amount against
+                  the forecast, and flags differences for the accountant.
+                </dd>
+              </div>
+              <div>
+                <dt>When it moves or stays</dt>
+                <dd>
+                  Postings and financial books stay in Sage. Accounting retains payroll. Any
+                  transfer requires a separate accounting decision and reconciliation of
+                  opening balances, transactions, and reports.
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section class="article-section" id="platform">
+            <h2>Inside Aura Pro</h2>
+            <p>The existing web app uses React, TypeScript, and TanStack. Supabase Auth identifies the participant. PostgreSQL stores project records and permissions, and private file storage holds evidence such as drawings and field photos.</p>
+            <p>The proposed planning service uses SimPy to model how work unfolds over time and OR-Tools to compare schedules under crew, equipment, and calendar constraints. The scheduler reviews the assumptions and forecasts. Connections to the three client tools can start with reviewed exports and use supported interfaces where the client has access.</p>
+            <p>For a whole building project, Aura Pro can call NVIDIA tools to check a lift route, compare delivery plans or test weather-sensitive work. The results feed back into the crew schedule, cost and opening forecast. <a href="capabilities/construction-simulation.html">Construction simulation architecture and NVIDIA assessment →</a></p>
+            <div class="actions">
+              <a class="under" href="capabilities/integration.html">Construction integration details →</a>
+              <a class="under" href="capabilities/index.html">The ten system capabilities →</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

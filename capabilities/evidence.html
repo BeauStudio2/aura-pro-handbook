@@ -1,0 +1,312 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Field observation and evidence · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Field observation and evidence</b></nav>
+      <div class="paperhead">
+        <h1>Field observation and evidence</h1>
+        <p>Establish what someone observed, what it settles, and what the next person still needs to check.</p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#responsibility">Inputs and outputs</a
+            ><a href="#approach">Approach</a
+            ><a href="#execution">Measuring the tower opening</a
+            ><a href="#disagreement">When the drawing and field disagree</a
+            ><a href="#technology-stack">How the tools fit today</a
+            ><a href="#ownership">What Aura Pro takes over</a
+            ><a href="#checks">Client walkthrough</a
+            ><a href="#patterns">Where this capability is used</a
+            ><a href="#connections">Connected capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="responsibility">
+            <h2>Inputs and outputs</h2>
+            <dl class="io">
+              <dt>Inputs</dt>
+              <dd>
+                A question, earlier records, and observations from people or
+                instruments.
+              </dd>
+              <dt>Expected output</dt>
+              <dd>
+                A finding that names the condition, its sources, who checked
+                it, and which decision can rely on it. An open question goes to
+                the person who can settle it.
+              </dd>
+            </dl>
+          </section>
+          <div class="related" id="analysis">
+            <h3>Across the architecture</h3>
+            <a href="integration.html"
+              >Construction tools, data ownership, and migration ↗</a
+            >
+          </div>
+          <section class="article-section" id="approach">
+            <h2>Approach</h2>
+            <p>
+              Start with the decision someone faces. On a five-minute repair,
+              the owner can run the tap and see whether the sink keeps up. On the
+              tower, the superintendent needs the foreman’s reading before
+              releasing the adjacent panel for installation. Once that panel
+              goes up, changing the lift sequence means bringing
+              the façade crew and crane back. The time to measure is while the
+              choice is still open.
+            </p>
+            <p>
+              Ask what each source can establish. An issued detail shows what
+              the designer called for. A tape reading describes the distance
+              between two physical points at a particular time. A supplier’s
+              dimension applies to a particular equipment configuration. A
+              finding explains how those facts bear on the decision. Someone
+              looking at it later should be able to reconstruct the comparison.
+            </p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>Measuring the tower opening</h2>
+            <p>
+              Can the assembled air handler enter through one façade bay on
+              its lifting frame? The example dimensions below illustrate how
+              the team could settle the width question. They are assumed
+              values for this lift.
+            </p>
+            <dl class="io">
+              <dt>Issued design</dt>
+              <dd>The current detail calls for <strong>101 inches clear</strong>
+                at the height where the frame passes. The project manager
+                identifies the level, bay, section, and issued sheet revision.</dd>
+              <dt>Field reading</dt>
+              <dd>The foreman measures across the travel path at several heights
+                and depths. An installed bracket projects into the opening.
+                The narrowest tape reading, from the opposite jamb to the
+                bracket face, is <strong>99½ inches</strong>. The foreman records
+                the endpoints, tape position, time, and photos in Raken and
+                estimates a ¼-inch uncertainty from seating and reading the
+                tape in that position.</dd>
+              <dt>Equipment</dt>
+              <dd>The supplier identifies the actual frame revision and confirms
+                that the assembly is <strong>at least 100 inches wide</strong>
+                in the orientation on the lift plan, including its projecting
+                fittings. The bare unit’s catalog width would answer a
+                different question.</dd>
+              <dt>Finding</dt>
+              <dd>Even at the upper end of the field estimate, the opening is
+                99¾ inches. The frame needs at least 100 inches before allowing
+                any room to maneuver. Width alone rules out the planned
+                straight pass. The foreman radios the superintendent, who holds
+                the affected lift and sends the crew to the next approved bay.</dd>
+            </dl>
+            <p>
+              If the plausible widths overlap, the comparison stays open.
+              The lift lead identifies which dimension needs a better reading
+              and who can obtain it before the panel goes up. For a wider
+              opening, the team also checks height, obstructions through the
+              depth of the opening, and the room the rigged load needs as it
+              moves. Spare width at one face can settle only part of that check.
+            </p>
+          </section>
+          <section class="article-section" id="disagreement">
+            <h2>When the drawing and field disagree</h2>
+            <ol>
+              <li><strong>Check that both records describe the same condition.</strong>
+                The project manager confirms the issued sheet, bay, elevation,
+                and dimension endpoints. A grid-to-grid dimension could coexist
+                with a smaller clear opening. Here the detail explicitly calls
+                for clear width at the bracket. The lift lead repeats the
+                measurement there and confirms the obstruction. Its cause is
+                still open.</li>
+              <li><strong>Give the discrepancy an owner.</strong> The project
+                manager links both readings and the marked detail to a request
+                for information (RFI) in Procore. The design reviewer answers
+                whether the bracket stays and what detail would accommodate
+                the lift. In this example it stays. The lift team measures the
+                route with two adjacent panels held out and confirms the
+                framed unit can pass. The reviewer confirms the revised opening
+                and temporary protection detail.</li>
+              <li><strong>Update the people using the finding.</strong> Aura Pro’s proposed role is to link the official response and
+                both observations to the bay, flag the one-panel plan as
+                infeasible, and send the checked alternative to the scheduler.
+                The original drawing, observed condition, and accepted detail
+                each retain their date and author. The scheduler can now test
+                the October 1 opening forecast. The GC executive owns the
+                $4,000 decision and the superintendent owns the field release.
+                <a href="intent-authority.html#execution">Tower spending and crew release</a></li>
+            </ol>
+            <p>
+              A corrected tape reading supersedes the earlier reading and
+              records why. Moving the bracket later creates a new condition
+              with its own observation time. Either change prompts a review
+              of the findings and open instructions that depend on that
+              clearance. After the lift, the foreman records which frame
+              actually passed through which opening. Years later, facilities
+              can recover that evidence and identify what a replacement lift
+              needs measured again.
+            </p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>How the tools fit today</h2>
+            <p>
+              The client uses Raken, Procore, and Sage. Confirm the active
+              connectors and the project’s issued-drawing register with the
+              team. The following is a proposed fit for that toolset.
+            </p>
+            <dl class="io">
+              <dt>Raken</dt>
+              <dd>The foreman owns the field entry. Use the signed report and
+                photos from the configured Procore Documents sync, or a
+                reviewed export. Report sync follows signature. An urgent hold
+                travels by radio while there is still time to act. The original
+                entry and its copied PDF count as one observation. A second
+                person taking a new reading has a separate observation.
+                <a href="https://help.rakenapp.com/en/articles/14514004-integrating-procore-with-raken">Raken report sync</a></dd>
+              <dt>Procore</dt>
+              <dd>The project manager tracks the RFI against the drawing.
+                The designated RFI manager marks the design reviewer’s official
+                response in Procore. Link the issued sheet revision and the field
+                measurement so the reviewer can see which detail changed.
+                <a href="https://support.procore.com/products/online/user-guide/project-level/rfi/tutorials/choose-an-official-response-for-an-rfi">Procore official responses</a></dd>
+              <dt>Sage</dt>
+              <dd>Accounting owns the posted cost of the change. Aura Pro can link the posting back to the clearance finding so
+                someone can explain the cost. Geometry comes from the lift
+                evidence. <a href="intent-authority.html#execution">Sage posting in the tower example</a></dd>
+            </dl>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>What Aura Pro takes over</h2>
+            <p>
+              <strong>First, connect the evidence.</strong> Aura Pro
+              owns the comparison, its sources, and the outstanding question.
+              Record the project, source record and revision, observer, location,
+              method, units, observed time, and time received. Link copies by
+              their source identifiers. A file checksum can confirm identical
+              bytes. Two differently rendered reports with uncertain origins go
+              to the project manager to match before either counts as corroboration.
+            </p>
+            <p>
+              <strong>Then, take over field capture where the crew adopts it.</strong>
+              The app already has permission-checked media upload and retrieval.
+              Extend its capture form to guide the foreman through endpoints,
+              orientation, readings, and uncertainty. Keep authorized originals
+              in private object storage and revisioned observations and source
+              links in PostgreSQL. Give each offline entry a stable ID and show
+              it as pending until its upload is confirmed. A retry uses the same
+              ID. If a model reads the tape photo, retain the proposed value
+              alongside the image for the observer to check.
+            </p>
+            <p>
+              <strong>Transfer authorship by crew and record type.</strong>
+              When a crew can capture, correct, and retrieve a measurement in
+              Aura Pro and the project accepts its report, designate it
+              as the original for that crew’s clearance checks. Send a referenced
+              copy to the project record. Other crews can keep originating theirs
+              in Raken. Aura Pro can also host discrepancy review when
+              the design team designates it for official responses and can carry
+              over open RFIs, revisions, and reviewer permissions. The reviewer
+              still owns the technical answer.
+            </p>
+          </section>
+          <section class="article-section" id="checks">
+            <h2>Client walkthrough</h2>
+            <p>
+              Have a foreman and reviewer reconstruct a completed clearance
+              check from the report, photo, supplier revision, issued sheet,
+              and response. Ask each to point to the tightest spot and explain
+              which configuration was checked. Then replay it with a copied
+              PDF, a missing unit, and a revised lifting frame. The copy should
+              add no independent reading. The missing unit should send a
+              question to the observer. The frame revision should reopen the
+              fit comparison and notify the lift lead before the old finding
+              is used again.
+            </p>
+          </section>
+          <section class="article-section" id="patterns">
+            <h2>Where this capability is used</h2>
+            <div class="entries">
+              <a class="entry" href="../patterns/restoration.html"
+                ><div>
+                  <h3>Restoration and verification</h3>
+                  <p>When can you stop?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/analogy.html"
+                ><div>
+                  <h3>Analogical reasoning and transfer</h3>
+                  <p>Does the lesson transfer?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/invention.html"
+                ><div>
+                  <h3>Invention and experimental search</h3>
+                  <p>Which trial would teach you the most?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <section class="article-section" id="connections">
+            <h2>Connected capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="world-model.html"
+                ><div>
+                  <h3>Project and asset model</h3>
+                  <p>
+                    Represent what exists, where it is, what depends on it, and
+                    what is known as of a date.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="inquiry.html"
+                ><div>
+                  <h3>Reasoning and inquiry</h3>
+                  <p>
+                    Choose which question deserves attention and which method
+                    can answer it.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue through the capabilities</h3>
+            <a href="world-model.html">Project and asset model →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

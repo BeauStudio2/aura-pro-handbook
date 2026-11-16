@@ -1,0 +1,323 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Construction tools and integration · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Construction tools and integration</b></nav>
+      <div class="paperhead">
+        <h1>Construction tools and integration</h1>
+        <p>
+          Construction is the first client application. This guide describes
+          how Aura Pro could connect the tools the team uses today and
+          take on specific workflows over time.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#architecture">What Aura Pro owns</a
+            ><a href="#tool-fit">The three client tools</a
+            ><a href="#concrete-estimate">North Lex to Galleria estimate</a
+            ><a href="#estimate-architecture">What the estimate needs from Aura Pro</a
+            ><a href="#flow">A cross-system handoff</a
+            ><a href="#contract">The integration contract</a
+            ><a href="#transition">From integration to native workflows</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="architecture">
+            <h2>What Aura Pro owns</h2>
+            <p>
+              The client uses Procore, Raken, and Sage. Start with the records
+              and screens people already trust. Aura Pro owns the intent,
+              stable project and asset identities, cross-system relationships,
+              evidence behind each recommendation, and the handoff to the next
+              decision maker. Assign one authoritative writer per record type
+              and project. Confirm the client’s Procore Estimating access, Raken production
+              records, Sage edition, and enabled connections before relying on them.
+            </p>
+            <p>
+              A <strong>field observation</strong> describes a condition. A
+              <strong>technical review</strong> records a judgment about a
+              design. An <strong>authorization</strong> permits a scoped action.
+              A <strong>commitment</strong> reserves money or resources. A
+              <strong>posting</strong> records an accounting event. A
+              <strong>forecast</strong> estimates a consequence. Preserve those
+              meanings across every adapter, even if two source systems label
+              their records “approved.”
+            </p>
+          </section>
+          <section class="article-section" id="tool-fit">
+            <h2>The three client tools</h2>
+            <div
+              aria-label="Comparison"
+              class="table-scroll"
+              role="region"
+              tabindex="0"
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tool</th>
+                    <th>Initial use and integration route</th>
+                    <th>What Aura Pro does</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Procore</strong></td>
+                    <td>The estimator measures the issued drawings in Procore Estimating
+                      and checks revisions. The project team uses Procore for formal
+                      design answers and approved changes.
+                      <a href="https://v2.support.procore.com/product-manuals/estimating-project/tutorials/upload-drawings-for-takeoffs">Procore drawing takeoffs and revisions</a></td>
+                    <td>Aura Pro links each reviewed quantity and decision to
+                      its drawing, revision, and scope. If the estimating module is
+                      unavailable, the estimator supplies a checked takeoff from the
+                      issued sheets.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Raken</strong></td>
+                    <td>The field team records hours and quantities installed by
+                      activity and cost code. Production Tracking requires the
+                      Performance plan. Use the available time cards and dated field
+                      reports where quantities can be verified.
+                      <a href="https://help.rakenapp.com/en/articles/14492603-getting-started-with-production-tracking-in-raken">Raken production tracking</a></td>
+                    <td>Aura Pro matches comparable work to those records. A
+                      signed report copied into Procore still represents one observation.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sage</strong></td>
+                    <td>Accounting supplies posted job costs and commitments by job and
+                      cost code. Use the report or supported connection for the
+                      client’s Sage edition.
+                      <a href="https://www.sage.com/en-us/sage-construction-us/job-costing/">Sage job costing</a></td>
+                    <td>Aura Pro reconciles forecast costs against the posted
+                      amounts. Accounting retains responsibility for the books.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="article-section" id="concrete-estimate">
+            <span id="beam-estimate" aria-hidden="true"></span>
+            <h2>North Lex to Galleria estimate</h2>
+            <p>
+              The estimating question is how much labor and material Galleria’s
+              concrete work will require, given what comparable work took at
+              North Lex. The quantities and rates below are illustrative.
+            </p>
+            <h3>From a drawing to a priced item</h3>
+            <ol>
+              <li><strong>The estimator measures Galleria’s issued drawings.</strong>
+                In Procore Estimating, measure each slab area and apply its specified
+                thickness to get concrete volume. Check thickened edges and openings
+                against the details. Take rebar sizes, spacing, and laps from the
+                schedules and notes. The estimator reviews those quantities, compares
+                each addendum with the prior sheets, and records the affected lines.
+                Aura Pro links each accepted quantity to its sheet and revision.
+                <a href="https://v2.support.procore.com/product-manuals/estimating-project/tutorials/upload-drawings-for-takeoffs">Procore drawing and revision workflow</a></li>
+              <li><strong>Aura Pro reconstructs the North Lex rate.</strong>
+                Match Raken crew hours and accepted installed quantities for the
+                same activity, area, and dates. Check Procore for revisions and
+                scope changes. Reconcile costs to the corresponding Sage job
+                and cost code. For example, 160 labor-hours spent placing 200
+                installed cubic yards gives 0.8 labor-hours per cubic yard.
+                If the timecard also includes formwork or rebar, the estimator
+                must resolve that allocation before using the placement rate.</li>
+              <li><strong>The estimator prices Galleria.</strong> Suppose the
+                reviewed drawing quantity is 250 cubic yards of comparable slab.
+                At the North Lex rate, placement would take 200 labor-hours.
+                Price those hours at the applicable Galleria wage and burden.
+                Price material separately using the purchase quantity, including
+                any documented order allowance. Show formwork and rebar under
+                their own units and activities. The estimator reviews differences
+                in access, reinforcement congestion, and crew mix, then accepts
+                or adjusts the rate and records the reason.</li>
+            </ol>
+            <h3>How to test whether the quantities are usable</h3>
+            <ol>
+              <li>Choose a completed North Lex package with an issued drawing
+                set, one known addendum, and an estimator-reviewed takeoff.
+                Agree accuracy tolerances by element and unit, which omissions
+                would affect the bid, and how much review time is acceptable.
+                Have the estimator complete the takeoff before seeing the reference quantities.</li>
+              <li>Run the original issue, then the addendum. Compare baseline
+                quantities and revision changes line by line. Record missing,
+                extra, and duplicated elements, signed and absolute errors,
+                and estimator minutes spent correcting or mapping the export.
+                Check unchanged items too. A missing wall and an overstated slab
+                can cancel in the total.</li>
+              <li>Trace each retained quantity to its sheet, location, unit,
+                activity, and cost code. Record the share that can be matched
+                to actual North Lex work and the share that remains unresolved.
+                Repeat on an untouched zone. Accept the source for a scope
+                only if it meets the agreed tolerances and review budget there.
+                Compare the resulting Galleria estimate with an independent
+                estimate at the same scope and price date. This last comparison
+                tests the rate transfer as well as the quantities.</li>
+            </ol>
+          </section>
+          <section class="article-section" id="estimate-architecture">
+            <h2>What the estimate needs from Aura Pro</h2>
+            <p>
+              <strong>Give each quantity a basis and a source.</strong>
+              A slab can have a design volume, a purchased volume, and an
+              installed volume. Store each with its element, location, unit,
+              activity, source revision, measurement method, and review status.
+              This lets purchasing apply an allowance and lets estimating
+              calculate installation productivity without counting that allowance
+              as installed work.
+            </p>
+            <p>
+              <strong>Carry revisions into dependent decisions.</strong>
+              Preserve the original export, estimator corrections, and any
+              assumptions connecting a quantity to a productivity rate. When
+              an addendum changes a slab, show the changed quantity, labor-hours,
+              and cost beside the last reviewed estimate. Flag affected crew
+              and delivery plans for review. A repeated import should produce
+              one change. A new forecast goes to the estimator before it can
+              change a bid or a commitment.
+            </p>
+            <p>
+              <strong>Keep the measuring tool replaceable.</strong> Let a
+              workbook, model, or manual measurement enter through the same
+              import and review process. Record who measured, who reviewed,
+              and which revision they accepted. The North Lex replay
+              then becomes a comparison any replacement must pass. An API can
+              automate delivery later if it preserves the same source detail.
+            </p>
+            <p>
+              <strong>Track the takeoff as assigned work.</strong> Record the
+              sheets and exclusions sent, the expected return date, the
+              received version, and who owes the next review. A partial return
+              can support pricing the covered elements while missing elements
+              remain open.
+            </p>
+          </section>
+          <section class="article-section" id="flow">
+            <h2>A cross-system handoff</h2>
+            <ol>
+              <li>
+                A foreman records a field observation in Raken. A linked Procore
+                document can provide the same report. Aura Pro assigns one observation
+                ID and retains both source references.
+              </li>
+              <li>
+                Aura Pro associates it with a model or drawing revision, equipment ID,
+                work package, and open RFI. A disputed match goes to review
+                before it affects a plan.
+              </li>
+              <li>
+                The planner compares available sequences. A spatial engine can
+                flag a modeled obstruction, while a schedule engine estimates a
+                missed commissioning slot. Both return their input versions and
+                assumptions.
+              </li>
+              <li>
+                Aura Pro assembles the options, cost exposure, and current delegation.
+                The authorized person commits the selected revision in the
+                designated record system. Reconcile that decision back to Aura Pro.
+              </li>
+              <li>
+                Execution receives the instruction. Finance posts through its
+                agreed Sage path. Verification records what actually happened.
+                Later updates reference the original decision and affected work.
+              </li>
+            </ol>
+          </section>
+          <section class="article-section" id="contract">
+            <h2>The integration contract</h2>
+            <p>
+              Use Aura Pro IDs for the organization, project, asset, work package, and
+              decision. Store a mapping from each external tenant, record type,
+              and native ID to its Aura Pro counterpart. Preserve source author,
+              revision, currency, units, visibility, observed time, and received
+              time. Keep raw evidence immutable under the applicable retention
+              policy and represent corrections as linked revisions.
+            </p>
+            <p>
+              Read via supported APIs, native sync, or reviewed files. Re-fetch
+              notifications from their authoritative source. For outgoing work,
+              persist the proposed operation and its stable key in the same
+              transaction as the approved change. Deliver asynchronously and
+              retain the acknowledgment or external reference. When delivery is
+              uncertain, query before retrying. Reconcile totals, revisions, and
+              failed deliveries. Restrict each connector to the tenant, project,
+              and operations it needs. One external login or admin credential
+              never establishes a person's right to approve work.
+            </p>
+          </section>
+          <section class="article-section" id="transition">
+            <h2>From integration to native workflows</h2>
+            <p>
+              <strong>Connect.</strong> Agree the authoritative writer for each
+              object. Pick a real decision and trace its identifiers across the
+              field report, design revision, approval, instruction, and cost
+              posting. Count re-entry, missing references, and time awaiting a
+              decision.
+            </p>
+            <p>
+              <strong>Coordinate.</strong> Aura Pro assembles the context, routes the
+              question, and follows it through acknowledgment while the client
+              retains its formal records. Compare decisions and downstream
+              totals with the existing process. Surface any variance for a human
+              to resolve.
+            </p>
+            <p>
+              <strong>Take ownership by workflow.</strong> After a
+              client-designated owner confirms equivalent semantics, designate
+              Aura Pro as writer for that workflow, migrate active state and history,
+              and switch consumers to Aura Pro receipts. Maintain export and
+              reconciliation. If cutover fails, stop outgoing writes, reconcile
+              changes since cutover, and return the single-writer role
+              explicitly. Extend native capability where it reduces effort or
+              improves decisions.
+            </p>
+            <p>
+              The portable unit is the decision and its evidence. A provider can
+              be replaced when the replacement preserves identity, revisions,
+              authority, resource balances, and outcomes in replay. Measure
+              approval lead time, duplicate entries, unresolved sync
+              discrepancies, and the user's effort on comparable work.
+            </p>
+          </section>
+          <div class="related">
+            <h3>Start the capability analysis</h3>
+            <a href="intent-authority.html">Intent and authority →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Intent and authority · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Intent and authority</b></nav>
+      <div class="paperhead">
+        <h1>Intent and authority</h1>
+        <p>
+          Define the desired result, the decisions people retain, and the work
+          they delegate.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#responsibility">Inputs and outputs</a
+            ><a href="#approach">Approach</a
+            ><a href="#execution">Who decides on the tower</a
+            ><a href="#ownership">What Aura Pro takes over</a
+            ><a href="#technology-stack">How the limit is enforced</a
+            ><a href="#checks">Acceptance and client walkthrough</a
+            ><a href="#patterns">Where this capability is used</a
+            ><a href="#connections">Connected capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="responsibility">
+            <h2>Inputs and outputs</h2>
+            <dl class="io">
+              <dt>Inputs</dt>
+              <dd>
+                The owner’s priorities and evidence of success, the proposed
+                action, and the current grants that cover it.
+              </dd>
+              <dt>Expected output</dt>
+              <dd>
+                A decision tied to an exact scope and revision, the person who
+                can make it, and the instruction the next person may act on.
+              </dd>
+            </dl>
+          </section>
+          <div class="related" id="analysis">
+            <h3>Across the architecture</h3>
+            <a href="integration.html"
+              >Construction tools, data ownership, and migration ↗</a
+            >
+          </div>
+          <section class="article-section" id="approach">
+            <h2>Approach</h2>
+            <p>
+              An owner can say “open the lower floors on October 1 and keep them
+              adaptable for the next tenant.” That sets a date and a design
+              priority. It leaves real choices open. Can the superintendent
+              resequence work? Who accepts a design deviation? Who can spend
+              more to preserve October 1? Capture these distinctions while the
+              people making the agreement are present.
+            </p>
+            <p>
+              <strong>Intent</strong> records the outcome, priorities when they
+              conflict, evidence of success, unresolved questions, source,
+              owner, scope, and revision. <strong>Authority</strong> is a dated
+              grant from a named principal to a person or role. It identifies
+              the permitted action, area or work package, per-action and
+              aggregate spending limits, period, prerequisites, and decisions
+              reserved to someone else. The principal confirms the grant.
+              The project administrator maps the named delegate to the account
+              they use to act.
+            </p>
+            <p>
+              Start proportionately. One person doing a repair can set the goal,
+              do the work, and accept a functional check. In a tower, the owner
+              can reserve a change in occupancy strategy, the designer can
+              review a routing change, and the superintendent can control crew
+              sequencing. Record the actual delegation for this project. A job
+              title alone supplies too little evidence to infer it.
+            </p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>Who decides on the tower</h2>
+            <p>
+              The façade crew is about to install the panel beside the opening
+              reserved for an air handler. Can the superintendent leave both
+              panels out and commit $4,000 for temporary weather protection?
+              In this worked example the general contractor (GC) bears the
+              cost. The roles, grants, and Sage configuration are illustrative.
+            </p>
+            <ol>
+              <li>
+                <strong>The owner’s representative sets the objective.</strong>
+                Brief revision 3 calls for lower-floor occupancy on October 1
+                and access through this bay for future refits. The superintendent
+                identifies the last lift before the crew closes the bay. Aura Pro attaches that decision deadline to the brief.
+              </li>
+              <li>
+                <strong>The foreman calls in the clearance conflict.</strong>
+                The foreman records the clear opening and a photo in Raken.
+                The supplier confirms the width of the unit on its lifting
+                frame. One panel leaves too little clearance. The foreman
+                radios the superintendent, who holds the affected lift and
+                directs the crew to the next approved bay. Aura Pro links
+                the measurement, supplier confirmation, drawing revision, and
+                Procore design question. Raken’s daily report can reach Procore
+                Documents after signature. That copy points back to the same
+                measurement. <a href="https://help.rakenapp.com/en/articles/14514004-integrating-procore-with-raken">Raken report sync</a>
+              </li>
+              <li>
+                <strong>The project manager prepares the change in Procore.</strong>
+                The lift team checks the two-panel opening against the frame.
+                The design reviewer confirms the opening and protection detail.
+                The façade subcontractor quotes a fixed $4,000. The scheduler
+                finds that assembling the unit indoors misses the booked tests
+                and moves the opening forecast to October 22. Protecting the
+                wider opening keeps the September 30 test finish and October 1
+                occupancy forecast. Aura Pro presents both paths against
+                the brief and links the reviewed detail and quote to the change event.
+              </li>
+              <li>
+                <strong>The GC project executive commits the money.</strong>
+                The superintendent may authorize $5,000 per temporary-work
+                change and $15,000 in total. Earlier commitments use $12,000,
+                leaving $3,000. Aura Pro routes the full $4,000 to the
+                project executive, who has a separate grant to sign for the GC.
+                The executive approves the expense and signs the subcontract
+                change for the GC. The façade subcontractor’s signatory
+                countersigns. The project manager records the executed commitment
+                change order in Procore. Aura Pro matches its scope,
+                amount, and revision to the proposal. An owner-funded change
+                would also follow the applicable prime-contract approval route.
+                <a href="https://support.procore.com/products/online/user-guide/project-level/change-orders/tutorials/create-a-change-order-from-a-change-event">Procore change-order routes</a>
+              </li>
+              <li>
+                <strong>The superintendent releases the crew.</strong>
+                With the reviewed detail and executed change in hand, the
+                superintendent issues the revised field instruction through
+                Procore and radios the foreman. It identifies the two panels
+                to hold, where to install protection, and when to close the
+                opening after the lift. The foreman reads back the panel IDs
+                and revision. Aura Pro tracks that acknowledgment. The
+                foreman records protection, lift, and close-in as they occur
+                in Raken. The scheduler uses actual progress to update the
+                commissioning and occupancy forecast.
+              </li>
+              <li>
+                <strong>The project accountant posts the commitment in Sage.</strong>
+                In the Sage 300 CRE example, the subcontract is already synced.
+                The accountant checks the job and cost code, accepts the approved
+                change for export under the configured Procore workflow, and
+                verifies that posting the Sage batch increased committed cost
+                by $4,000. Aura Pro links that posting to the executed
+                change. If export fails, the accountant corrects and reconciles
+                it. Invoice approval and payment have their own records.
+                <a href="https://support.procore.com/products/online/user-guide/company-level/erp-integrations/sage-300-cre">Procore’s Sage 300 CRE connector</a>
+              </li>
+            </ol>
+            <p>
+              <strong>When the owner changes the goal.</strong> If the owner
+              withdraws phased occupancy, version the brief and identify
+              commitments justified by the earlier date. Review pending
+              dependent proposals. If the instruction has already reached the
+              crew, the superintendent checks what is in place and issues any
+              revised direction to the foreman for acknowledgment. Preserve
+              the original rationale and any cost already committed.
+            </p>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>What Aura Pro takes over</h2>
+            <p>
+              <strong>Coordination.</strong> In the initial design Aura Pro owns the brief, links to source records, and routing.
+              It can flag the superintendent’s apparent $3,000 balance and
+              chase a missing signature or crew acknowledgment. Procore is
+              where the team verifies and executes the subcontract change.
+              A commitment entered there between imports can change the balance.
+            </p>
+            <p>
+              <strong>Field instructions.</strong> Once the superintendent and
+              foreman can issue, acknowledge, revise, and retrieve an instruction
+              in Aura Pro, the GC can designate it as the official place
+              to issue sequence changes. Transfer open instructions and their
+              latest acknowledgments. From that point the superintendent issues
+              the instruction there, the foreman acknowledges it there, and
+              Procore receives a linked copy. The superintendent still decides
+              when to release the crew.
+            </p>
+            <p>
+              <strong>Delegated spending.</strong> This is a separate transfer.
+              The GC identifies every route that can bind it against the grant,
+              reconciles open commitments and reservations, and designates one
+              authorization check for that balance. A Procore or manual change
+              using that grant must first obtain a reservation for the exact
+              amount and revision, or the GC must close that route. While an
+              independent route can draw on the same allowance, Aura Pro
+              can report discrepancies and escalate requests. It can enforce
+              the aggregate only once every binding route uses the check.
+              Contract signatures can still live in Procore and posting in Sage.
+              <a href="integration.html#transition">Workflow transfer and reversal</a>
+            </p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>How the limit is enforced</h2>
+            <p>
+              The existing TypeScript/TanStack app uses Supabase Auth and
+              PostgreSQL. Its decision command checks organization approval
+              rights and locks the individual request. Two requests against
+              the same allowance have different request records. Enforcing
+              the cumulative limit requires the following extension to the
+              app’s command.
+            </p>
+            <div
+              aria-label="Comparison"
+              class="table-scroll"
+              role="region"
+              tabindex="0"
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th>Responsibility</th>
+                    <th>Recommended implementation</th>
+                    <th>Replaceable alternative</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Capture and identity</td>
+                    <td>
+                      A short editable brief and decision form. Authenticate the
+                      actor and resolve their current project membership
+                      server-side. Keep the client's role mapping explicit.
+                    </td>
+                    <td>
+                      Another web client or an enterprise identity provider
+                      mapped to the same internal actor and delegation IDs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Decision store and enforcement</td>
+                    <td>
+                      PostgreSQL transactions for versioned briefs, grants,
+                      proposals, reservations, decisions, and an event journal.
+                      Enforce scoped reads with row-level security. Recheck
+                      the current grant, proposal revision, and limits while
+                      holding a lock on the shared allowance. Deduct existing
+                      commitments and open reservations before reserving the
+                      new amount. Save the decision and reservation together.
+                      On execution, convert that reservation to a commitment
+                      once. Release it on confirmed cancellation.
+                    </td>
+                    <td>
+                      Managed or self-hosted PostgreSQL with another auth
+                      service. A policy engine such as OPA can evaluate policy
+                      when rules grow. The database still commits against
+                      current balances and revisions.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Integration delivery</td>
+                    <td>
+                      Save the decision and outgoing message together. If a
+                      receipt is missing, look up the external change by its
+                      stable reference before retrying. Where the connector
+                      cannot establish the outcome, keep the reservation open
+                      and send the discrepancy to the project manager.
+                    </td>
+                    <td>
+                      A durable workflow service can replace the database-backed
+                      worker through the same command and acknowledgment
+                      contract.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Language and estimates</td>
+                    <td>
+                      Structured human entry works on its own. An optional model
+                      drafts language from a brief. A person confirms the
+                      consequential terms. Simulation contributes versioned
+                      estimates.
+                    </td>
+                    <td>
+                      Swap model providers, use deterministic extraction, or
+                      attach a reviewed human estimate. The same decision form
+                      and checks apply.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              A durable decision includes the Aura Pro ID, tenant and
+              project, actor, source system and revision, intent revision,
+              applicable grant, proposal hash or revision, amount and currency,
+              outcome, rationale, and effective and recorded times. Store
+              external documents by reference or authorized snapshot and check
+              visibility on retrieval.
+              <a
+                href="https://supabase.com/docs/guides/database/postgres/row-level-security"
+                >Supabase row-level security</a
+              >
+              ·
+              <a href="https://www.openpolicyagent.org/docs"
+                >Open Policy Agent</a
+              >
+            </p>
+          </section>
+          <section class="article-section" id="checks">
+            <h2>Acceptance and client walkthrough</h2>
+            <p>
+              <strong>Test the same two requests on both sides of the transfer.</strong>
+              Give the superintendent $3,000 remaining and submit two $2,000
+              changes at once. Try allowing a direct Procore approval to
+              bypass Aura Pro’s spending check during transfer. Both
+              could pass and exceed the grant by $1,000.
+              With both routes using the shared reservation, the first reserves
+              $2,000 and the second goes to the executive. A changed quote
+              requires approval of the new revision. Revoking the grant must
+              block a decision from an already-open screen. Losing the receipt
+              after signature must lead back to the existing commitment.
+            </p>
+            <p>
+              <strong>Verify the client’s actual workflow.</strong> Choose one
+              completed change. Ask the foreman for the field finding, the GC
+              signatory for the grant and executed change, the superintendent
+              for the instruction the crew acknowledged, and the accountant
+              for the posted entry. Trace the revision and amount across those
+              records. Confirm the Sage edition, export route, and any other
+              way the same spending authority can be exercised.
+            </p>
+          </section>
+          <section class="article-section" id="patterns">
+            <h2>Where this capability is used</h2>
+            <div class="entries">
+              <a class="entry" href="../patterns/goal-discovery.html"
+                ><div>
+                  <h3>Goal discovery and revision</h3>
+                  <p>What is worth preserving?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/hierarchical-planning.html"
+                ><div>
+                  <h3>Hierarchical planning under uncertainty</h3>
+                  <p>Which detail changes the whole plan?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <section class="article-section" id="connections">
+            <h2>Connected capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="execution.html"
+                ><div>
+                  <h3>Work coordination and execution</h3>
+                  <p>
+                    Carry an authorized choice into physical work and follow it
+                    through handoffs.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="verification.html"
+                ><div>
+                  <h3>Verification and acceptance</h3>
+                  <p>
+                    Determine what a specific check establishes and who may
+                    accept the result.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue through the capabilities</h3>
+            <a href="evidence.html">Field observation and evidence →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

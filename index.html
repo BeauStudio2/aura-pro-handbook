@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aura Pro product and architecture handbook"
+    />
+    <title>Introduction · Aura Pro</title>
+    <link rel="stylesheet" href="assets/handbook.css" />
+    <script src="assets/chapters.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="map.html#shared-map">11-step process</a>
+          <a href="patterns/index.html">Examples</a>
+          <a href="capabilities/index.html">Capabilities</a>
+          <a href="capabilities/construction-simulation.html">Construction simulation</a>
+          <a href="tech-stack.html">Tech stack</a>
+          <a href="#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <div class="front">
+        <div class="front-copy">
+          <div class="label">
+            <span class="rule"></span> Product &amp; architecture handbook
+          </div>
+          <h1>Aura Pro</h1>
+          <p class="lead">
+            Get stuff done.
+          </p>
+          <p>
+            Aura Pro is a platform for turning a real-world objective into a
+            plan and guiding the work through to completion. For a small DIY task
+            like fixing a clogged sink, it offers step-by-step guidance.
+          </p>
+          <p>
+            For a billion-dollar development, Aura Pro builds a dynamic plan
+            from where the project stands today to the finished building. It draws
+            on knowledge from past projects and runs simulations guided by the
+            project team to compare different ways to get there.
+          </p>
+          <p>
+            The master plan breaks down into smaller plans, each with its own
+            objective. Those plans break down further until a crew has a specific
+            task it can carry out. As crews learn what works on site, their
+            findings feed back into the simulations so the team can refine the plan
+            for the whole development.
+          </p>
+          <div class="actions">
+            <a class="button" href="map.html#shared-map">Start with the 11-step process →</a>
+            <a class="under" href="capabilities/construction-simulation.html">See how Aura Pro simulates a whole building project →</a>
+          </div>
+        </div>
+        <figure class="field">
+          <img
+            class="site-image"
+            src="assets/field.webp"
+            alt="Illustration of mechanical services on an unfinished tower floor"
+          />
+          <div class="inset">
+            <img
+              src="assets/drawing.webp"
+              alt="Illustrated coordination drawing of the same floor"
+            />
+          </div>
+          <figcaption>
+            Field condition <span>↔</span> Coordinated design
+          </figcaption>
+        </figure>
+      </div>
+      <section class="browse" id="chapters" aria-labelledby="chapters-title">
+        <div class="directory-head">
+          <h2 id="chapters-title">All handbook chapters</h2>
+          <div class="chapter-filter" hidden>
+            <label for="chapter-query">Find a chapter or section</label>
+            <input id="chapter-query" type="search" autocomplete="off" placeholder="Try crew availability, delays, or car wash" />
+          </div>
+        </div>
+        <p id="chapter-status" role="status"></p>
+        <div class="directory">
+            <section class="chapter-group">
+              <h3>How Aura Pro works</h3>
+              <ul>
+                <li><a href="index.html">Introduction</a><p>The same platform for a DIY repair and a major development.</p></li>
+                <li><a href="map.html#shared-map">The 11-step process</a><p>The cognitive map from objective and discovery through execution and learning.</p></li>
+                <li><a href="map.html#tower-decision">Follow one tower decision</a><p>From a field measurement to an approved change and an opening date.</p></li>
+              </ul>
+            </section>
+            <section class="chapter-group">
+              <h3>Construction and technology</h3>
+              <ul>
+                <li><a href="capabilities/construction-simulation.html">Whole-building simulation proposal with NVIDIA</a><p>Model construction from current site conditions through occupancy, using prior projects to compare labor, logistics, and weather across build sequences.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="construction project delays delayed schedule slippage bottlenecks disruptions risks permits shortages uncertainty" hidden><a href="capabilities/construction-simulation.html#scope">What can change the outcome</a><p>See how permits, suppliers, weather, and shared resources can change the building’s schedule.</p></li>
+                    <li data-section data-keywords="labor labour laborers crews staffing available workers crew availability shortages short-staffed understaffed shifts overtime absences delivery deliveries delays delayed trucks unloading queues trade stacking" hidden><a href="capabilities/construction-simulation.html#crews">How labor and physical logistics interact</a><p>The concrete crew and trucks are on site. The pour has to wait because the shift’s only qualified pump operator is absent.</p></li>
+                    <li data-section data-keywords="cranes crane booking clearance lift lifting frame opening dates occupancy schedule delay delays commissioning tests" hidden><a href="capabilities/construction-simulation.html#tower">One tower, two opening dates</a><p>Follow the crane booking and field clearance check through to October 1 or October 22.</p></li>
+                    <li data-section data-keywords="historical data database past projects previous projects prior projects records training models initial state" hidden><a href="capabilities/construction-simulation.html#history">How previous projects shape the next one</a><p>Use records from comparable jobs to estimate production rates and identify what to check on this site.</p></li>
+                    <li data-section data-keywords="NVIDIA tools GPU Omniverse OpenUSD RTX PhysX Warp cuOpt Earth-2 PhysicsNeMo DeepStream Isaac Sim Cosmos RAPIDS DSX" hidden><a href="capabilities/construction-simulation.html#nvidia">Where NVIDIA fits</a><p>Which tools can check a lift route, sequence deliveries, or test weather-sensitive work?</p></li>
+                  </ul>
+                </li>
+                <li><a href="tech-stack.html">Tech stack</a><p>Where Procore, Raken, Sage, and Aura Pro fit today and as functions move.</p></li>
+                <li><a href="capabilities/integration.html">Construction tools and integration</a><p>How project records and decisions move between systems.</p></li>
+                <li><a href="capabilities/integration.html#concrete-estimate">North Lex to Galleria estimate</a><p>Use quantities and crew hours from one job to estimate another.</p></li>
+              </ul>
+            </section>
+            <section class="chapter-group">
+              <h3>Examples</h3>
+              <ul>
+                <li><a href="patterns/index.html">Compare the seven examples</a><p>See where the reasoning patterns overlap and where they differ.</p></li>
+                <li><a href="patterns/restoration.html">Clogged sink</a><p>Check whether a repair worked.</p></li>
+                <li><a href="patterns/goal-discovery.html">’67 Chevy</a><p>Revise the goal when a discovery changes what matters.</p></li>
+                <li><a href="patterns/design.html">Attached garage</a><p>Trace what moving a door changes elsewhere.</p></li>
+                <li><a href="patterns/analogy.html">Duplex portfolio</a><p>Use repair histories to spot a recurring failure.</p></li>
+                <li><a href="patterns/invention.html">Iron Man suit</a><p>Choose a prototype that tests an idea.</p></li>
+                <li><a href="patterns/operations.html">Car wash</a><p>Keep daily work moving while handling exceptions.</p></li>
+                <li><a href="patterns/hierarchical-planning.html">Billion-dollar skyscraper</a><p>Find the one field check that can change opening day.</p></li>
+              </ul>
+            </section>
+            <section class="chapter-group">
+              <h3>System capabilities</h3>
+              <ul>
+                <li><a href="capabilities/index.html">Overview of the ten capabilities</a><p>How the platform supports decisions, fieldwork, and follow-up.</p></li>
+                <li><a href="capabilities/intent-authority.html">Intent and authority</a><p>Who sets the objective, commits money, and releases the crew?</p></li>
+                <li><a href="capabilities/evidence.html">Field observation and evidence</a><p>What should the team do when measurements and drawings disagree?</p></li>
+                <li><a href="capabilities/world-model.html">Project and asset model</a><p>What exists on site, where is it, and what depends on it?</p></li>
+                <li><a href="capabilities/inquiry.html">Reasoning and inquiry</a><p>Which question is worth investigating next?</p></li>
+                <li><a href="capabilities/planning.html">General planning and simulation</a><p>How Aura Pro compares ways to carry out any job and tests the assumption that could change the choice.</p></li>
+                <li><a href="capabilities/logistics.html">Resources and logistics</a><p>When will people, materials, equipment, and access coincide?</p></li>
+                <li><a href="capabilities/execution.html">Work coordination and execution</a><p>How does an approved decision reach the person doing the work?</p></li>
+                <li><a href="capabilities/verification.html">Verification and acceptance</a><p>Who checks the result and what does that check settle?</p></li>
+                <li><a href="capabilities/learning.html">Project memory and learning</a><p>What can the next job learn from this one?</p></li>
+                <li><a href="capabilities/interfaces.html">Human and agent interfaces</a><p>What does each participant need to see and do?</p></li>
+              </ul>
+            </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Aura Pro product and architecture handbook"
+      name="description"
+    />
+    <title>Human and agent interfaces · Aura Pro</title>
+    <link href="../assets/handbook.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html#shared-map">11-step process</a>
+          <a href="../patterns/index.html">Examples</a>
+          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
+          <a href="construction-simulation.html">Construction simulation</a>
+          <a href="../tech-stack.html">Tech stack</a>
+          <a href="../index.html#chapters">All chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Human and agent interfaces</b></nav>
+      <div class="paperhead">
+        <h1>Human and agent interfaces</h1>
+        <p>
+          Give each participant the information and actions appropriate to their
+          role.
+        </p>
+      </div>
+      <div class="layout">
+        <aside>
+          <nav aria-label="On this page" class="contents">
+            <strong>On this page</strong
+            ><a href="#responsibility">Inputs and outputs</a
+            ><a href="#approach">Approach</a
+            ><a href="#execution">How it works</a
+            ><a href="#technology-stack">Technology choices</a
+            ><a href="#ownership">Integration and native ownership</a
+            ><a href="#patterns">Where this capability is used</a
+            ><a href="#connections">Connected capabilities</a>
+          </nav>
+        </aside>
+        <article>
+          <section class="article-section" id="responsibility">
+            <h2>Inputs and outputs</h2>
+            <dl class="io">
+              <dt>Inputs</dt>
+              <dd>
+                The participant’s question, work context, permissions, and
+                evidence available at the time.
+              </dd>
+              <dt>Expected output</dt>
+              <dd>
+                A useful next action, a source-backed answer, or a request
+                delivered to the authorized decision maker.
+              </dd>
+            </dl>
+          </section>
+          <div class="related" id="analysis">
+            <h3>Across the architecture</h3>
+            <a href="integration.html"
+              >Construction tools, data ownership, and migration ↗</a
+            >
+          </div>
+          <section class="article-section" id="approach">
+            <h2>Approach</h2>
+            <p>
+              Present the next decision in the place the responsible person
+              already works. Give a worker the instruction and check, an owner
+              the alternatives and authority request, and an analyst the sources
+              and uncertainty. The same scoped service contracts can support a
+              human interface or an authorized software agent.
+            </p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>How it works</h2>
+            <p>
+              A foreman follows a link from a project issue to the current lift
+              instruction. The link resolves the user's present rights and the
+              latest revision. The owner's decision view includes options, cost,
+              source documents, and the commitment being requested. An agent can
+              draft a proposed change or retrieve an authorized record;
+              consequential commands use the same authority checks as the human
+              path.
+            </p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>Technology choices</h2>
+            <p>
+              Use the existing React/TypeScript/TanStack interface. Expose
+              versioned JSON contracts for queries, drafts, and commands.
+              Deep-link to Procore records where users already have
+              accounts. Portable alternatives include a responsive standalone
+              portal, reviewed PDF packets, and a documented HTTP API. Each
+              connector maps client identities to scoped Aura Pro
+              participants.
+              <a
+                href="https://developers.procore.com/documentation/content/payload-formats"
+                >Procore webhook behavior</a
+              >
+            </p>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>Integration and native ownership</h2>
+            <p>
+              Let the client keep its familiar entry points while Aura Pro supplies cross-tool context. Adopt native role-specific
+              workspaces where people benefit from fewer handoffs. Test a
+              revoked link, a participant with access to only one work package,
+              and an agent retrying a submitted command. An accessible link must
+              never imply authority to approve.
+            </p>
+          </section>
+          <section class="article-section" id="patterns">
+            <h2>Where this capability is used</h2>
+            <div class="entries">
+              <a class="entry" href="../patterns/restoration.html"
+                ><div>
+                  <h3>Restoration and verification</h3>
+                  <p>When can you stop?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/goal-discovery.html"
+                ><div>
+                  <h3>Goal discovery and revision</h3>
+                  <p>What is worth preserving?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="../patterns/operations.html"
+                ><div>
+                  <h3>Continuous operations and exception handling</h3>
+                  <p>What needs attention now?</p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <section class="article-section" id="connections">
+            <h2>Connected capabilities</h2>
+            <div class="entries">
+              <a class="entry" href="intent-authority.html"
+                ><div>
+                  <h3>Intent and authority</h3>
+                  <p>
+                    Define the desired result, the decisions people retain, and
+                    the work they delegate.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              ><a class="entry" href="inquiry.html"
+                ><div>
+                  <h3>Reasoning and inquiry</h3>
+                  <p>
+                    Choose which question deserves attention and which method
+                    can answer it.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </section>
+          <div class="related">
+            <h3>Continue through the capabilities</h3>
+            <a href="index.html">System capabilities →</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap foot">
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <a href="../index.html#chapters">All handbook chapters ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

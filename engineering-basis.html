@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A reproducible Aura Pro engineering example connecting air-handler compatibility, installation resources, testing, and occupancy, with explicit evidence and assumptions.">
+    <title>Engineering basis · Aura Pro</title>
+    <link rel="stylesheet" href="assets/handbook.css">
+  <script src="assets/reading.js" defer></script></head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast"><div class="bar">
+      <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+      <nav aria-label="Handbook">
+        <a href="map.html">Mission Logic</a><a href="patterns/index.html">Examples</a><a href="capabilities/index.html">Capabilities</a><a href="system-architecture.html">Architecture</a><a href="business-management.html">Business management</a><a href="capabilities/construction-simulation.html">Simulation</a><a href="tech-stack.html">Tech stack</a><a href="index.html#chapters">All chapters</a></nav>
+    </div></header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <a href="architecture-reference.html#engineering-basis">System architecture</a> <span aria-hidden="true">/</span> <b aria-current="page">Engineering basis</b></nav>
+      <nav class="reading-position" aria-label="Reading position"><span>Worked example</span><a href="index.html#reading-path">Reading path</a><a href="index.html#explore">Deeper routes</a></nav><div class="paperhead"><h1>Engineering basis</h1><p>Connect what must work to the configuration, calculation, people, and evidence that establish it.</p><p>This example makes one path inspectable: a compatible replacement permits installation, the resource calculation establishes test readiness, and the testing calendar constrains occupancy.</p><div class="case-note"><strong>Case: reference calculation for the component recovery</strong><p>Continue the week-numbered development’s damaged-component branch. The calculation checks one conditional path and is distinct from the October 1 / October 22 access decision.</p></div></div>
+      <div class="layout">
+        <aside><nav class="contents" aria-label="On this page">
+          <strong>On this page</strong><a href="#example-choice">Why use the air handler?</a><a href="#basis">Scope and evidence status</a><a href="#compatibility">Calculate compatibility</a><a href="#installation">Calculate installation readiness</a><a href="#occupancy">Calculate testing and occupancy</a><a href="#proof">What the evidence establishes</a><a href="#change">When the basis changes</a>
+        </nav></aside>
+        <article>
+          <section class="article-section" id="example-choice">
+            <h2>Why use the air handler?</h2>
+            <p>The air handler is a useful common example because one equipment choice connects mechanical performance, physical access, electrical and controls interfaces, procurement, shared resources, and building use. Keeping the same asset lets the reader inspect the engineering behind the <a href="capabilities/work-package-model.html">procurement decision</a> and <a href="capabilities/logistics.html#air-handler">logistics recovery</a> without learning another project.</p>
+            <p>Each view has a different job. The introductory October tower explains a decision and its people. The week-numbered development compares equipment strategies. Logistics follows material and resources through damage and recovery. This page calculates one conditional path. It continues the week-numbered sectional strategy; its numbers do not modify the separate October example.</p>
+            <p>The air handler does not demonstrate every engineering demand. An attached garage is better for structural load paths and changes to drainage; a concrete floor would better expose strength developing with time and temporary support. The seven examples remain necessary. The air handler is the worked connection across disciplines, not a universal model of all construction.</p>
+          </section>
+          <section class="article-section" id="basis">
+            <h2>Scope and evidence status</h2>
+            <p><strong>All quantities, durations, supplier capabilities, and test readings on this page are illustrative inputs, not measurements from an actual building or an executed simulation.</strong> The arithmetic and schedule below are reproducible from those inputs. Calculating an answer does not verify that the inputs describe a real project.</p>
+            <p>The selected sectional air handler contains modules M1–M4. M3 has a damaged coil cassette. This calculation evaluates the compatible replacement-cassette branch after the team has chosen it conditionally. The real need is usable occupied space. A design airflow requirement is one derived condition of that need; airflow alone cannot establish temperature control, air distribution, required outside air, or complete occupancy readiness.</p>
+            <p>AP retains the following basis with the calculation:</p>
+            <ul>
+              <li><strong>Configuration:</strong> the selected fan, replacement cassette, filters, assembled casing, duct layout, control settings, and design air conditions. Sources would be the identified supplier selection, issued design, field configuration, and accepted revisions.</li>
+              <li><strong>Interface prerequisites:</strong> compatible dimensions and connections, accepted supports and handling route, electrical supply and motor/drive capability, coil fluid conditions and thermal duty, and the required controls sequence. These are assumed satisfied for this worked path; the pressure calculation does not prove them.</li>
+              <li><strong>Calendar:</strong> five working days per week, eight productive hours per assigned worker per day, no holidays or overtime. Day 1 is Monday of week 10; day 5 ends week 10, day 20 ends week 13, and day 25 ends week 14.</li>
+              <li><strong>Authority:</strong> the design reviewer accepts technical compatibility, the commercial decision-maker commits the approved expense, and the superintendent releases ready work. The commissioning lead accepts test readiness. AP supplies the linked comparison and checks.</li>
+            </ul>
+            <p>In live use, every assumed input keeps an owner and required evidence. A qualified source can support an engineering conclusion without turning a future delivery or test into an observed result. Conditional recommendations remain visibly conditional.</p>
+          </section>
+          <section class="article-section" id="compatibility">
+            <h2>Calculate compatibility at the required airflow</h2>
+            <p>Assume a design requirement of <strong>5.0 m³/s</strong> at the specified design air conditions. The following pressures use the same total-pressure basis and airflow. Losses follow the governing air path; losses from parallel branches are not simply added together. The filter allowance represents the stated design loading condition, not just a clean filter.</p>
+            <div class="table-scroll" role="region" tabindex="0" aria-label="Illustrative airflow pressure budget"><table>
+              <thead><tr><th scope="col">Input at 5.0 m³/s</th><th scope="col">Assumed value</th><th scope="col">Evidence needed on a project</th></tr></thead>
+              <tbody>
+                <tr><td>Compatible replacement cassette loss</td><td>250 Pa</td><td>Applicable supplier performance data for the actual cassette and air conditions.</td></tr>
+                <tr><td>Filters and other internal losses, excluding the cassette</td><td>150 Pa</td><td>Configuration-specific selection covering the stated filter condition and internal components.</td></tr>
+                <tr><td>External system pressure requirement</td><td>350 Pa</td><td>Reviewed duct/network calculation including terminals, fittings, relevant boundary conditions, and installation effects.</td></tr>
+                <tr><td>Fan pressure available at the maximum permitted selected speed</td><td>850 Pa</td><td>Applicable fan curve at the same airflow and air density, with motor, drive, stability, and speed limits checked.</td></tr>
+              </tbody>
+            </table></div>
+            <p><strong>Required pressure = 250 + 150 + 350 = 750 Pa.</strong><br><strong>Nominal pressure margin = 850 − 750 = 100 Pa.</strong></p>
+            <p>The selected fan has enough nominal pressure capability at the target airflow under these assumptions. Variable-speed control is assumed capable of establishing a stable operating point at that airflow. The 850-Pa curve point is available capability, not a claim that the installed system will operate at both 5.0 m³/s and 850 Pa. The actual operating point depends on the fan and system characteristics and control setting. <a href="https://www.energy.gov/sites/prod/files/2014/05/f16/fan_sourcebook.pdf">DOE/AMCA fan-system reference</a>.</p>
+            <p>Consider a dimensionally interchangeable cassette with a <strong>380-Pa</strong> loss instead. The requirement becomes <strong>380 + 150 + 350 = 880 Pa</strong>; the margin becomes <strong>850 − 880 = −30 Pa</strong>. That candidate fails this pressure-budget check at the permitted selected speed. AP returns it to the design reviewer to consider another cassette or a qualified system change. It does not assume a higher fan speed or declare every possible redesign impossible.</p>
+            <p>The positive 100-Pa margin is nominal. No uncertainty bounds are supplied here, so it is not a quantified assurance or a hidden safety factor. Source tolerances, system-model error, and operating variation must be assessed before relying on that margin. This check also leaves thermal capacity, acoustic performance, electrical compatibility, control behavior, branch distribution, and other stated requirements to their applicable analyses and tests.</p>
+          </section>
+          <section class="article-section" id="installation">
+            <h2>Calculate installation readiness from work and resources</h2>
+            <p>For this path, the compatible cassette arrives before work starts on day 1. Two qualified service technicians require 48 labor-hours for replacement: <strong>48 ÷ (2 × 8) = 3 working days</strong>. They work days 1–3. The required inspection and acceptance occupy days 4–5, including the checker's reserved time. Successful acceptance releases M3 at the end of day 5. These are assumed method durations and first-pass results.</p>
+            <p>The installer foreman uses the wait for independently released positioning and support work, then the ready duct-support work described in Logistics. These activities and their labor remain separate from the dependent effort below. The calculation assumes those prerequisites are complete by day 5 and that the assembly area, material kits, handling resources, and manufacturer attendance are available at their required times.</p>
+            <p>The remaining dependent work uses the following explicitly assumed effort and calendars. Crew size is held fixed; dividing effort by crew-hours is valid here only because the example assumes that crew composition can perform the method at that rate. It is not a rule that doubling any crew halves a task.</p>
+            <div class="table-scroll" role="region" tabindex="0" aria-label="Resource-constrained air handler installation calculation"><table>
+              <thead><tr><th scope="col">Work and prerequisite</th><th scope="col">Resource and duration calculation</th><th scope="col">Scheduled interval</th></tr></thead>
+              <tbody>
+                <tr><td>A. Join, align, and complete module assembly after M3 and the workface are released</td><td>Four installers; 320 labor-hours ÷ 32 labor-hours/day = 10 days</td><td>Days 6–15; complete at end of week 12</td></tr>
+                <tr><td>B. Mechanical connections and associated completion work after A</td><td>The same four installers; 256 ÷ 32 = 8 days</td><td>Days 16–23</td></tr>
+                <tr><td>C. Electrical connections after A</td><td>Two electricians; 64 ÷ 16 = 4 days</td><td>Days 16–19, concurrent with B in separately usable work areas</td></tr>
+                <tr><td>D. Controls setup after C</td><td>Two controls technicians; 48 ÷ 16 = 3 days</td><td>Days 20–22, concurrent with the remaining B work</td></tr>
+                <tr><td>E. Pre-functional checks and installation acceptance after B and D</td><td>Two elapsed working days, with the commissioning lead and required trade attendance reserved</td><td>Days 24–25; complete at end of week 14</td></tr>
+              </tbody>
+            </table></div>
+            <p>Using end-of-day completion numbers, with a successor starting the next working day:</p>
+            <p><strong>A = 5 + 10 = 15</strong><br><strong>B = 15 + 8 = 23</strong><br><strong>C = 15 + 4 = 19</strong><br><strong>D = 19 + 3 = 22</strong><br><strong>E = max(23, 22) + 2 = 25.</strong></p>
+            <p>The installation forecast is therefore the end of day 25, not the sum of every trade’s duration. Electrical and controls work overlap the mechanical connections under the stated work-area assumption. The four installers perform <strong>320 + 256 = 576 labor-hours</strong> on A and B and are never assigned to both simultaneously. Service, independent preparation, inspection, manufacturer attendance, and check attendance are additional resource records; 576 is not the total package labor or a cost estimate.</p>
+            <p>Without the damage, assuming the same dependent effort and all its prerequisites available before day 1, the chain is <strong>10 + max(8, 4 + 3) + 2 = 20 working days</strong>, finishing at the end of week 13. The five-day release delay moves this chain to day 25 and consumes the week-14 recovery margin. Different remaining work or a different method requires a new calculation; these durations do not calculate the whole-module replacement alternative.</p>
+            <p>The installer team is consequently unavailable for its other-floor assignment in week 14. For this worked path, that assignment requires 160 labor-hours. A separately confirmed four-person team supplies <strong>4 × 8 × 5 = 160 labor-hours</strong> during days 21–25. AP checks that team's qualifications, current commitments, and the other floor’s readiness. Without that capacity, the other-floor completion must be recalculated; the air-handler result cannot quietly borrow those hours. The additional team cost remains part of the recovery decision.</p>
+          </section>
+          <section class="article-section" id="occupancy">
+            <h2>Calculate testing and occupancy from readiness and bookings</h2>
+            <p>The reserved integrated ventilation test sequence occupies <strong>days 26–35: weeks 15–16</strong>. It requires complete readiness before day 26 begins. Installation acceptance E is one prerequisite. The reference plan also requires permanent utilities by day 15, electrical/controls interfaces outside this package by day 25, and the applicable independent prerequisite checks by day 25. Their successful completion is assumed here, not derived from the installation effort.</p>
+            <p><strong>Test readiness = max(installation 25, utilities 15, external interfaces 25, prerequisite checks 25) = end of day 25.</strong> The installation just meets the booked start; it has no whole working day of remaining margin. External interfaces and prerequisite checks also sit at that boundary and can independently cause a miss.</p>
+            <p>On the successful-test branch, integrated testing finishes at the end of day 35. Training, handover, final review, and required permissions use the reserved week-17 window, days 36–40. Occupied areas and access are assumed ready by day 35. Provided every acceptance condition passes, the earliest modeled occupancy is <strong>day 41, the start of week 18</strong>. These are calendar and acceptance assumptions, not a legal rule or a guarantee that a review takes five days.</p>
+            <p>Now delay M3 release by one working day while holding the remaining work, resources, and method fixed. A, B, C, D, and E finish on days <strong>16, 24, 20, 23, and 26</strong>. E finishes after the day-26 test start. The complete ten-day sequence cannot fit the remaining nine days of the booked block under its assumed indivisible arrangement.</p>
+            <p>If the next suitable block can be secured for <strong>days 46–55, weeks 19–20</strong>, successful testing and a corresponding days-56–60 acceptance window would support occupancy on <strong>day 61, week 22</strong>. The one-day installation slip can therefore cause a four-week occupancy shift in this calendar. That is a conditional consequence of the booking gap, not a universal delay multiplier. Another qualified testing arrangement, revised method, failed test, or later prerequisite changes the result.</p>
+            <p>AP reports the threatened booking to the superintendent and commissioning lead before the last useful rebooking or recovery decision time. The team can change the method or seek another arrangement. AP recalculates the linked resources, cost, cash, and portfolio effects; it does not silently shorten a test or issue new work instructions.</p>
+          </section>
+          <section class="article-section" id="proof">
+            <h2>What the evidence proves and what remains assumed</h2>
+            <div class="table-scroll" role="region" tabindex="0" aria-label="Evidence and limits of the engineering calculation"><table>
+              <thead><tr><th scope="col">Result or source</th><th scope="col">What it establishes</th><th scope="col">What it does not establish</th></tr></thead>
+              <tbody>
+                <tr><td>Pressure-budget arithmetic</td><td>The compatible cassette leaves 100 Pa nominal margin under the stated inputs; the 380-Pa candidate does not pass this selected configuration’s check.</td><td>Actual supplier performance, installed airflow, thermal duty, stability, or an uncertainty allowance.</td></tr>
+                <tr><td>Supplier configuration and applicable curve, when obtained and checked</td><td>The documented characteristics for the identified equipment and conditions.</td><td>That the delivered item matches, that the installation matches the model, or that the whole system performs.</td></tr>
+                <tr><td>Receiving and replacement inspection, when performed</td><td>Identity, condition, workmanship, and acceptance within the specified inspection scope.</td><td>All integrated ventilation requirements or future seasonal performance.</td></tr>
+                <tr><td>Effort and calendar calculation</td><td>Day-25 readiness and conditional week-18 occupancy follow from the listed durations, prerequisites, resource availability, bookings, and successful checks.</td><td>That those rates are achievable here, the bookings will be honored, or checks will pass.</td></tr>
+                <tr><td>Integrated test record, when performed</td><td>Performance against its explicit criteria in the tested configuration and operating conditions.</td><td>Untested conditions, unrelated building requirements, or permission to occupy by itself.</td></tr>
+              </tbody>
+            </table></div>
+            <p>For a concrete illustration of scoped acceptance, suppose the project’s airflow criterion is <strong>5.0 m³/s ±5%</strong>, giving <strong>4.75–5.25 m³/s</strong>. A hypothetical test result of <strong>4.95 m³/s with an assessed ±0.10 m³/s bound</strong> spans <strong>4.85–5.05 m³/s</strong>. If the agreed acceptance rule requires the full assessed interval to lie within the limits, that result passes the airflow criterion. The tolerance, reading, bound, and rule are example assumptions—not measured evidence or a general testing standard. If the interval crossed a limit, that rule would leave acceptance unresolved pending a better check or disposition.</p>
+            <p>The checker records the instruments, method, uncertainty basis, control state, configuration, air conditions, and criterion revision. Thermal duty, distribution, other operating modes, and integrated controls retain their own checks. The commissioning lead accepts the supported scope; the owner and relevant issuers retain the separate final acceptance decisions. In operation, seasonal measurements may test conditions that commissioning could not reproduce.</p>
+            <p>Model credibility is specific to its use. Check the arithmetic and calendar implementation, compare production and performance predictions with independent observations, and assess whether plausible errors change the decision. The structure follows the distinction between model credibility and product verification/validation described in <a href="https://standards.nasa.gov/standard/nasa/nasa-std-7009">NASA’s models and simulations standard</a> and <a href="https://www.nasa.gov/reference/5-0-product-realization/">systems engineering guidance</a>. Those references do not validate these illustrative inputs.</p>
+          </section>
+          <section class="article-section" id="change">
+            <h2>When the engineering basis changes</h2>
+            <p><a href="simulation-execution.html">From this reference calculation to a dynamic simulation →</a> Keep this deterministic case as a reproducible check. The car-wash experiment shows events, interruptions, information delays, and human responses; the whole-development model applies those rules to uncertain readiness and shared resources.</p>
+            <p>A new cassette revision reopens the affected compatibility checks. A changed duct route reopens the pressure calculation and possibly the installation method. A late acceptance moves the remaining resource schedule. A failed control sequence creates corrective work and changes test readiness. AP follows the relevant relationships rather than invalidating everything or preserving a result after its basis has changed.</p>
+            <p>The engineering reviewer identifies what the evidence supports and what requires another calculation or test. The planner and resource owners revise the affected forecast; the authorized people decide on commitments and work release. Each result retains its input snapshot, assumptions, configuration, model version, and reviewer so the next person can reproduce the reasoning.</p>
+            <p>Observed effort, waiting, inspections, and operating performance return to <a href="capabilities/learning.html#dashboard">Learning</a>. AP and the team compare predictions with what happened, investigate the cause of differences, and identify which model or practice should change. Finishing in week 18 would establish the selected path’s outcome; it would not establish what the unchosen alternatives would have achieved.</p>
+          </section>
+          <div class="related"><h3>From a reference calculation to a dynamic experiment</h3><a href="simulation-execution.html">Next in the simulation reference: Simulation execution and experiments →</a><a href="capabilities/logistics.html">Worked example: Physical flow and recovery ↗</a><a href="system-architecture.html">Return to: System architecture ↗</a></div></article>
+      </div>
+    </main>
+    <footer><div class="wrap foot"><span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span><a href="index.html#chapters">All handbook chapters ↑</a></div></footer>
+  </body>
+</html>

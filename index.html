@@ -1,43 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Aura Pro product and architecture handbook"
-    />
-    <title>Introduction · Aura Pro</title>
-    <link rel="stylesheet" href="assets/handbook.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aura Pro product and architecture handbook">
+    <title>Aura Pro handbook · Version 3</title>
+    <link rel="stylesheet" href="assets/handbook.css">
     <script src="assets/chapters.js" defer></script>
-  </head>
+  <script src="assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="map.html#shared-map">11-step process</a>
-          <a href="patterns/index.html">Examples</a>
-          <a href="capabilities/index.html">Capabilities</a>
-          <a href="capabilities/construction-simulation.html">Construction simulation</a>
-          <a href="tech-stack.html">Tech stack</a>
-          <a href="#chapters">All chapters</a>
-        </nav>
+          <a href="map.html">Mission Logic</a><a href="patterns/index.html">Examples</a><a href="capabilities/index.html">Capabilities</a><a href="system-architecture.html">Architecture</a><a href="business-management.html">Business management</a><a href="capabilities/construction-simulation.html">Simulation</a><a href="tech-stack.html">Tech stack</a><a href="index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main id="main" class="wrap">
-      <div class="front">
+      <nav class="reading-position" aria-label="Reading position"><span>Main reading path · 1 of 7 · Introduction</span><a href="index.html#reading-path">Reading path</a><a href="index.html#explore">Deeper routes</a></nav><div class="front">
         <div class="front-copy">
           <div class="label">
-            <span class="rule"></span> Product &amp; architecture handbook
+            <span class="rule"></span> Product &amp; architecture handbook · Version 3
           </div>
           <h1>Aura Pro</h1>
           <p class="lead">
             Get stuff done.
           </p>
           <p>
-            Aura Pro is a platform for turning a real-world objective into a
+            Aura Pro (AP) is a platform for turning a real-world objective into a
             plan and guiding the work through to completion. For a small DIY task
             like fixing a clogged sink, it offers step-by-step guidance.
           </p>
@@ -55,49 +46,174 @@
             for the whole development.
           </p>
           <div class="actions">
-            <a class="button" href="map.html#shared-map">Start with the 11-step process →</a>
+            <a class="button" href="map.html">Start with Mission Logic →</a>
+            <a class="under" href="system-architecture.html">See how the system fits together →</a>
+          </div>
+          <div class="actions">
+            <strong>Shortcuts:</strong>
             <a class="under" href="capabilities/construction-simulation.html">See how Aura Pro simulates a whole building project →</a>
+            <a class="under" href="capabilities/telemetry.html">Telemetry — Eyes and Ears →</a>
+            <a class="under" href="capabilities/learning.html">Project memory and learning →</a>
           </div>
         </div>
         <figure class="field">
-          <img
-            class="site-image"
-            src="assets/field.webp"
-            alt="Illustration of mechanical services on an unfinished tower floor"
-          />
+          <img class="site-image" src="assets/field.webp" alt="Illustration of mechanical services on an unfinished tower floor">
           <div class="inset">
-            <img
-              src="assets/drawing.webp"
-              alt="Illustrated coordination drawing of the same floor"
-            />
+            <img src="assets/drawing.webp" alt="Illustrated coordination drawing of the same floor">
           </div>
           <figcaption>
             Field condition <span>↔</span> Coordinated design
           </figcaption>
         </figure>
       </div>
-      <section class="browse" id="chapters" aria-labelledby="chapters-title">
+      <section class="browse" id="reading-path" aria-labelledby="reading-path-title">
+<h2 id="reading-path-title">Read the whole idea first</h2>
+<p>Follow this path for the complete explanation. Each chapter points to worked examples and technical detail when a closer look is useful. The seven full examples and the reference library remain available without making every detail part of a first reading.</p>
+<ol class="reading-list">
+<li><a href="map.html">Mission Logic</a> — how people and AP approach a problem, through eleven steps and one tower decision.</li>
+<li><a href="patterns/index.html">Seven examples</a> — the different kinds of reasoning, from restoring a function to inventing a method.</li>
+<li><a href="capabilities/index.html">Capabilities working together</a> — what the platform contributes at each exchange.</li>
+<li><a href="system-architecture.html">System architecture</a> — how evidence, calculations, decisions and memory stay connected.</li>
+<li><a href="business-management.html#value-in-practice">Business management</a> — whose objectives matter, who benefits and what AP contributes.</li>
+<li><a href="tech-stack.html#adoption-overview">Working with existing tools</a> — how the client retains control and moves functions when ready.</li>
+</ol>
+<p><strong>Link key:</strong> <b>Next</b> advances the main reading path. <b>Worked example</b> explores a case. <b>Technical detail</b> opens the supporting explanation. <b>Return to</b> resumes the overview. Within a specialist series, links name that series explicitly.</p>
+</section><section class="browse" id="explore" aria-labelledby="explore-title">
+<h2 id="explore-title">Choose a deeper reading route</h2>
+<div class="route-grid">
+<div><h3>Understand the product</h3><p><a href="map.html#tower-decision">Follow the team’s experience</a>, then explore <a href="patterns/index.html">the seven examples</a> and <a href="business-management.html#value">how its contribution is measured</a>.</p></div>
+<div><h3>Design the system</h3><p>Start with <a href="architecture-reference.html">the shared model and contracts</a>, then <a href="ai-reasoning.html">AI reasoning</a> and <a href="capabilities/index.html#direction">the capability references</a>.</p></div>
+<div><h3>Study simulation</h3><p>Follow <a href="capabilities/work-package-model.html">the whole-development strategy</a>, <a href="engineering-basis.html">the reference calculation</a>, <a href="simulation-execution.html">the dynamic experiment</a>, and <a href="capabilities/construction-simulation.html#engine">the whole-project engine</a>.</p></div>
+<div><h3>Explore construction integration</h3><p>Read <a href="tech-stack.html">the tech stack</a>, <a href="capabilities/integration.html">record handoffs</a>, and <a href="capabilities/integration.html#concrete-estimate">estimating from past projects</a>. <a href="capabilities/construction-simulation.html#nvidia">NVIDIA tools</a> support selected calculations within that architecture.</p></div>
+</div>
+</section><section class="browse" id="chapters" aria-labelledby="chapters-title">
         <div class="directory-head">
           <h2 id="chapters-title">All handbook chapters</h2>
           <div class="chapter-filter" hidden>
             <label for="chapter-query">Find a chapter or section</label>
-            <input id="chapter-query" type="search" autocomplete="off" placeholder="Try crew availability, delays, or car wash" />
+            <input id="chapter-query" type="search" autocomplete="off" placeholder="Try crew availability, delays, or car wash">
           </div>
         </div>
         <p id="chapter-status" role="status"></p>
         <div class="directory">
-            <section class="chapter-group">
-              <h3>How Aura Pro works</h3>
-              <ul>
-                <li><a href="index.html">Introduction</a><p>The same platform for a DIY repair and a major development.</p></li>
-                <li><a href="map.html#shared-map">The 11-step process</a><p>The cognitive map from objective and discovery through execution and learning.</p></li>
+            <section class="chapter-group" id="directory-start"><h3>Start here</h3><p>The introduction, the process and one worked decision establish how Aura Pro works.</p><ul><li><a href="index.html">Introduction</a><p>The same platform for a DIY repair and a major development.</p></li>
+                <li><a href="map.html">Mission Logic</a><p>How people and AP reason, act, and learn together. Start with the eleven steps and one tower decision; explore the deeper reasoning when needed.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="human in the loop human-in-the-loop collaboration empowerment team simulations expertise" hidden><a href="map.html#human-partnership">People and AP reason together</a><p>People shape the need, develop alternatives, guide simulations, interpret results, and learn throughout the process.</p></li>
+                    <li data-section data-keywords="mission logic deeper reasoning judgment reference decisions" hidden><a href="map.html#deeper-reasoning">How people and AP choose the next move</a><p>Explore the judgments behind the steps, including which questions to pursue and how to organize an inquiry.</p></li>
+                    <li data-section data-keywords="11 steps sequence process objective discovery execution learning" hidden><a href="map.html#shared-map">The 11-step process</a><p>Follow the full sequence, including where work can enter or skip ahead.</p></li>
+                    <li data-section data-keywords="Mission Logic diagram flowchart finding response next actor agreed action discovery" hidden><a href="map.html#result">Who acts on a result?</a><p>See the shared diagram: what a finding settles, who acts next, and which questions reopen.</p></li>
+                    <li data-section data-keywords="investigate act wait stop reasoning choice attention" hidden><a href="map.html#choose-the-next-move">Choose the next move</a><p>Decide whether another check, an action, waiting, or stopping serves the objective.</p></li>
+                    <li data-section data-keywords="nest nesting switch switching reframe reframing methods parent child questions" hidden><a href="map.html#manage-the-question-while-choosing-a-method">Manage the question while choosing a method</a><p>Distinguish continuing, switching methods, nesting a question, and reframing the goal.</p></li>
+                  </ul>
+                </li>
                 <li><a href="map.html#tower-decision">Follow one tower decision</a><p>From a field measurement to an approved change and an opening date.</p></li>
-              </ul>
-            </section>
-            <section class="chapter-group">
-              <h3>Construction and technology</h3>
-              <ul>
-                <li><a href="capabilities/construction-simulation.html">Whole-building simulation proposal with NVIDIA</a><p>Model construction from current site conditions through occupancy, using prior projects to compare labor, logistics, and weather across build sequences.</p>
+              </ul></section><section class="chapter-group" id="directory-examples"><h3>Seven examples</h3><p>Different kinds of questions call for different reasoning patterns. One undertaking can use several.</p><ul><li><a href="patterns/index.html">Compare the seven examples</a><p>See where the reasoning patterns overlap and where they differ.</p></li>
+                <li><a href="patterns/restoration.html">Clogged sink</a><p>Check whether a repair worked.</p></li>
+                <li><a href="patterns/goal-discovery.html">’67 Chevy</a><p>Revise the goal when a discovery changes what matters.</p></li>
+                <li><a href="patterns/design.html">Attached garage</a><p>Trace what moving a door changes elsewhere.</p></li>
+                <li><a href="patterns/analogy.html">Duplex portfolio</a><p>Use repair histories to spot a recurring failure.</p></li>
+                <li><a href="patterns/invention.html">Iron Man suit</a><p>Choose a prototype that tests an idea.</p></li>
+                <li><a href="patterns/operations.html">Car wash</a><p>Keep daily work moving while handling exceptions.</p></li>
+                <li><a href="patterns/hierarchical-planning.html">Billion-dollar skyscraper</a><p>Find the one field check that can change opening day.</p></li>
+              </ul></section><section class="chapter-group" id="directory-system"><h3>System architecture and capabilities</h3><p>The architecture overview leads to detailed models, worked calculations and the eleven capability references.</p><ul><li><a href="system-architecture.html">System architecture</a><p>The main explanation: a shared picture, evidence, possible paths, directed work and project memory.</p><ul class="section-hits" hidden><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#shared-picture">One undertaking, several useful views</a><p>How the capabilities share understanding and carry a decision into work.</p></li><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#evidence-cycle">Build understanding from evidence</a><p>How the capabilities share understanding and carry a decision into work.</p></li><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#possible-paths">Develop and compare possible paths</a><p>How the capabilities share understanding and carry a decision into work.</p></li><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#directed-work">Turn a choice into coordinated work</a><p>How the capabilities share understanding and carry a decision into work.</p></li><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#continuity">Keep useful knowledge with the undertaking</a><p>How the capabilities share understanding and carry a decision into work.</p></li><li data-section="" data-keywords="architecture overview shared model evidence planning learning human" hidden><a href="system-architecture.html#architecture-value">What the architecture makes possible</a><p>How the capabilities share understanding and carry a decision into work.</p></li></ul></li><li><a href="architecture-reference.html">Shared model and system contracts</a><p>Technical reference for identities, evidence, calculations, capability handoffs, command rules and project memory.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="shared data model objects mission task work package nesting relationships dependencies" hidden><a href="architecture-reference.html#shared-model">The shared model</a><p>Define objectives, Missions, tasks, work packages, assets, evidence and decisions without duplicating work.</p></li>
+                    <li data-section data-keywords="engineering basis physical model requirements interfaces compatibility configuration verification calculations" hidden><a href="architecture-reference.html#engineering-basis">The engineering basis in the shared model</a><p>Connect requirements, configurations, interfaces, calculations, uncertainty, and acceptance evidence.</p></li>
+                    <li data-section data-keywords="initial model building evidence imports records drawings historical data interviews missing work model creation" hidden><a href="architecture-reference.html#from-evidence">Building the model from evidence</a><p>Match identities, find omitted requirements, qualify methods and review assumptions before comparing plans.</p></li>
+                    <li data-section data-keywords="simulation behavior models production rates resources calculations engine refinement" hidden><a href="architecture-reference.html#calculation">How the model calculates</a><p>Connect productive effort, shared calendars, physical behavior, acceptance and whole-project consequences.</p></li>
+                    <li data-section data-keywords="eleven capabilities connections architecture integration workflow handoffs cooperation" hidden><a href="architecture-reference.html#capabilities">How the capabilities work together</a><p>See what each capability reads and contributes to the shared model.</p></li>
+                    <li data-section data-keywords="procurement supplier delay design funding occupancy decision cycle strategy" hidden><a href="architecture-reference.html#decision-cycle">One change across the system</a><p>Follow a supplier update through evidence, alternatives, a survey, commitment, execution and learning.</p></li>
+                    <li data-section data-keywords="dashboard user experience interfaces human control foreman planner owner what if approved plan" hidden><a href="architecture-reference.html#interfaces">What people see and control</a><p>Keep evidence, approved work and proposed alternatives distinct while presenting the next useful action.</p></li>
+                    <li data-section data-keywords="contracts authority commands commit release approval retries revisions offline recovery" hidden><a href="architecture-reference.html#contracts">Shared handoff rules</a><p>Carry scope, versions, authority and receipts across calculations, decisions and external actions.</p></li>
+                    <li data-section data-keywords="architecture testing validation acceptance seven examples outcomes" hidden><a href="architecture-reference.html#validation">Testing the whole architecture</a><p>Use all seven examples to check the same model, then assess actual usefulness and outcomes.</p></li>
+                  </ul>
+                </li><li><a href="ai-reasoning.html">AI reasoning and model construction</a><p>How AP earns a dependable model through evidence, human correction, calculations and evaluation.</p><ul class="section-hits" hidden><li data-section data-keywords="AI artificial intelligence reasoning model construction extraction identity resolution human correction dispatcher tickets truck queue evidence" hidden><a href="ai-reasoning.html#ai-reasoning">From records to a dependable model</a><p>Follow a mistaken truck assignment from messy records through competing explanations, a reviewed model change, calculation and the dispatcher’s decision.</p></li>
+                    <li data-section data-keywords="AI decision clock elapsed time stale forecast investigation delay dispatch remaining supply" hidden><a href="ai-reasoning.html#ai-decision-clock">Advance the decision clock</a><p>Recalculate remaining supply and arrival when investigating a correction takes five minutes.</p></li>
+                    <li data-section data-keywords="AI contradiction conflicting records reassignment human correction stale tickets trust model maintenance missing confirmation overdue acknowledgment physical location authorization" hidden><a href="ai-reasoning.html#ai-later-contradiction">A later contradiction reopens the question</a><p>Follow conflicting or missing confirmation through physical location, authorization, revised forecasts and the team’s next action.</p></li>
+                    <li data-section data-keywords="AI evaluation accuracy hallucination testing learning model training regression human feedback unknown answers" hidden><a href="ai-reasoning.html#ai-evaluation">Evaluating the reasoning</a><p>Check extraction, record matching, supported conclusions, calculations and usefulness; distinguish project corrections from changes to forecasting or AI models.</p></li>
+                    <li data-section="" data-keywords="dispatcher truck L7 departure arrival time chronology original outcome" hidden><a href="ai-reasoning.html#ai-case-timeline">The original delivery timeline</a><p>Separate the original release and arrival from retrospective calculation and the delayed-release experiment.</p></li></ul></li><li><a href="engineering-basis.html">Engineering basis</a><p>Reproduce one air-handler calculation connecting technical compatibility, installation resources, testing, and occupancy.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="air handler example engineering case study seven examples" hidden><a href="engineering-basis.html#example-choice">Why use the air handler?</a><p>Use one asset to connect disciplines while keeping the October tower and week-numbered strategy distinct.</p></li>
+                    <li data-section data-keywords="fan airflow air flow pressure compatibility coil cassette replacement performance calculation" hidden><a href="engineering-basis.html#compatibility">Calculate compatibility at the required airflow</a><p>Calculate a nominal pressure margin and show why a physically interchangeable cassette can fail the selected configuration’s check.</p></li>
+                    <li data-section data-keywords="labor labour crew hours duration days installation calculation shared resources schedule" hidden><a href="engineering-basis.html#installation">Calculate installation readiness from work and resources</a><p>Trace productive effort, concurrent trades, and a shared crew to day-25 readiness.</p></li>
+                    <li data-section data-keywords="testing commissioning occupancy opening delay recovery buffer one day slip four weeks" hidden><a href="engineering-basis.html#occupancy">Calculate testing and occupancy from readiness and bookings</a><p>See why week-18 occupancy depends on meeting the test start and how a missed block can move it to week 22.</p></li>
+                    <li data-section data-keywords="evidence assumptions uncertainty tolerance verification validation acceptance measured hypothetical" hidden><a href="engineering-basis.html#proof">What the evidence proves and what remains assumed</a><p>Separate arithmetic, supplier data, inspection, test results, and acceptance for a defined scope.</p></li>
+                  </ul>
+                </li><li><a href="simulation-execution.html">Simulation execution and experiments</a><p>A complete dynamic car-wash simulation connects events, queues, delayed observations, human decisions, and experiments to whole-development planning.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="car wash carwash experiment policies response decision objective" hidden><a href="simulation-execution.html#experiment">Frame the car-wash experiment</a><p>Compare routine and prompt review under the same operating conditions and human authority.</p></li>
+                    <li data-section data-keywords="discrete event state transitions time queue failure interruptions resources inventory clocks" hidden><a href="simulation-execution.html#rules">Define the world and its rules</a><p>Specify arrivals, interrupted work, reporting delays, repair, acceptance, supplies, and shared people.</p></li>
+                    <li data-section data-keywords="event trace step by step timeline delayed information observation repair acceptance" hidden><a href="simulation-execution.html#trace">Follow one run from observation to action</a><p>See a minute-5 fault reach the lead at minute 7, followed by diagnosis, repair, testing, and release.</p></li>
+                    <li data-section data-keywords="results comparison experiment staff unavailable attendant occupied benefit queues waiting" hidden><a href="simulation-execution.html#results">Compare responses under the same conditions</a><p>Earlier review improves the fault run when response capacity is available; an occupied attendant removes that advantage.</p></li>
+                    <li data-section data-keywords="attendant conflict shared resource supplies shortage inventory receiving repair priority tradeoff delivery waiting" hidden><a href="simulation-execution.html#resource-conflict">When repair competes with receiving</a><p>Compare restoring a bay first with accepting supplies first when both jobs need the same person.</p></li>
+                    <li data-section data-keywords="failed check test failure retest specialist diagnosis change method repair acceptance" hidden><a href="simulation-execution.html#failed-check">A failed check changes the response</a><p>Keep the bay closed, request a new diagnosis, and follow a specialist replacement through retest and release.</p></li>
+                    <li data-section data-keywords="uncertainty stochastic probability probabilities random sampling monte carlo correlations distributions scenarios" hidden><a href="simulation-execution.html#uncertainty">Build possible futures from evidence</a><p>Separate operating variation, uncertain parameters, disputed states, and stress scenarios without invented probabilities.</p></li>
+                    <li data-section data-keywords="human in the loop policies interventions decisions information replay" hidden><a href="simulation-execution.html#people">Keep people inside the simulation</a><p>Model what participants know and can do, and preserve human interventions for replay.</p></li>
+                    <li data-section data-keywords="coupled models co simulation refinement clocks convergence physical models" hidden><a href="simulation-execution.html#coupling">Connect models without changing their meaning</a><p>Exchange state and boundary conditions while preserving shared resources, quantities, and parent scope.</p></li>
+                    <li data-section data-keywords="verification validation credibility calibration accuracy optimization experiments testing" hidden><a href="simulation-execution.html#validation">Test the model and the recommendation</a><p>Check mechanics, independent behavior, paired comparisons, decision stability, and unresolved rankings.</p></li>
+                    <li data-section data-keywords="air handler tower whole building development nested packages integration reference calculation" hidden><a href="simulation-execution.html#development">Connect the car wash and air handler to the whole development</a><p>Use the air handler as the deterministic check and the car wash as the dynamic example inside the project-wide architecture.</p></li>
+                    <li data-section data-keywords="local recovery whole project readiness controls testing occupancy opening date day 25 26" hidden><a href="simulation-execution.html#parent-readiness">Calculate whole-project readiness after local recovery</a><p>Calculate when faster installation preserves a testing window and when late controls still prevent it.</p></li>
+                    <li data-section data-keywords="download reproduce runnable reference model code python results json" hidden><a href="simulation-execution.html#reproduce">Reproduce the reference experiment</a><p>Inspect the small reference model and all six computed event traces.</p></li>
+                  </ul>
+                </li><li><a href="business-management.html">Business management</a><p>Whose objectives AP serves, who bears costs and benefits, how performance is measured, and how decisions affect the whole portfolio.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="stakeholders objectives interests priorities human judgment tradeoffs beneficiaries buyer customer" hidden><a href="business-management.html#objectives">Whose objectives AP serves</a><p>People establish priorities; AP makes conflicting interests and the agreements needed visible.</p></li>
+                    <li data-section data-keywords="costs benefits payer beneficiary cash funding incentives compensation financial economics" hidden><a href="business-management.html#costs-benefits">Who bears costs and receives benefits</a><p>Trace the tower's protection cost, opening benefit, and effects on other trades.</p></li>
+                    <li data-section data-keywords="KPI KPIs metrics business intelligence BI performance measurement cost completion progress forecast cash accounting definitions baseline" hidden><a href="business-management.html#performance">How performance is measured</a><p>Define each measure, its owner, calculation, scope, sources, and time basis before comparing results.</p></li>
+                    <li data-section data-keywords="dashboard executive management reporting drill down drilldown financial report explain variance" hidden><a href="business-management.html#management-view">From a business measure to the work</a><p>Follow a changed forecast to the work, evidence, and person who can act.</p></li>
+                    <li data-section data-keywords="portfolio portfolios capital allocation shared crew multiple projects resource conflict prioritize prioritization" hidden><a href="business-management.html#portfolio">Decisions across the whole portfolio</a><p>Compare reallocating one specialist team with obtaining another, including the effect on both developments.</p></li>
+                    <li data-section data-keywords="ROI return on investment benefits savings attribution value business case baseline contribution" hidden><a href="business-management.html#value">What value the decision and AP contribute</a><p>Separate a strategy's expected advantage, the observed outcome, and the benefit attributable to AP.</p></li>
+                    <li data-section data-keywords="cost to serve adoption pricing margin onboarding training support cost of simulation total ownership" hidden><a href="business-management.html#cost-to-use">The cost of obtaining useful intelligence</a><p>Include preparation, review, collection, computation, and operating effort in the value comparison.</p></li>
+                  <li data-section="" data-keywords="value benefits contribution costs adoption main reading path" hidden><a href="business-management.html#value-in-practice">What makes a better decision valuable?</a><p>Connect better decisions to objectives, affected parties and the effort required to obtain useful intelligence.</p></li></ul>
+                </li><li><a href="capabilities/index.html">Overview of the eleven capabilities</a><p>What each capability contributes and how they work together on one decision.</p><ul class="section-hits" hidden=""><li data-section="" data-keywords="architecture handoffs collaboration shared model feedback loop system works together" hidden=""><a href="capabilities/index.html#together">How the capabilities work together</a><p>Follow a shipment from an installation objective through evidence, a revised lift, acceptance and learning.</p></li><li data-section="" data-keywords="telemetry evidence world project asset model boundaries" hidden=""><a href="capabilities/index.html#understand">Understanding current conditions</a><p>Telemetry gathers observations; evidence establishes what they support; the project model connects them.</p></li><li data-section="" data-keywords="learning interfaces human agent communication" hidden=""><a href="capabilities/index.html#retain">Learning and collaboration</a><p>Learning and human interfaces support the work throughout its cycle.</p></li></ul></li>
+                <li><a href="capabilities/intent-authority.html">Intent and authority</a><p>Who sets the objective, commits money, and releases the crew?</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="quiet observation proactive recommendations participation permission delegation active role autonomy" hidden><a href="capabilities/intent-authority.html#participation">From quiet observation to recommendations</a><p>Who permits AP to speak up, for which work, and which decisions people retain.</p></li>
+                    <li data-section data-keywords="ready readiness evaluation acceptance trust evidence approve review" hidden><a href="capabilities/intent-authority.html#readiness">How the team decides AP is ready</a><p>The dispatcher and superintendent review usefulness, misses and interruptions before the role changes.</p></li>
+                    <li data-section data-keywords="reduce withdraw revoke authority pause stop disable permission quiet observation" hidden><a href="capabilities/intent-authority.html#withdrawal">Reducing or withdrawing authority</a><p>Narrow or stop AP's active role, block queued recommendations, and follow up on actions already issued.</p></li>
+                  </ul>
+                </li>
+                <li><a href="capabilities/telemetry.html">Telemetry — Eyes and Ears</a><p>Decide what to observe, connect signals, recognize gaps, and request the next useful check. POV and security cameras, audio, GPS and mobile device sensors, barometric pressure, weather, seismic vibration, traffic, fuel prices, and stock market signals.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="observation plan monitoring watch assumptions dependencies what to observe" hidden><a href="capabilities/telemetry.html#observation-plan">How AP decides what to observe</a><p>The objective and plan guide which conditions AP watches and when an answer matters.</p></li>
+                    <li data-section data-keywords="connect signals sensor fusion matching identity shipment patterns combined observations" hidden><a href="capabilities/telemetry.html#connections">Connecting signals into a shared picture</a><p>Connect tickets, gate records and floor scans; investigate patterns across deliveries, production and overtime.</p></li>
+                    <li data-section data-keywords="coverage gaps blind spots missing data stale offline unavailable sensor failure" hidden><a href="capabilities/telemetry.html#coverage">Recognizing gaps in what AP can see</a><p>Distinguish an unchanged condition from a missing update, an unreliable source or an area with no coverage.</p></li>
+                    <li data-section data-keywords="request ask next observation active sensing measurement inquiry information needed" hidden><a href="capabilities/telemetry.html#next-observation">Asking for what is needed next</a><p>Ask for the check that could change a decision, then update the plan or carry the uncertainty to its owner.</p></li>
+                  </ul>
+                </li>
+                <li><a href="capabilities/evidence.html">Field observation and evidence</a><p>What should the team do when measurements and drawings disagree?</p></li>
+                <li><a href="capabilities/world-model.html">Project and asset model</a><p>What exists on site, where is it, and what depends on it?</p></li>
+                <li><a href="capabilities/inquiry.html">Reasoning and inquiry</a><p>Which question is worth investigating next?</p></li>
+                <li><a href="capabilities/planning.html">General planning and simulation</a><p>How Aura Pro compares ways to carry out any job and tests the assumption that could change the choice.</p></li>
+                <li><a href="capabilities/logistics.html">Resources and logistics</a><p>When will people, materials, equipment, and access coincide?</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="air handler air-handler supplier fabrication delivery receiving installation material flow supply chain" hidden><a href="capabilities/logistics.html#air-handler">From supplier to accepted installation</a><p>Follow four air-handler modules through production, dispatch, receiving, handling, assembly, and acceptance.</p></li>
+                    <li data-section data-keywords="damaged component damage replacement repair rejected delivery supplier claim returns reverse logistics" hidden><a href="capabilities/logistics.html#damage">A damaged component changes the available choices</a><p>Compare replacing a whole module with an approved cassette replacement and identify who commits and releases the work.</p></li>
+                    <li data-section data-keywords="crew reassignment hoist staging storage handling recovery return resources" hidden><a href="capabilities/logistics.html#recovery">People and resources move through the recovery</a><p>Move installers to ready work, confirm replacement capacity, and carry the damaged component through return and settlement.</p></li>
+                    <li data-section data-keywords="logistics delays testing occupancy buffer recovery week cost cash whole plan" hidden><a href="capabilities/logistics.html#whole-plan">What changes in the whole development plan</a><p>Use the recovery week to retain week-18 occupancy while showing costs, displaced deliveries, and the remaining conditions.</p></li>
+                    <li data-section data-keywords="inventory stock quantities complete kit material identity shortage missing parts" hidden><a href="capabilities/logistics.html#material-flow">Preserve material identity, quantity, and usability</a><p>Distinguish received, held, usable, allocated, and installed material without duplicating quantities.</p></li>
+                    <li data-section data-keywords="dispatch release laydown space buffers off-site storage unloading routes" hidden><a href="capabilities/logistics.html#space-dispatch">Manage space, dispatch, and deliberate buffers</a><p>Check the receiving combination before release and compare holding, splitting, storing, or resequencing loads.</p></li>
+                  </ul>
+                </li>
+                <li><a href="capabilities/execution.html">Work coordination and execution</a><p>How does an approved decision reach the person doing the work?</p></li>
+                <li><a href="capabilities/verification.html">Verification and acceptance</a><p>Who checks the result and what does that check settle?</p></li>
+                <li><a href="capabilities/learning.html">Project memory and learning</a><p>Retrieve the project’s history and reasoning, and learn with the team from observation, interviews, simulations and outcomes.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="project memory decision history why was this done lifetime continuity" hidden><a href="capabilities/learning.html#project-memory">The project’s history and reasoning</a><p>Recover what happened, what the team knew, and why it chose a path.</p></li>
+                    <li data-section data-keywords="retrieve retrieval search sources reasoning records evidence citations decisions" hidden><a href="capabilities/learning.html#retrieval">Retrieving history and reasoning</a><p>Trace a facilities manager’s question to dated evidence, decisions and remaining gaps.</p></li>
+                    <li data-section data-keywords="case selection investigation inquiry bias sampling why investigated" hidden><a href="capabilities/learning.html#case-selection">Why a case was investigated</a><p>Preserve the trigger, purpose, comparison cases and reason an inquiry closed.</p></li>
+                    <li data-section data-keywords="accepted rejected deferred lessons counterexamples review rationale superseded withdrawn" hidden><a href="capabilities/learning.html#lesson-decisions">Why lessons are accepted or rejected</a><p>Keep the evidence, reviewer, scope and reasons behind each lesson decision.</p></li>
+                    <li data-section data-keywords="external histories data models" hidden><a href="capabilities/learning.html#databases">Learning from historical databases</a><p>See how external histories help test a lesson from the team’s work.</p></li>
+                    <li data-section data-keywords="emails documents photographs photos Procore Raken Sage historical data" hidden><a href="capabilities/learning.html#history">Reconstructing previous projects</a><p>Connect records around a decision and investigate what happened.</p></li>
+                    <li data-section data-keywords="human teaching inquiry questions reasoning cognitive process" hidden><a href="capabilities/learning.html#interviews">Learning through interviews</a><p>Ask team members what they noticed, considered and expected.</p></li>
+                    <li data-section data-keywords="personality personalities communication interaction patterns preferences" hidden><a href="capabilities/learning.html#team">Getting to know the team</a><p>Learn how people work together and let them correct AP’s understanding.</p></li>
+                    <li data-section data-keywords="human feedback collaboration dashboard disagreements symbiosis" hidden><a href="capabilities/learning.html#dashboard">Learning together in the dashboard</a><p>Compare expectations with the outcome and decide what to investigate next.</p></li>
+                    <li data-section data-keywords="efficacy passive observational active" hidden><a href="capabilities/learning.html#collaboration">Earning a more active role</a><p>Use demonstrated usefulness to guide closer collaboration.</p></li>
+                  </ul>
+                </li>
+                <li><a href="capabilities/interfaces.html">Human and agent interfaces</a><p>What does each participant need to see and do?</p></li>
+              </ul></section><section class="chapter-group" id="directory-construction"><h3>Construction application</h3><p>Construction is the first client application: whole-development simulation and the workflows connecting the client’s existing tools.</p><ul><li><a href="capabilities/construction-simulation.html">Whole-building simulation with NVIDIA</a><p>Model construction from current site conditions through occupancy, using prior projects to compare labor, logistics, and weather across build sequences.</p>
                   <ul class="section-hits" hidden>
                     <li data-section data-keywords="construction project delays delayed schedule slippage bottlenecks disruptions risks permits shortages uncertainty" hidden><a href="capabilities/construction-simulation.html#scope">What can change the outcome</a><p>See how permits, suppliers, weather, and shared resources can change the building’s schedule.</p></li>
                     <li data-section data-keywords="labor labour laborers crews staffing available workers crew availability shortages short-staffed understaffed shifts overtime absences delivery deliveries delays delayed trucks unloading queues trade stacking" hidden><a href="capabilities/construction-simulation.html#crews">How labor and physical logistics interact</a><p>The concrete crew and trucks are on site. The pour has to wait because the shift’s only qualified pump operator is absent.</p></li>
@@ -106,46 +222,25 @@
                     <li data-section data-keywords="NVIDIA tools GPU Omniverse OpenUSD RTX PhysX Warp cuOpt Earth-2 PhysicsNeMo DeepStream Isaac Sim Cosmos RAPIDS DSX" hidden><a href="capabilities/construction-simulation.html#nvidia">Where NVIDIA fits</a><p>Which tools can check a lift route, sequence deliveries, or test weather-sensitive work?</p></li>
                   </ul>
                 </li>
-                <li><a href="tech-stack.html">Tech stack</a><p>Where Procore, Raken, Sage, and Aura Pro fit today and as functions move.</p></li>
+                <li><a href="capabilities/work-package-model.html">Work packages and whole-development simulation</a><p>How nested tasks share resources and new evidence changes equipment selection, design, funding, construction and occupancy.</p>
+                  <ul class="section-hits" hidden>
+                    <li data-section data-keywords="work package tasks nested nesting dependencies shared resources model" hidden><a href="capabilities/work-package-model.html#package-model">Define work packages and their connections</a><p>What a package produces, what it requires, and how its result connects to the development.</p></li>
+                    <li data-section data-keywords="procurement supplier delay equipment substitution strategy alternatives cost comparison" hidden><a href="capabilities/work-package-model.html#new-evidence">New evidence changes the preferred strategy</a><p>A survey changes the installation method and reverses the equipment recommendation.</p></li>
+                    <li data-section data-keywords="funding cash bridge lender deposit financing commitment" hidden><a href="capabilities/work-package-model.html#funding">Resolve design and funding together</a><p>Separate extra cost from earlier cash needs and establish what must be confirmed before purchase.</p></li>
+                    <li data-section data-keywords="testing commissioning occupancy readiness opening dates prerequisites" hidden><a href="capabilities/work-package-model.html#occupancy">Explain the occupancy forecast and its conditions</a><p>Check strategy-dependent readiness dates alongside independent utility and acceptance conditions.</p></li>
+                    <li data-section data-keywords="recommendation authority commit money release crews work permission" hidden><a href="capabilities/work-package-model.html#recommendation">Show when the recommendation should change again</a><p>Separate a provisional preference, a contractual commitment, and permission to begin physical work.</p></li>
+                  </ul>
+                </li>
                 <li><a href="capabilities/integration.html">Construction tools and integration</a><p>How project records and decisions move between systems.</p></li>
-                <li><a href="capabilities/integration.html#concrete-estimate">North Lex to Galleria estimate</a><p>Use quantities and crew hours from one job to estimate another.</p></li>
-              </ul>
-            </section>
-            <section class="chapter-group">
-              <h3>Examples</h3>
-              <ul>
-                <li><a href="patterns/index.html">Compare the seven examples</a><p>See where the reasoning patterns overlap and where they differ.</p></li>
-                <li><a href="patterns/restoration.html">Clogged sink</a><p>Check whether a repair worked.</p></li>
-                <li><a href="patterns/goal-discovery.html">’67 Chevy</a><p>Revise the goal when a discovery changes what matters.</p></li>
-                <li><a href="patterns/design.html">Attached garage</a><p>Trace what moving a door changes elsewhere.</p></li>
-                <li><a href="patterns/analogy.html">Duplex portfolio</a><p>Use repair histories to spot a recurring failure.</p></li>
-                <li><a href="patterns/invention.html">Iron Man suit</a><p>Choose a prototype that tests an idea.</p></li>
-                <li><a href="patterns/operations.html">Car wash</a><p>Keep daily work moving while handling exceptions.</p></li>
-                <li><a href="patterns/hierarchical-planning.html">Billion-dollar skyscraper</a><p>Find the one field check that can change opening day.</p></li>
-              </ul>
-            </section>
-            <section class="chapter-group">
-              <h3>System capabilities</h3>
-              <ul>
-                <li><a href="capabilities/index.html">Overview of the ten capabilities</a><p>How the platform supports decisions, fieldwork, and follow-up.</p></li>
-                <li><a href="capabilities/intent-authority.html">Intent and authority</a><p>Who sets the objective, commits money, and releases the crew?</p></li>
-                <li><a href="capabilities/evidence.html">Field observation and evidence</a><p>What should the team do when measurements and drawings disagree?</p></li>
-                <li><a href="capabilities/world-model.html">Project and asset model</a><p>What exists on site, where is it, and what depends on it?</p></li>
-                <li><a href="capabilities/inquiry.html">Reasoning and inquiry</a><p>Which question is worth investigating next?</p></li>
-                <li><a href="capabilities/planning.html">General planning and simulation</a><p>How Aura Pro compares ways to carry out any job and tests the assumption that could change the choice.</p></li>
-                <li><a href="capabilities/logistics.html">Resources and logistics</a><p>When will people, materials, equipment, and access coincide?</p></li>
-                <li><a href="capabilities/execution.html">Work coordination and execution</a><p>How does an approved decision reach the person doing the work?</p></li>
-                <li><a href="capabilities/verification.html">Verification and acceptance</a><p>Who checks the result and what does that check settle?</p></li>
-                <li><a href="capabilities/learning.html">Project memory and learning</a><p>What can the next job learn from this one?</p></li>
-                <li><a href="capabilities/interfaces.html">Human and agent interfaces</a><p>What does each participant need to see and do?</p></li>
-              </ul>
-            </section>
-        </div>
+                </ul></section><section class="chapter-group" id="directory-references"><h3>Technology and references</h3><p>Implementation choices and supporting material, including historical data used by Learning.</p><ul><li><a href="tech-stack.html">Tech stack</a><p>Where Procore, Raken, Sage, and Aura Pro fit today and as functions move.</p><ul class="section-hits" hidden=""><li data-section="" data-keywords="adoption existing tools data control official records workflow migration main reading path" hidden><a href="tech-stack.html#adoption-overview">Connect the work, then move functions deliberately</a><p>Begin with reviewed exports, preserve the client’s control, and transfer functions with clear ownership.</p></li></ul></li>
+                <li><a href="capabilities/integration.html#concrete-estimate">Estimating new work from past projects</a><p>Follow a fictional office-building estimate from past crew hours and new drawing quantities to pricing and revision review.</p></li>
+              <li><a href="capabilities/historical-databases.html">Historical databases</a><p>Reference sources for Learning. Cambridge schedules, NYC filings, NOAA weather, PeMS traffic, BLS prices and employment, EIA energy, FRED and ALFRED, OSHA incidents, NASA equipment data, building energy and RSMeans costs.</p></li>
+                </ul></section></div>
       </section>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

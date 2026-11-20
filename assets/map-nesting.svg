@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1060" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+<title id="title">A clearance inquiry nested inside the development plan</title><desc id="desc">The parent question asks which sequence can preserve the October 1 opening forecast. A child inquiry checks one-bay clearance. Its accepted failure result closes that child while the scheduler still owes a sequence; the wider route needs a new check. Independent work continues and all reasoning is retained in project memory. After execution, the parent verifies integrated requirements and validates the intended occupancy need; successful child checks alone do not establish whole-system success.</desc>
+<rect width="1000" height="1060" fill="#faf8f1"/>
+<text x="25" y="36" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#26392e">A small inquiry inside a larger decision</text>
+<text x="25" y="66" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" fill="#26392e">The child returns an answer. The parent still owes a decision.</text>
+<rect x="25" y="90" width="950" height="865" rx="12" fill="#e1ece1" stroke="#65846d" stroke-width="1.3"/>
+<text x="47" y="122" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#26392e">PARENT · Deliver lower-floor occupancy on October 1</text>
+<rect x="65" y="148" width="600" height="105" rx="8" fill="#fffef9" stroke="#9faea2" stroke-width="1.3"/>
+<text x="85" y="179" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#26392e">Which construction sequence can preserve the date?</text>
+<text x="85" y="207" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">The scheduler compares whole-development paths (5–7).</text>
+<text x="85" y="231" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">A preferred path depends on whether the framed unit fits.</text>
+<path d="M365,253 L365,310" fill="none" stroke="#26392e" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="365.0,310.0 368.8,302.0 361.2,302.0" fill="#26392e"/>
+<text x="385" y="285" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#26392e">Ask the focused question</text>
+<rect x="65" y="310" width="600" height="198" rx="8" fill="#fffef9" stroke="#65846d" stroke-width="1.3"/>
+<text x="85" y="342" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#26392e">CHILD · Can the framed unit pass through one bay?</text>
+<text x="85" y="374" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Use the supplier’s frame width and current field measurement.</text>
+<text x="85" y="399" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Foreman measures; lift lead repeats and checks (7).</text>
+<text x="85" y="424" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">99½-inch opening, ±¼ inch; minimum frame width: 100 inches.</text>
+<text x="85" y="449" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">The lift lead accepts that the planned straight lift cannot fit (10).</text>
+<text x="85" y="474" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Close this question; retain the evidence and limits (11).</text>
+<rect x="711" y="310" width="240" height="198" rx="8" fill="#f1f0e8" stroke="#9faea2" stroke-width="1.3"/>
+<text x="728" y="341" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#26392e">INDEPENDENT WORK</text>
+<text x="728" y="374" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">Superintendent holds</text>
+<text x="728" y="397" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">the affected lift and moves</text>
+<text x="728" y="420" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">the crew to the next</text>
+<text x="728" y="443" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">approved bay.</text>
+<text x="728" y="466" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">The parent inquiry stays</text>
+<text x="728" y="489" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">open while work continues.</text>
+<path d="M365,508 L365,571" fill="none" stroke="#37677b" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="365.0,571.0 368.8,563.0 361.2,563.0" fill="#37677b"/>
+<text x="385" y="541" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#37677b">Return the accepted result,</text>
+<text x="385" y="562" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#37677b">evidence and uncertainty</text>
+<rect x="65" y="571" width="600" height="138" rx="8" fill="#fffef9" stroke="#9faea2" stroke-width="1.3"/>
+<text x="85" y="601" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#26392e">PARENT · Revise the comparison, not the objective</text>
+<text x="85" y="632" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">The one-bay path is ruled out; the opening date is still a forecast.</text>
+<text x="85" y="655" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">A new child checks the wider route. Once settled, the scheduler</text>
+<text x="85" y="678" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">compares two-bay lifting with indoor assembly (5–7).</text>
+<text x="85" y="701" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Design review, funding and work release remain separate decisions.</text>
+<text x="729" y="594" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">A child may itself</text>
+<text x="729" y="618" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">need a smaller inquiry.</text>
+<text x="729" y="642" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">Each returns only</text>
+<text x="729" y="666" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">what its evidence</text>
+<text x="729" y="690" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">can establish.</text>
+<path d="M365,955 L365,975" fill="none" stroke="#37677b" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="365.0,975.0 368.8,967.0 361.2,967.0" fill="#37677b"/>
+<rect x="25" y="975.0" width="950" height="65" rx="8" fill="#edf4f5" stroke="#88a7b2" stroke-width="1.3"/>
+<text x="45" y="1002.0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#37677b">Shared project memory</text>
+<text x="285" y="1002.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Why this check mattered · evidence · accepted answer · revised strategy</text>
+<text x="45" y="1027.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">The child’s result can serve other decisions without duplicating the inquiry or authorizing new work.</text>
+<path d="M365,709 L365,765" fill="none" stroke="#37677b" stroke-width="1.6"/><polygon points="365.0,765.0 368.8,757.0 361.2,757.0" fill="#37677b"/><text x="385" y="740" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#37677b">After authorized, ready work is executed</text><rect x="65" y="765" width="600" height="170" rx="8" fill="#fffef9" stroke="#9faea2" stroke-width="1.3"/><text x="85" y="795" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#26392e">PARENT · Verify and validate the whole (10)</text><text x="85" y="825" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Test ventilation with power and controls operating together.</text><text x="85" y="848" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Verify requirements and validate conditions in intended use.</text><text x="85" y="871" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">System reviewers accept checks; the owner’s representative</text><text x="85" y="894" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">judges occupancy against the agreed objective and real need.</text><text x="85" y="917" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#26392e">Passing child checks alone does not close the parent.</text><text x="729" y="800" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#26392e">Whole-system result</text><text x="729" y="831" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">Interactions can fail</text><text x="729" y="854" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">even when individual</text><text x="729" y="877" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">components pass.</text><text x="729" y="900" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">The parent retains</text><text x="729" y="923" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#26392e">its own acceptance.</text></svg>
+

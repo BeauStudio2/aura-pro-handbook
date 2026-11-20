@@ -57,7 +57,7 @@ function filterChapters() {
 filter.hidden = false;
 query.addEventListener("input", filterChapters);
 window.addEventListener("pageshow", filterChapters);
-for (const link of document.querySelectorAll('a[href="#chapters"]')) {
+for (const link of document.querySelectorAll('a[href="#chapters"], a[href^="#directory-"]')) {
   link.addEventListener("click", () => {
     query.value = "";
     filterChapters();

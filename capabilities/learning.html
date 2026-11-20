@@ -1,190 +1,546 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
-    <title>Project memory and learning · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
+    <title>Project memory and learning · Aura Pro · Version 3</title>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Project memory and learning</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Project memory and learning</h1>
+        <p class="chapter-question">What should the next decision learn from this one?</p><p>Project memory keeps the undertaking’s history and reasoning available
+          from the first idea through construction, operation, and later changes.
+          Learning uses that history to improve what AP and the team do next.
+          A record can remain valuable even when it supports no general lesson.</p>
         <p>
-          Retain the reasons, evidence, and conditions that can improve a later
-          decision.
+          Aura Pro learns from observed work, historical project records,
+          shared databases, and conversations with the people doing the work.
+          Together these supply examples, explanations, and conditions AP can
+          investigate and model. The team can use AP’s models and
+          simulations to examine its own decisions. Both develop a better
+          understanding of the project through observation, questions, and outcomes.
         </p>
+        <p><a href="telemetry.html">Telemetry — Eyes and Ears</a> establishes
+          what is happening and where information is missing. Learning uses
+          that evidence to improve AP's understanding, predictions and work
+          with the team. The resulting lessons also guide what AP observes
+          and asks about next. These activities can happen during the same encounter.</p>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#learn-from-the-outcome">Mission Logic</a>:</strong> AP retrieves relevant history throughout the process, compares outcomes with expectations, and proposes changes to models, questions, and practices. The team reviews lessons under its delegated rules; supporting evidence does not itself grant permission to use a lesson.</p>
       </div>
       <div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#responsibility">Inputs and outputs</a
-            ><a href="#approach">Approach</a
-            ><a href="#execution">How it works</a
-            ><a href="#technology-stack">Technology choices</a
-            ><a href="#ownership">Integration and native ownership</a
-            ><a href="#patterns">Where this capability is used</a
-            ><a href="#connections">Connected capabilities</a>
+            <strong>On this page</strong><a href="#project-memory">The project’s history and reasoning</a><a href="#execution">Carrying knowledge forward</a><a href="#retrieval">Retrieving history and reasoning</a><a href="#approach">One complete learning cycle</a><a href="#responsibility">What changes when AP learns?</a><a href="#case-selection">Why a case was investigated</a><a href="#history">Reconstructing previous projects</a><a href="#databases">Learning from historical databases</a><a href="#interviews">Learning through interviews</a><a href="#team">Getting to know the team</a><a href="#dashboard">Learning together in the dashboard</a><a href="#collaboration">Earning a more active role</a><a href="#lesson-decisions">Why lessons are accepted or rejected</a><a href="#technology-stack">How a correction reaches the next forecast</a><a href="#ownership">What AP takes on and who controls it</a><a href="#patterns">Where this capability is used</a><a href="#connections">Connected capabilities</a>
           </nav>
         </aside>
         <article>
+
+
+          <section class="article-section" id="project-memory">
+            <h2>The project’s history and reasoning</h2>
+            <p>AP connects sources, observations, questions, alternatives, decisions,
+              instructions, and outcomes to the work and assets they concern.
+              The history includes what was tried and redone, why a path was
+              chosen, who accepted the answer, and what remained unresolved.
+              It also preserves assumptions and the information available at the
+              time, so a later reader can understand a choice without judging it
+              through facts learned afterward.</p>
+            <p>This memory belongs to the project as people and platforms change.
+              A replacement crew can recover the reason for an installation detail;
+              a facilities manager can trace later modifications; a new undertaking
+              can retrieve relevant experience with permission. AP distinguishes
+              documented reasoning from a later reconstruction and identifies
+              missing records instead of inventing an explanation. The result is
+              retrievable history whose sources, scope, and uncertainty travel with it.</p>
+          </section>
+          <section class="article-section" id="execution">
+            <h2>Carrying knowledge forward</h2>
+            <p>In the <a href="../patterns/hierarchical-planning.html#example">tower example</a>,
+              the team installs an air-handling unit through an opening with two
+              façade panels held back. Years later, a facilities manager asks why
+              that route was chosen and whether it can serve a replacement. The
+              people who made the original decision may have left. Project memory
+              connects their reasoning to the installation records and later changes.</p>
+            <p>Each record retains its scope. A later commissioning delay may show
+              that a forecast date was wrong while the recorded clearance measurement
+              remains valid evidence of the opening at installation.</p>
+          </section>
+          <section class="article-section" id="retrieval">
+            <h2>Retrieving history and reasoning</h2>
+            <div class="case-note"><strong>Case: the October tower, years later</strong><p>The facilities manager retrieves the earlier lift decision. Historical clearance helps frame the new inquiry; it does not establish the replacement route’s current condition.</p></div><p>When the facilities manager asks, “Why were those panels held back,
+              and can we use the same route again?”, AP follows a traceable retrieval
+              process:</p>
+            <ol>
+              <li><strong>Locate the relevant history.</strong> Resolve the building,
+                equipment, location, and time period. Search permitted records by
+                identity, structured fields, and text. Optional semantic search can
+                suggest related material, but similarity is not evidence that two
+                records describe the same equipment or conditions.</li>
+              <li><strong>Follow the reasoning.</strong> Traverse links from the
+                installation to its measurements, compared sequences, approval,
+                instructions, actual work, and subsequent modifications. Retrieve
+                linked inquiries and lesson reviews, including why alternatives or
+                explanations were rejected. Check source revisions and access before
+                using their contents.</li>
+              <li><strong>Answer with a dated account.</strong> Cite the source for
+                each consequential claim and distinguish the recorded reason for
+                holding the panels from any later inference. Separate what was known
+                during installation from what is known now. State conflicts and
+                gaps; the old clearance measurement alone cannot establish that the
+                replacement equipment fits the current route.</li>
+              <li><strong>Carry the answer into the next inquiry.</strong> Save the
+                answer’s source and revision links. The facilities manager can use
+                it to commission the missing survey and compare replacement methods.
+                The new observations extend the history without rewriting the original
+                decision.</li>
+            </ol>
+            <h3>The answer the facilities manager receives</h3>
+            <p>In this illustrative case, AP returns the explanation with links to
+              the supporting measurement, sequence comparison, and approved instruction:</p>
+            <blockquote>
+              <p>The air-handling unit on its lifting frame could not pass through
+                the one-panel opening. The team checked the wider route and confirmed
+                that holding back two panels would allow the lift.</p>
+              <p>The scheduler compared that route with assembling the equipment
+                indoors. The other occupancy prerequisites were forecast to be ready,
+                so ventilation testing controlled opening day. Indoor assembly would
+                miss the booked testing window and move the opening forecast from
+                October 1 to October 22.
+                Holding back two panels, with temporary protection, let interior
+                work continue and preserved the October 1 forecast. After the revised
+                detail and spending commitment were approved, the superintendent
+                released the crew to follow that sequence.</p>
+              <p>These records explain the original choice. They do not yet establish
+                that the replacement can use the same route. Compare its dimensions
+                and handling frame with a current survey of the route, including
+                modifications since installation.</p>
+            </blockquote>
+            <p>As new evidence arrives, AP uses it to compare replacement methods.
+              The original decision remains available even if the replacement
+              needs a different route.</p>
+            <p>AP keeps durable source, event, and decision
+              records separate from a rebuildable search index. Background updates
+              make those records searchable, retaining their identities, revisions,
+              dates, and access rules. The index helps find candidates; AP rechecks
+              the underlying records and current permissions when assembling an
+              answer. If a source cannot be checked, AP identifies that limit rather
+              than presenting a cached claim as current confirmation.</p>
+            <p>Corrections, access changes, and retention decisions propagate to
+              search copies and saved answers that depend on them. An earlier answer
+              may need to be marked outdated or made unavailable. Historical questions
+              retain their requested time boundary. Authorized exports preserve the
+              records and reasoning links so the client can take the project’s memory
+              to another platform.</p>
+                      <h3 id="retrieval-unknown-test">Retrieval test: the correct answer is unknown</h3>
+            <p>Test the question, “Can the replacement air handler use the original lift route?” Supply the original installation records, but no current route survey or confirmed dimensions for the replacement on its handling frame. The expected answer is: <strong>“Unknown from the available evidence.”</strong> AP explains what the old records establish, cites them, and names the missing measurements. It must not turn the successful original lift, a similar installation, or a simulation into confirmation that the replacement will fit.</p>
+            <p>The test passes when AP returns the supported history, preserves the unresolved fit question, and identifies the next useful check for the facilities manager without treating the answer as permission to lift. Then add a current survey and confirmed replacement dimensions: AP revises only the conclusions those records support and retains the earlier answer and its evidence boundary. These acceptance checks define the required behavior; they do not report test results.</p>
+</section>
+          <section class="article-section" id="approach">
+            <h2>One complete learning cycle</h2>
+            <div class="case-note"><strong>Case: the dispatcher and two pours</strong><p>This is the same supply-and-release case developed in <a href="../ai-reasoning.html">AI reasoning and model construction</a>. This chapter follows the lessons and the team relationship; the AI chapter follows records, identities and calculations.</p></div><p>The architecture’s <a href="../ai-reasoning.html#ai-reasoning">AI reasoning and model construction</a> section follows the records behind this case: how AP extracts claims, resolves truck and load identities, checks the dispatcher’s correction, and recalculates the choice. Here the focus is what the team and AP learn and change afterward.</p>
+            <p>Consider a different concrete pour from the stopped-pump example
+              in <a href="telemetry.html#attention">Telemetry</a>. In this
+              illustrative case, six trucks are staged as the pump
+              starts receiving the first load. AP predicts that releasing another
+              will add unnecessary waiting. The dispatcher directs release and
+              explains that two staged trucks belong to a separate pour.
+              AP checks the tickets and corrects the assignment.</p>
+            <p>The four loads assigned to this pour provide about forty minutes
+              of supply at the expected pumping rate, allowing for changeovers.
+              The next truck’s journey is estimated at thirty to forty-five minutes.
+              AP compares immediate release with a five-minute hold. Immediate
+              release could put the truck on site ten minutes before supply runs
+              out or five minutes afterward. Holding moves that arrival range to
+              five minutes before or ten minutes afterward. The corrected model
+              makes the trade between truck waiting and pump idle time visible.
+              These timings are illustrative assumptions for this example.</p>
+            <p>The dispatcher’s authorized release proceeds. AP saves the original
+              and corrected forecasts, both alternatives, and the dispatcher’s
+              explanation before the outcome is known. Suppose the truck arrives
+              after thirty-seven minutes, waits three minutes, and starts unloading
+              as the preceding load finishes. The receiving and discharge records
+              confirm the assignment and timing. Supply continued, and arrival
+              fell within the forecast range. The five-minute hold remains a
+              simulated alternative whose result depends on the travel and pumping
+              assumptions.</p>
+            <p>After the initial correction, the dispatch lead provisionally adopts
+              the assignment check, as explained in the
+              <a href="#lesson-decisions">lesson decision below</a>. It changes the next
+              <a href="telemetry.html#observation-plan">observation plan</a>.
+              AP checks truck assignments and collects dispatch, arrival and
+              discharge times, then compares the available pumping time with
+              the range of incoming travel times before raising a queue concern.
+              It asks the dispatcher when an unresolved assignment or timing
+              assumption could change the release decision. The dispatcher can
+              inspect and correct the comparison. Those new observations return
+              to Learning, where repeated results help both judge whether the
+              arrival ranges describe the conditions well enough to guide release decisions.</p>
+            <p>After subsequent deliveries, the team reviews the provisional procedure.
+              AP has continued asking the dispatcher to confirm assignments already
+              recorded on delivery tickets. The review shows that current tickets identify the
+              pour reliably and the extra confirmation adds no information.
+              Within the team's agreed checks, AP uses those tickets directly
+              and stops requesting duplicate confirmation. It asks again when
+              a ticket is missing, outdated or conflicts with another record.</p>
+            <p>On a later pour with more predictable deliveries, the dispatcher
+              asks, “Could we keep the pump supplied with fewer trucks waiting?”
+              AP compares sequences using that pour’s travel and discharge
+              records. The dispatcher chooses a sequence, and they review the
+              actual waiting and pump idle time together. AP has learned which
+              assignments and timing assumptions to check. The dispatcher has
+              a way to test when the familiar practice of keeping trucks staged
+              helps and when a smaller queue could serve the work.</p>
+          </section>
           <section class="article-section" id="responsibility">
-            <h2>Inputs and outputs</h2>
-            <dl class="io">
-              <dt>Inputs</dt>
-              <dd>
-                Expected and observed outcomes, failed attempts, changed
-                preferences, and expert explanations.
-              </dd>
-              <dt>Expected output</dt>
-              <dd>
-                Retrievable history and lessons whose scope and uncertainty
-                travel with them.
-              </dd>
-            </dl>
+            <h2>What changes when AP learns?</h2>
+            <p>A correction can apply to one event, a forecasting model, a
+              person’s preferences or a team procedure. AP shows the scope of the change alongside its evidence.</p>
+            <ul>
+              <li><strong>A fact about this job.</strong> Tickets establish that
+                two trucks serve another pour. AP corrects their assignment
+                and reruns affected forecasts, retaining the earlier record.</li>
+              <li><strong>An assumption in a model.</strong> The dispatcher says
+                traffic regularly stretches the next journey. AP compares
+                actual trips and comparable traffic histories, tests a revised
+                arrival range, and evaluates it on subsequent deliveries.</li>
+              <li><strong>A working preference.</strong> The superintendent asks
+                for routine questions before the morning handoff. AP adjusts
+                how it presents those questions to that person.</li>
+              <li><strong>A shared procedure.</strong> Experience suggests
+                checking pour assignments before reviewing a queue. AP proposes
+                the practice with its evidence and exceptions. The person
+                responsible for dispatch decides whether the team adopts it.</li>
+            </ul>
+            <p>Keep explanations, instructions and outcomes with their authors
+              and conditions. An authorized instruction determines the action
+              within that person’s authority. Its predicted effects can be
+              tested through observation and simulation. Conflicting accounts
+              supply questions to investigate.</p>
+          </section>
+          <section class="article-section" id="case-selection">
+            <h2>Why a case was investigated</h2>
+            <p>Each inquiry keeps its initiating observation or request, the question
+              it was meant to settle, the decision it could affect, and why finding
+              an answer was worth the effort. Record who raised it, when, and whether
+              it came from a routine sample, an exception, a team request, or AP’s
+              own investigation. Later explanations are dated additions, not
+              replacements for the reason recorded at the time.</p>
+            <p>In the pour example, AP investigates because an apparent queue could
+              change the next truck release. This is a selected problem case, not
+              a representative sample of all pours. Before generalizing, AP seeks
+              comparable ordinary deliveries and cases that contradict its proposed
+              explanation. It records how those comparisons were selected, which
+              conditions differ, and where records are missing. Otherwise, learning
+              only from escalated problems could make normal work look unreliable.</p>
+            <p>When a question closes, keep what the answer settled, for whom, who
+              accepted it, and what follows: an agreed action, a fresh decision,
+              another inquiry, or no further work. A question closed because it no
+              longer affects a decision remains distinct from one answered by evidence.</p>
+          </section>
+          <section class="article-section" id="history">
+            <h2>Reconstructing previous projects</h2>
+            <p>Begin with project records the client makes available. Emails can
+              preserve a warning, a promise, or the reason for an exception.
+              Documents contain plans, specifications, schedules and decisions.
+              Photographs show conditions at a particular place and time.
+              Procore history can connect drawing revisions, design questions
+              and signed changes. Raken reports can connect field conditions,
+              crew hours and installed quantities. Sage records can connect
+              commitments and actual cost to the same work.</p>
+            <p>Put those records on a timeline around a specific decision. Preserve
+              original files, revisions, project and activity references, and both
+              when something happened and when the team learned of it. A revised
+              schedule issued after a delay cannot explain what the dispatcher
+              knew beforehand. A photograph needs a location and date before it
+              can establish the condition of a particular opening.</p>
+            <p>Suppose an email warns that a delivery could slip, the schedule
+              retains the original date, a daily report records an idle crew,
+              and Sage shows extra equipment hire. AP can propose a connection
+              and ask the scheduler what happened between the warning and the
+              crew’s release. The answer may identify an approval wait, an
+              alternative supplier that fell through, or unrelated hire costs.
+              The resulting account supplies dependencies, response times and
+              questions for simulation.</p>
+            <p>Include successful work, abandoned options, rework and incomplete
+              cases. Missing records remain gaps to investigate. When borrowing a
+              production rate from another job, retain the method, quantities,
+              crew conditions, access and season that make it comparable. A lesson
+              from a completed project earns broader use when it predicts outcomes
+              on other comparable work.</p>
+          </section>
+          <section class="article-section" id="databases">
+            <h2>Learning from historical databases</h2>
+            <p>External histories help AP test whether a lesson holds beyond the
+              team’s own jobs. A traffic archive from the relevant corridor can
+              describe how journey times vary. Weather records can help explain
+              which conditions made those journeys difficult. Comparing those
+              histories with dispatch and discharge records gives AP a way to
+              investigate the dispatcher’s explanation about keeping a queue.</p>
+            <p>The Cambridge construction schedule archive supplies examples of
+              work sequences to compare. NOAA’s hourly observations supply
+              weather conditions to replay. ALFRED preserves economic figures as
+              they were published, helping AP reconstruct what a planner could
+              have known at the time. Each source answers a different part of
+              the question.</p>
+            <p>Retain the source, location, dates, missing information and whether
+              values were observed, estimated or simulated. Test the resulting
+              model on other comparable projects and keep the original forecasts.
+              The team can then judge whether the added data improved a decision.
+              <a href="historical-databases.html">Explore the 15 historical database sources →</a></p>
+          </section>
+          <section class="article-section" id="interviews">
+            <h2>Learning through interviews</h2>
+            <p>AP prepares an interview around an actual episode and shows the
+              person the records it is trying to understand. It explains what
+              question their experience could settle, follows their account,
+              and asks about the detail that could change the model. The person
+              can correct the timeline before AP draws conclusions.</p>
+            <ul>
+              <li>“This email raised the delivery concern on Tuesday. What did you
+                know then, and what were you still waiting to find out?”</li>
+              <li>“What made you release the next truck? What would have made you hold it?”</li>
+              <li>“Which alternatives did you consider, and what made one impractical?”</li>
+              <li>“Who did you call before changing the sequence, and what could they tell you?”</li>
+              <li>“When has that rule failed? What was different about that job?”</li>
+              <li>“How would you explain this choice to someone taking over your shift?”</li>
+              <li>“Would a drawing, a few numbers, or a walk through the site have
+                made this easier to discuss? When would a question have been welcome?”</li>
+            </ul>
+            <p>These questions help AP understand the cues people notice, how
+              they compare options, whom they consult, and where experience
+              supplies a shortcut. AP returns its interpretation for correction.
+              It might say, “I understood that you released the truck because
+              its journey could take longer than the remaining supply would
+              last. What would change your choice if deliveries became more
+              predictable?” The corrected explanation becomes
+              a conditional model that the team can inspect and test.</p>
+          </section>
+          <section class="article-section" id="team">
+            <h2>Getting to know the team</h2>
+            <p>AP learns how each person prefers to think and communicate while recognizing that the setting matters. A superintendent may
+              want a marked-up photograph during a site walk and a cost comparison
+              before a commercial decision. A dispatcher may welcome questions
+              after a pour and need a brief choice with a deadline during one.
+              Observed habits give AP something to ask about. The person’s
+              explanation helps establish when the pattern applies.</p>
+            <p>Keep that understanding visible and editable by the person. A useful
+              note might be, “Ask the pump lead about loading conditions before
+              proposing a dispatch change,” or “Send routine comparisons before
+              the morning meeting.” If AP infers that someone prefers verbal
+              explanations, it can ask them and revise the preference as it gains
+              experience. A delayed reply alone leaves the reason unknown.</p>
+            <p>Suppose the superintendent explains that routine questions interrupt
+              the morning handoff. AP assembles them beforehand with the relevant
+              photograph and the decision each answer affects. The superintendent
+              answers once, and AP carries that explanation into the next
+              comparison. If the same question comes up after conditions change,
+              AP shows what changed and asks whether the earlier answer still
+              applies. The superintendent can see how teaching AP makes the next
+              day’s work easier.</p>
+            <p>During the pour, the dispatcher may say, “Ask me afterward.”
+              AP carries the learning question forward. At the agreed review,
+              it brings the dispatch timeline and the release-versus-hold
+              comparison. The dispatcher can explain the choice with the
+              records in view, without reconstructing the shift from memory.</p>
+            <p>Separate a person’s communication preference from a project procedure
+              and from authority to approve work. Each has a different owner.
+              Learn the team’s interaction patterns by asking how handoffs work,
+              which dependencies cause friction, and who holds relevant knowledge.
+              People can see and challenge the conclusions AP uses, decide who sees interview material, and understand how their input helps with the work. Present disagreements around the evidence,
+              constraints and decision. Invitations to explain, correct and try
+              alternatives give the team an active part in shaping its teammate.</p>
+          </section>
+          <section class="article-section" id="dashboard">
+            <h2>Learning together in the dashboard</h2>
+            <p>The dashboard lets the dispatcher and pump lead inspect the reasoning and its sources, correct inputs, explain conditions, and request another comparison. Each contribution keeps its author and links to the claims it affects.</p>
+            <p>The same view shows what a lesson’s evidence supports, whether it is
+              approved for use, and who made that decision. The dispatcher can open a
+              new comparison—such as keeping fewer trucks waiting—from this history.
+              AP asks which conditions have changed, carries forward the applicable
+              procedure, and presents the alternatives for the next decision.</p>
+                      <p>The dashboard keeps five things together for each reviewed decision:</p>
+            <ol>
+              <li><strong>The human direction and reason.</strong> Who chose the action, what they directed, and the explanation they gave at the time.</li>
+              <li><strong>AP’s expectations for both choices.</strong> The forecasts, assumptions, and evidence available before the outcome, preserving the original and corrected versions.</li>
+              <li><strong>What actually happened.</strong> The observed result and its sources, compared with the forecast for the action taken. The unchosen alternative remains simulated.</li>
+              <li><strong>What the human and AP each learned.</strong> Record the two accounts separately. In the dispatcher example, AP corrects which trucks belong to the pour and learns to check assignments before interpreting a queue. The dispatcher records whether the comparison changed or confirmed their judgment about when a staged queue protects supply and when fewer waiting trucks could serve the work. That can lead to a specific question: under more predictable delivery conditions, could a smaller queue keep the pump supplied? AP asks the dispatcher to confirm this account. A proposed smaller queue remains something to test; either party’s understanding may be unchanged or uncertain.</li>
+              <li><strong>When that understanding will be tested again.</strong> Give each lesson its own next check: the occasion, reviewer, observations needed, and what would support or challenge it. AP preserves the expectation before the check and shows it as pending until the evidence arrives. The reviewer records what that check establishes and which questions remain open. A successful pour does not establish every lesson at once.</li>
+            </ol>
+            <p>For the dispatcher example, the next checks are distinct:</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="The next test for each lesson">
+              <table>
+                <thead><tr><th scope="col">Understanding to test</th><th scope="col">When and who reviews</th><th scope="col">Evidence and what it establishes</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Check assignments before interpreting the queue.</th><td>On the next applicable delivery after the procedure takes effect, the dispatch lead reviews AP’s assignment check under the agreed confirmation procedure.</td><td>Compare current tickets with the confirmed pour assignment and record corrections or unnecessary questions. This checks whether AP identified the relevant trucks and avoided a mistaken queue assessment; it does not establish forecast accuracy.</td></tr>
+                  <tr><th scope="row">The timing forecast is useful.</th><td>AP saves forecasts before dispatch on subsequent comparable deliveries. The dispatch lead reviews the results across those deliveries.</td><td>Compare actual travel, discharge, waiting, and pump idle times with the saved expectations. Repeated misses reopen the relevant inputs or assumptions; one arrival inside the range does not establish general accuracy.</td></tr>
+                  <tr><th scope="row">A smaller queue could keep the pump supplied.</th><td>The dispatcher selects a suitable pour with more predictable deliveries and agrees the trial’s criteria and fallback with the pump lead. The person authorized to change the sequence approves the trial; the dispatcher and pump lead review it afterward.</td><td>Record the actual smaller-queue sequence, truck waiting, and pump idle time against the agreed criteria. The result establishes performance under those conditions. A claim of improvement also needs a comparable baseline; an untried alternative remains simulated. Until a trial is authorized and scheduled, this question remains pending.</td></tr>
+                </tbody>
+              </table>
+            </div>
+</section>
+          <section class="article-section" id="collaboration">
+            <h2>Earning a more active role</h2>
+            <p>The <a href="../business-management.html#value">business value review</a> uses this learning record to distinguish the value of the selected strategy, observed outcomes, and AP’s contribution. The team includes the effort of preparing data, reviewing advice, and changing the work.</p>
+            <p>Initially, AP observes the agreed sources, reconstructs histories,
+              and records predictions quietly for later comparison. Interviews
+              and review conversations help it understand the local context.
+              As it proves useful on a particular kind of work, the team can
+              invite AP into planning discussions, request alternatives during
+              execution, and let it proactively raise a decision while options
+              remain open.</p>
+            <p>Assess usefulness against the team’s ordinary practice. Did AP’s
+              question uncover a missing dependency? Did its forecast arrive
+              early enough to help? Did fewer pump interruptions justify the
+              additional truck waiting? Include missed problems, false alarms,
+              time spent answering questions, and team feedback about whether
+              AP made the work easier. Good results with one crew or method
+              support a specific next use. New conditions or repeated misses
+              can call for closer observation and revised assumptions. Evaluate proposed improvements on jobs
+              that were not used to develop them. Include questions the available
+              evidence cannot answer, and check that AP makes those gaps visible.</p>
+          </section>
+          <section class="article-section" id="lesson-decisions">
+            <h2>Why lessons are accepted or rejected</h2>
+            <p>A proposed lesson states the change it recommends, the cases and
+              counterexamples considered, the conditions where it may apply, and
+              what remains uncertain. Its review keeps two judgments separate:</p>
+            <ul>
+              <li><strong>What the evidence supports.</strong> Record the finding,
+                its basis and limits, and any competing explanation. A confirmed
+                assignment, a plausible cause, and a forecast supported by repeated
+                comparisons are different kinds of knowledge.</li>
+              <li><strong>What is permitted for use.</strong> Record who accepts,
+                defers, or rejects the proposed change, when, for which work, and why.
+                The responsible person may adopt an inexpensive check provisionally
+                while its wider benefit remains unproven. Permission to use it does
+                not strengthen the evidence or give AP additional authority.</li>
+            </ul>
+            <p>In the illustrative pour’s review, the dispatch lead rejects using this event to adopt a general rule to hold incoming
+              trucks: the original queue assessment used the wrong assignments, and
+              the hold alternative was never observed. AP preserves that reason.
+              The review leaves open whether holding would help under other conditions.</p>
+            <p>The lead accepts a narrower procedure for this project’s concrete
+              deliveries: use current delivery tickets to establish pour assignments
+              before comparing remaining supply with incoming travel time. The reason
+              is specific—the correction changed this release comparison, and the
+              tickets are already available. If a ticket is missing, outdated, or
+              conflicts with another record, AP asks the dispatcher. Existing confirmation checks remain in place during provisional use;
+              the dispatcher retains the release decision. The procedure is adopted provisionally
+              while later deliveries test whether it improves comparisons without
+              adding unnecessary questions.</p>
+            <p>AP saves the lead’s decision, effective time, scope, reason, and review
+              conditions with the procedure revision. On the next applicable delivery
+              after it takes effect, the forecast records that revision and the ticket
+              assignments it used. Actual waiting, pump interruptions, and questions
+              raised return to the review. A conflicting ticket or repeated forecast
+              miss can prompt investigation; the lead can revise or withdraw the
+              procedure. The confirmed assignment from the original pour stays in
+              project memory regardless of that later decision.</p>
+            <p>Rejected and deferred proposals remain retrievable with their evidence
+              and reasons. New counterexamples or changed conditions can reopen them.
+              A revision links to the lesson it supersedes or withdraws, preserving
+              which earlier forecasts relied on it. Rejection does not establish that
+              an idea is false under every condition.</p>
+          </section>
+          <section class="article-section" id="technology-stack">
+            <h2>How a correction reaches the next forecast</h2>
+            <p>The project database links source revisions to the claims, procedure
+              revisions, and calculations that use them. A corrected truck assignment
+              identifies the current queue forecasts that need to run again. A new
+              procedure applies only within its approved scope and effective period.
+              Historical forecasts retain their original inputs so AP can explain
+              both what changed and what the earlier prediction was based on.</p>
+            <p>The planning service reruns the affected scenarios with explicit input
+              and model versions; the dashboard shows the revised comparison to the
+              decision-maker. Proposed model changes are evaluated on separate
+              deliveries or projects before promotion under the team’s review rules.
+              Earlier versions remain available for comparison or rollback. Actual
+              outcomes attach to the forecast that preceded the work, allowing AP to
+              test whether an accepted change helped.
+              <a href="../tech-stack.html#platform">Technology inside AP</a></p>
+          </section>
+          <section class="article-section" id="ownership">
+            <h2>What AP takes on and who controls it</h2>
+            <p>The team decides which responsibilities AP may take on, such as
+              maintaining reviewed procedures or supplying tested assumptions to
+              forecasts. That delegation defines what AP may change itself and
+              what requires a person’s decision.
+              <a href="intent-authority.html#participation">How the team authorizes a more active role and can withdraw it →</a></p>
+            <p>The client controls who can use the project history and interview
+              material. When a manager changes, the incoming manager receives
+              the permitted history and the outgoing manager's access is updated
+              to match their remaining responsibilities. Knowledge stays with
+              the project under the client's control.</p>
           </section>
           <div class="related" id="analysis">
             <h3>Across the architecture</h3>
-            <a href="integration.html"
-              >Construction tools, data ownership, and migration ↗</a
-            >
+            <a href="telemetry.html">Telemetry — Eyes and Ears →</a>
+            <a href="integration.html">Construction tools, data ownership, and migration ↗</a>
           </div>
-          <section class="article-section" id="approach">
-            <h2>Approach</h2>
-            <p>
-              Keep the expectation, alternatives available at the time, action
-              taken, evidence, and observed result together. Record why the case
-              was selected for investigation. A useful lesson describes the
-              conditions under which it transfers, including counterexamples.
-            </p>
-          </section>
-          <section class="article-section" id="execution">
-            <h2>How it works</h2>
-            <p>
-              Years after the lift, a facilities manager asks how to replace the
-              unit. Retrieve dated dimensions, the panels held back, subsequent
-              modifications, and remaining gaps. A new survey corrects the
-              current condition and preserves the original installation history.
-              Compare actual commissioning with the forecast; a different delay
-              can invalidate a date while the measured clearance remains
-              reliable.
-            </p>
-          </section>
-          <section class="article-section" id="technology-stack">
-            <h2>Technology choices</h2>
-            <p>
-              Use the app's durable records plus an asynchronous retrieval
-              projection. The project has exercised selected Mnemonic evidence
-              handover in staging. PostgreSQL full-text search with evidence
-              references is a simpler substitute; an optional embedding index
-              can retrieve candidates. Enforce current access on every retrieval
-              and support portable exports. Import Raken field history and Sage
-              costs with source dates, units, and permissions.
-              <a href="https://www.rakenapp.com/integration/api"
-                >Raken client API</a
-              >
-              ·
-              <a
-                href="https://developer.sage.com/intacct/apis/intacct/1/intacct-openapi/groups/construction"
-                >Sage Intacct construction API</a
-              >
-            </p>
-          </section>
-          <section class="article-section" id="ownership">
-            <h2>Integration and native ownership</h2>
-            <p>
-              Own the retrieval and explanation first. Later own reviewed
-              procedures and calibrated prediction inputs. Evaluate with
-              held-out jobs and retrieval questions whose correct answer is
-              “unknown.” A replacement manager must see permitted history and an
-              outgoing manager must lose access according to current grants.
-            </p>
-          </section>
           <section class="article-section" id="patterns">
             <h2>Where this capability is used</h2>
             <div class="entries">
-              <a class="entry" href="../patterns/goal-discovery.html"
-                ><div>
+              <a class="entry" href="../patterns/goal-discovery.html"><div>
                   <h3>Goal discovery and revision</h3>
                   <p>What is worth preserving?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/analogy.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/analogy.html"><div>
                   <h3>Analogical reasoning and transfer</h3>
                   <p>Does the lesson transfer?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/invention.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/invention.html"><div>
                   <h3>Invention and experimental search</h3>
                   <p>Which trial would teach you the most?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/hierarchical-planning.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/hierarchical-planning.html"><div>
                   <h3>Hierarchical planning under uncertainty</h3>
                   <p>Which detail changes the whole plan?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <section class="article-section" id="connections">
             <h2>Connected capabilities</h2>
             <div class="entries">
-              <a class="entry" href="world-model.html"
-                ><div>
+              <a class="entry" href="world-model.html"><div>
                   <h3>Project and asset model</h3>
                   <p>
                     Represent what exists, where it is, what depends on it, and
                     what is known as of a date.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="verification.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="verification.html"><div>
                   <h3>Verification and acceptance</h3>
                   <p>
                     Determine what a specific check establishes and who may
                     accept the result.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <div class="related">
-            <h3>Continue through the capabilities</h3>
-            <a href="interfaces.html">Human and agent interfaces →</a>
+            <h3>Continue the capability reference</h3>
+            <p>History and lessons become useful when people can retrieve, challenge and apply them. Interfaces provide that access in the work each person is doing.</p><a href="interfaces.html">Next in the capability reference: Human and agent interfaces →</a>
           </div>
         </article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

@@ -1,0 +1,4083 @@
+{
+  "status": "Synthetic reference runs, not operational validation",
+  "model_version": "car-wash-reference-2",
+  "common_inputs": {
+    "time_unit": "minute",
+    "ready_bays_at_start": [
+      1,
+      2,
+      3
+    ],
+    "arrival_times": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "wash_duration": 6,
+    "failure_bay": 2,
+    "failure_time_when_enabled": 5,
+    "fault_report_time": 7,
+    "routine_review_time": 12,
+    "diagnosis_duration": 1,
+    "repair_duration": 3,
+    "test_duration": 1,
+    "test_outcome": "pass",
+    "release_review_delay": 0,
+    "initial_supply_units": 12,
+    "delivery_time": 20,
+    "delivery_units": 6,
+    "receiving_duration": 2,
+    "units_per_wash_start_or_test": 1,
+    "interrupted_wash": "retain customer; cancel completion; full restart",
+    "queue": "FIFO; lowest-numbered ready bay; interrupted customer retains bay",
+    "same_time_phases": [
+      "failure",
+      "completion or accepted stock",
+      "arrival",
+      "information and decisions",
+      "dispatch"
+    ],
+    "abandonment": false,
+    "scenario_probabilities": null,
+    "test_dose_policy": "reserve one usable unit when a recovery job starts; consume at test",
+    "attendant_allocation": "queued non-preemptible jobs; readiness and selected priority determine start",
+    "specialist_assumptions_if_first_check_fails": {
+      "response_interval": 4,
+      "diagnosis": 2,
+      "replacement": 4,
+      "retest": 1,
+      "available_parts": 1,
+      "retest_result": "pass",
+      "authorization_review_delay": 0
+    }
+  },
+  "runs": [
+    {
+      "case": "No failure",
+      "policy": "routine",
+      "failure_at_minute_5": false,
+      "attendant_available_from": 0,
+      "summary": {
+        "completed_by_minute_24": 10,
+        "all_complete_at": 24,
+        "initial_queue_wait_minutes_total": 0,
+        "initial_queue_wait_minutes_mean": 0.0,
+        "customer_minutes_on_site_total": 60,
+        "car_2_complete_at": 8,
+        "bay_2_released_at": null,
+        "attendant_minutes": 2,
+        "supply_units_used": 10,
+        "supply_units_remaining": 8
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 8,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 8,
+          "finish": 14,
+          "bay": 2
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 14,
+          "finish": 20,
+          "bay": 2
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 starts a full wash in bay 2",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 starts a full wash in bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 starts a full wash in bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 5 completes and leaves bay 2",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 starts a full wash in bay 2",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 6 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 7 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Car 8 completes and leaves bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "No failure",
+      "policy": "prompt",
+      "failure_at_minute_5": false,
+      "attendant_available_from": 0,
+      "summary": {
+        "completed_by_minute_24": 10,
+        "all_complete_at": 24,
+        "initial_queue_wait_minutes_total": 0,
+        "initial_queue_wait_minutes_mean": 0.0,
+        "customer_minutes_on_site_total": 60,
+        "car_2_complete_at": 8,
+        "bay_2_released_at": null,
+        "attendant_minutes": 2,
+        "supply_units_used": 10,
+        "supply_units_remaining": 8
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 8,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 8,
+          "finish": 14,
+          "bay": 2
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 14,
+          "finish": 20,
+          "bay": 2
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 starts a full wash in bay 2",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 starts a full wash in bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 starts a full wash in bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 5 completes and leaves bay 2",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 starts a full wash in bay 2",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 6 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 7 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Car 8 completes and leaves bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Failure; attendant available",
+      "policy": "routine",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 0,
+      "summary": {
+        "completed_by_minute_24": 8,
+        "all_complete_at": 29,
+        "initial_queue_wait_minutes_total": 23,
+        "initial_queue_wait_minutes_mean": 2.3,
+        "customer_minutes_on_site_total": 98,
+        "car_2_complete_at": 23,
+        "bay_2_released_at": 17,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 6
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 23,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 23,
+          "finish": 29,
+          "bay": 2
+        }
+      },
+      "attendant_intervals": [
+        [
+          12,
+          17,
+          "diagnosis, repair, test"
+        ],
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Lead requests diagnosis; attendant available from 0",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 6,
+          "reserved_for_test": 1,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 13,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 17,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 17,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 23,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 23,
+          "event": "Car 10 starts a full wash in bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 28,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 29,
+          "event": "Car 10 completes and leaves bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Failure; attendant available",
+      "policy": "prompt",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 0,
+      "summary": {
+        "completed_by_minute_24": 9,
+        "all_complete_at": 28,
+        "initial_queue_wait_minutes_total": 18,
+        "initial_queue_wait_minutes_mean": 1.8,
+        "customer_minutes_on_site_total": 88,
+        "car_2_complete_at": 18,
+        "bay_2_released_at": 12,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 6
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 18,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 2
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        }
+      },
+      "attendant_intervals": [
+        [
+          7,
+          12,
+          "diagnosis, repair, test"
+        ],
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Lead requests diagnosis; attendant available from 0",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 7,
+          "reserved_for_test": 1,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 1,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 7,
+          "reserved_for_test": 1,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 1,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 1,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 1,
+          "consumed_units": 5
+        },
+        {
+          "minute": 11,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 12,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 18,
+          "event": "Car 9 starts a full wash in bay 2",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 22,
+          "event": "Car 10 starts a full wash in bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 24,
+          "event": "Car 9 completes and leaves bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 28,
+          "event": "Car 10 completes and leaves bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Failure; attendant occupied until minute 14",
+      "policy": "routine",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 14,
+      "summary": {
+        "completed_by_minute_24": 7,
+        "all_complete_at": 30,
+        "initial_queue_wait_minutes_total": 24,
+        "initial_queue_wait_minutes_mean": 2.4,
+        "customer_minutes_on_site_total": 101,
+        "car_2_complete_at": 25,
+        "bay_2_released_at": 19,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 6
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 25,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 24,
+          "finish": 30,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          14,
+          19,
+          "diagnosis, repair, test"
+        ],
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Lead requests diagnosis; attendant available from 14",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Attendant released from prior work",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 15,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 19,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 19,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 25,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 28,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 30,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Failure; attendant occupied until minute 14",
+      "policy": "prompt",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 14,
+      "summary": {
+        "completed_by_minute_24": 7,
+        "all_complete_at": 30,
+        "initial_queue_wait_minutes_total": 24,
+        "initial_queue_wait_minutes_mean": 2.4,
+        "customer_minutes_on_site_total": 101,
+        "car_2_complete_at": 25,
+        "bay_2_released_at": 19,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 6
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 25,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 24,
+          "finish": 30,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          14,
+          19,
+          "diagnosis, repair, test"
+        ],
+        [
+          20,
+          22,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 12,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 11,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 10,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 9,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Lead requests diagnosis; attendant available from 14",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Attendant released from prior work",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 15,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 19,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 19,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 25,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 28,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 30,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 12,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    }
+  ],
+  "decision_runs": [
+    {
+      "case": "Limited stock; repair first",
+      "policy": "prompt",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 18,
+      "summary": {
+        "completed_by_minute_24": 6,
+        "all_complete_at": 37,
+        "initial_queue_wait_minutes_total": 41,
+        "initial_queue_wait_minutes_mean": 4.1,
+        "customer_minutes_on_site_total": 124,
+        "car_2_complete_at": 31,
+        "bay_2_released_at": 23,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 2
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 31,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 25,
+          "finish": 31,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 25,
+          "finish": 31,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 31,
+          "finish": 37,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          18,
+          23,
+          "diagnosis, repair, test"
+        ],
+        [
+          23,
+          25,
+          "receiving"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Lead requests diagnosis; attendant available from 18",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Attendant released from prior work",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 0,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 19,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 0,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 0,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 0,
+          "reserved_for_test": 1,
+          "consumed_units": 7
+        },
+        {
+          "minute": 22,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 23,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 23,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 25,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 25,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 9
+        },
+        {
+          "minute": 25,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 10
+        },
+        {
+          "minute": 25,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 37,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 8,
+        "work_priority": "repair_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 25,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Limited stock; receive first",
+      "policy": "prompt",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 18,
+      "summary": {
+        "completed_by_minute_24": 7,
+        "all_complete_at": 33,
+        "initial_queue_wait_minutes_total": 24,
+        "initial_queue_wait_minutes_mean": 2.4,
+        "customer_minutes_on_site_total": 109,
+        "car_2_complete_at": 33,
+        "bay_2_released_at": 27,
+        "attendant_minutes": 7,
+        "supply_units_used": 12,
+        "supply_units_remaining": 2
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 33,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 24,
+          "finish": 30,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          20,
+          22,
+          "receiving"
+        ],
+        [
+          22,
+          27,
+          "diagnosis, repair, test"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Lead requests diagnosis; attendant available from 18",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Attendant released from prior work",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Receiving hold deadline; evaluate currently ready jobs",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 23,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 1,
+          "consumed_units": 10
+        },
+        {
+          "minute": 26,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 27,
+          "event": "Functional test passes; authorized lead releases bay 2",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 27,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 28,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 30,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 33,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 8,
+        "work_priority": "receive_first",
+        "first_check_fails": false,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": null,
+        "specialist_intervals": [],
+        "specialist_parts_received": 0,
+        "specialist_parts_used": 0,
+        "specialist_part_stock": 0
+      }
+    },
+    {
+      "case": "Limited stock; receive first; failed functional check",
+      "policy": "prompt",
+      "failure_at_minute_5": true,
+      "attendant_available_from": 18,
+      "summary": {
+        "completed_by_minute_24": 7,
+        "all_complete_at": 44,
+        "initial_queue_wait_minutes_total": 24,
+        "initial_queue_wait_minutes_mean": 2.4,
+        "customer_minutes_on_site_total": 120,
+        "car_2_complete_at": 44,
+        "bay_2_released_at": 38,
+        "attendant_minutes": 7,
+        "supply_units_used": 13,
+        "supply_units_remaining": 1
+      },
+      "customers": {
+        "1": {
+          "arrival": 0,
+          "first_start": 0,
+          "finish": 6,
+          "bay": 1
+        },
+        "2": {
+          "arrival": 2,
+          "first_start": 2,
+          "finish": 44,
+          "bay": 2
+        },
+        "3": {
+          "arrival": 4,
+          "first_start": 4,
+          "finish": 10,
+          "bay": 3
+        },
+        "4": {
+          "arrival": 6,
+          "first_start": 6,
+          "finish": 12,
+          "bay": 1
+        },
+        "5": {
+          "arrival": 8,
+          "first_start": 10,
+          "finish": 16,
+          "bay": 3
+        },
+        "6": {
+          "arrival": 10,
+          "first_start": 12,
+          "finish": 18,
+          "bay": 1
+        },
+        "7": {
+          "arrival": 12,
+          "first_start": 16,
+          "finish": 22,
+          "bay": 3
+        },
+        "8": {
+          "arrival": 14,
+          "first_start": 18,
+          "finish": 24,
+          "bay": 1
+        },
+        "9": {
+          "arrival": 16,
+          "first_start": 22,
+          "finish": 28,
+          "bay": 3
+        },
+        "10": {
+          "arrival": 18,
+          "first_start": 24,
+          "finish": 30,
+          "bay": 1
+        }
+      },
+      "attendant_intervals": [
+        [
+          20,
+          22,
+          "receiving"
+        ],
+        [
+          22,
+          27,
+          "diagnosis, repair, test"
+        ]
+      ],
+      "trace": [
+        {
+          "minute": 0,
+          "event": "Car 1 arrives",
+          "usable_stock": 8,
+          "reserved_for_test": 0,
+          "consumed_units": 0
+        },
+        {
+          "minute": 0,
+          "event": "Car 1 starts a full wash in bay 1",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 arrives",
+          "usable_stock": 7,
+          "reserved_for_test": 0,
+          "consumed_units": 1
+        },
+        {
+          "minute": 2,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 arrives",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 2
+        },
+        {
+          "minute": 4,
+          "event": "Car 3 starts a full wash in bay 3",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 5,
+          "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 1 completes and leaves bay 1",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 arrives",
+          "usable_stock": 5,
+          "reserved_for_test": 0,
+          "consumed_units": 3
+        },
+        {
+          "minute": 6,
+          "event": "Car 4 starts a full wash in bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Fault report reaches AP; cause remains unconfirmed",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 7,
+          "event": "Lead requests diagnosis; attendant available from 18",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 8,
+          "event": "Car 5 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 3 completes and leaves bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 6 arrives",
+          "usable_stock": 4,
+          "reserved_for_test": 0,
+          "consumed_units": 4
+        },
+        {
+          "minute": 10,
+          "event": "Car 5 starts a full wash in bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 4 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 7 arrives",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Scheduled operating review",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 5
+        },
+        {
+          "minute": 12,
+          "event": "Car 6 starts a full wash in bay 1",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 14,
+          "event": "Car 8 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 5 completes and leaves bay 3",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 9 arrives",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 6
+        },
+        {
+          "minute": 16,
+          "event": "Car 7 starts a full wash in bay 3",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 6 completes and leaves bay 1",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 10 arrives",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Attendant released from prior work",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 7
+        },
+        {
+          "minute": 18,
+          "event": "Car 8 starts a full wash in bay 1",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 20,
+          "event": "Six supply units arrive; receiving job enters attendant queue",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 20,
+          "event": "Attendant starts receiving; delivered stock is not usable yet",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Car 7 completes and leaves bay 3",
+          "usable_stock": 0,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Six supply units accepted into usable stock",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Receiving hold deadline; evaluate currently ready jobs",
+          "usable_stock": 6,
+          "reserved_for_test": 0,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Attendant begins diagnosis; one test dose reserved",
+          "usable_stock": 5,
+          "reserved_for_test": 1,
+          "consumed_units": 8
+        },
+        {
+          "minute": 22,
+          "event": "Car 9 starts a full wash in bay 3",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 23,
+          "event": "Diagnosis supports the modeled minor repair; repair starts",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 24,
+          "event": "Car 8 completes and leaves bay 1",
+          "usable_stock": 4,
+          "reserved_for_test": 1,
+          "consumed_units": 9
+        },
+        {
+          "minute": 24,
+          "event": "Car 10 starts a full wash in bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 1,
+          "consumed_units": 10
+        },
+        {
+          "minute": 26,
+          "event": "Repair complete; one-minute functional test starts",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 27,
+          "event": "Functional check fails; lead holds bay and requests specialist inquiry",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 28,
+          "event": "Car 9 completes and leaves bay 3",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 30,
+          "event": "Car 10 completes and leaves bay 1",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Booked specialist arrives with identified replacement part",
+          "usable_stock": 3,
+          "reserved_for_test": 0,
+          "consumed_units": 11
+        },
+        {
+          "minute": 31,
+          "event": "Specialist begins new diagnosis; retest dose reserved",
+          "usable_stock": 2,
+          "reserved_for_test": 1,
+          "consumed_units": 11
+        },
+        {
+          "minute": 33,
+          "event": "New diagnosis supports component replacement; authorized method replaces minor repair",
+          "usable_stock": 2,
+          "reserved_for_test": 1,
+          "consumed_units": 11
+        },
+        {
+          "minute": 37,
+          "event": "Replacement complete; specialist starts retest",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 38,
+          "event": "Retest passes; lead accepts result and releases bay 2",
+          "usable_stock": 2,
+          "reserved_for_test": 0,
+          "consumed_units": 12
+        },
+        {
+          "minute": 38,
+          "event": "Car 2 starts a full wash in bay 2",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 13
+        },
+        {
+          "minute": 44,
+          "event": "Car 2 completes and leaves bay 2",
+          "usable_stock": 1,
+          "reserved_for_test": 0,
+          "consumed_units": 13
+        }
+      ],
+      "decision_inputs": {
+        "initial_stock": 8,
+        "work_priority": "receive_first",
+        "first_check_fails": true,
+        "reported_delivery_time": 20,
+        "receiving_hold_deadline": 22
+      },
+      "recovery": {
+        "stock_accepted_at": 22,
+        "failed_check_at": 27,
+        "specialist_intervals": [
+          [
+            31,
+            38,
+            "diagnosis, component replacement, retest"
+          ]
+        ],
+        "specialist_parts_received": 1,
+        "specialist_parts_used": 1,
+        "specialist_part_stock": 0
+      }
+    }
+  ],
+  "resource_conflict_check": {
+    "policy": "prompt",
+    "failure_at_minute_5": true,
+    "attendant_available_from": 18,
+    "summary": {
+      "completed_by_minute_24": 7,
+      "all_complete_at": 30,
+      "initial_queue_wait_minutes_total": 24,
+      "initial_queue_wait_minutes_mean": 2.4,
+      "customer_minutes_on_site_total": 105,
+      "car_2_complete_at": 29,
+      "bay_2_released_at": 23,
+      "attendant_minutes": 7,
+      "supply_units_used": 12,
+      "supply_units_remaining": 6
+    },
+    "customers": {
+      "1": {
+        "arrival": 0,
+        "first_start": 0,
+        "finish": 6,
+        "bay": 1
+      },
+      "2": {
+        "arrival": 2,
+        "first_start": 2,
+        "finish": 29,
+        "bay": 2
+      },
+      "3": {
+        "arrival": 4,
+        "first_start": 4,
+        "finish": 10,
+        "bay": 3
+      },
+      "4": {
+        "arrival": 6,
+        "first_start": 6,
+        "finish": 12,
+        "bay": 1
+      },
+      "5": {
+        "arrival": 8,
+        "first_start": 10,
+        "finish": 16,
+        "bay": 3
+      },
+      "6": {
+        "arrival": 10,
+        "first_start": 12,
+        "finish": 18,
+        "bay": 1
+      },
+      "7": {
+        "arrival": 12,
+        "first_start": 16,
+        "finish": 22,
+        "bay": 3
+      },
+      "8": {
+        "arrival": 14,
+        "first_start": 18,
+        "finish": 24,
+        "bay": 1
+      },
+      "9": {
+        "arrival": 16,
+        "first_start": 22,
+        "finish": 28,
+        "bay": 3
+      },
+      "10": {
+        "arrival": 18,
+        "first_start": 24,
+        "finish": 30,
+        "bay": 1
+      }
+    },
+    "attendant_intervals": [
+      [
+        18,
+        23,
+        "diagnosis, repair, test"
+      ],
+      [
+        23,
+        25,
+        "receiving"
+      ]
+    ],
+    "trace": [
+      {
+        "minute": 0,
+        "event": "Car 1 arrives",
+        "usable_stock": 12,
+        "reserved_for_test": 0,
+        "consumed_units": 0
+      },
+      {
+        "minute": 0,
+        "event": "Car 1 starts a full wash in bay 1",
+        "usable_stock": 11,
+        "reserved_for_test": 0,
+        "consumed_units": 1
+      },
+      {
+        "minute": 2,
+        "event": "Car 2 arrives",
+        "usable_stock": 11,
+        "reserved_for_test": 0,
+        "consumed_units": 1
+      },
+      {
+        "minute": 2,
+        "event": "Car 2 starts a full wash in bay 2",
+        "usable_stock": 10,
+        "reserved_for_test": 0,
+        "consumed_units": 2
+      },
+      {
+        "minute": 4,
+        "event": "Car 3 arrives",
+        "usable_stock": 10,
+        "reserved_for_test": 0,
+        "consumed_units": 2
+      },
+      {
+        "minute": 4,
+        "event": "Car 3 starts a full wash in bay 3",
+        "usable_stock": 9,
+        "reserved_for_test": 0,
+        "consumed_units": 3
+      },
+      {
+        "minute": 5,
+        "event": "Bay 2 stops locally; car 2 retained; no staff report yet",
+        "usable_stock": 9,
+        "reserved_for_test": 0,
+        "consumed_units": 3
+      },
+      {
+        "minute": 6,
+        "event": "Car 1 completes and leaves bay 1",
+        "usable_stock": 9,
+        "reserved_for_test": 0,
+        "consumed_units": 3
+      },
+      {
+        "minute": 6,
+        "event": "Car 4 arrives",
+        "usable_stock": 9,
+        "reserved_for_test": 0,
+        "consumed_units": 3
+      },
+      {
+        "minute": 6,
+        "event": "Car 4 starts a full wash in bay 1",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 7,
+        "event": "Fault report reaches AP; cause remains unconfirmed",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 7,
+        "event": "Lead requests diagnosis; attendant available from 18",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 8,
+        "event": "Car 5 arrives",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 10,
+        "event": "Car 3 completes and leaves bay 3",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 10,
+        "event": "Car 6 arrives",
+        "usable_stock": 8,
+        "reserved_for_test": 0,
+        "consumed_units": 4
+      },
+      {
+        "minute": 10,
+        "event": "Car 5 starts a full wash in bay 3",
+        "usable_stock": 7,
+        "reserved_for_test": 0,
+        "consumed_units": 5
+      },
+      {
+        "minute": 12,
+        "event": "Car 4 completes and leaves bay 1",
+        "usable_stock": 7,
+        "reserved_for_test": 0,
+        "consumed_units": 5
+      },
+      {
+        "minute": 12,
+        "event": "Car 7 arrives",
+        "usable_stock": 7,
+        "reserved_for_test": 0,
+        "consumed_units": 5
+      },
+      {
+        "minute": 12,
+        "event": "Scheduled operating review",
+        "usable_stock": 7,
+        "reserved_for_test": 0,
+        "consumed_units": 5
+      },
+      {
+        "minute": 12,
+        "event": "Car 6 starts a full wash in bay 1",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 6
+      },
+      {
+        "minute": 14,
+        "event": "Car 8 arrives",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 6
+      },
+      {
+        "minute": 16,
+        "event": "Car 5 completes and leaves bay 3",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 6
+      },
+      {
+        "minute": 16,
+        "event": "Car 9 arrives",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 6
+      },
+      {
+        "minute": 16,
+        "event": "Car 7 starts a full wash in bay 3",
+        "usable_stock": 5,
+        "reserved_for_test": 0,
+        "consumed_units": 7
+      },
+      {
+        "minute": 18,
+        "event": "Car 6 completes and leaves bay 1",
+        "usable_stock": 5,
+        "reserved_for_test": 0,
+        "consumed_units": 7
+      },
+      {
+        "minute": 18,
+        "event": "Car 10 arrives",
+        "usable_stock": 5,
+        "reserved_for_test": 0,
+        "consumed_units": 7
+      },
+      {
+        "minute": 18,
+        "event": "Attendant released from prior work",
+        "usable_stock": 5,
+        "reserved_for_test": 0,
+        "consumed_units": 7
+      },
+      {
+        "minute": 18,
+        "event": "Attendant begins diagnosis; one test dose reserved",
+        "usable_stock": 4,
+        "reserved_for_test": 1,
+        "consumed_units": 7
+      },
+      {
+        "minute": 18,
+        "event": "Car 8 starts a full wash in bay 1",
+        "usable_stock": 3,
+        "reserved_for_test": 1,
+        "consumed_units": 8
+      },
+      {
+        "minute": 19,
+        "event": "Diagnosis supports the modeled minor repair; repair starts",
+        "usable_stock": 3,
+        "reserved_for_test": 1,
+        "consumed_units": 8
+      },
+      {
+        "minute": 20,
+        "event": "Six supply units arrive; receiving job enters attendant queue",
+        "usable_stock": 3,
+        "reserved_for_test": 1,
+        "consumed_units": 8
+      },
+      {
+        "minute": 22,
+        "event": "Car 7 completes and leaves bay 3",
+        "usable_stock": 3,
+        "reserved_for_test": 1,
+        "consumed_units": 8
+      },
+      {
+        "minute": 22,
+        "event": "Repair complete; one-minute functional test starts",
+        "usable_stock": 3,
+        "reserved_for_test": 0,
+        "consumed_units": 9
+      },
+      {
+        "minute": 22,
+        "event": "Car 9 starts a full wash in bay 3",
+        "usable_stock": 2,
+        "reserved_for_test": 0,
+        "consumed_units": 10
+      },
+      {
+        "minute": 23,
+        "event": "Functional test passes; authorized lead releases bay 2",
+        "usable_stock": 2,
+        "reserved_for_test": 0,
+        "consumed_units": 10
+      },
+      {
+        "minute": 23,
+        "event": "Attendant starts receiving; delivered stock is not usable yet",
+        "usable_stock": 2,
+        "reserved_for_test": 0,
+        "consumed_units": 10
+      },
+      {
+        "minute": 23,
+        "event": "Car 2 starts a full wash in bay 2",
+        "usable_stock": 1,
+        "reserved_for_test": 0,
+        "consumed_units": 11
+      },
+      {
+        "minute": 24,
+        "event": "Car 8 completes and leaves bay 1",
+        "usable_stock": 1,
+        "reserved_for_test": 0,
+        "consumed_units": 11
+      },
+      {
+        "minute": 24,
+        "event": "Car 10 starts a full wash in bay 1",
+        "usable_stock": 0,
+        "reserved_for_test": 0,
+        "consumed_units": 12
+      },
+      {
+        "minute": 25,
+        "event": "Six supply units accepted into usable stock",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 12
+      },
+      {
+        "minute": 28,
+        "event": "Car 9 completes and leaves bay 3",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 12
+      },
+      {
+        "minute": 29,
+        "event": "Car 2 completes and leaves bay 2",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 12
+      },
+      {
+        "minute": 30,
+        "event": "Car 10 completes and leaves bay 1",
+        "usable_stock": 6,
+        "reserved_for_test": 0,
+        "consumed_units": 12
+      }
+    ],
+    "decision_inputs": {
+      "initial_stock": 12,
+      "work_priority": "repair_first",
+      "first_check_fails": false,
+      "reported_delivery_time": 20,
+      "receiving_hold_deadline": 22
+    },
+    "recovery": {
+      "stock_accepted_at": 25,
+      "failed_check_at": null,
+      "specialist_intervals": [],
+      "specialist_parts_received": 0,
+      "specialist_parts_used": 0,
+      "specialist_part_stock": 0
+    }
+  },
+  "parent_readiness": [
+    {
+      "case": "Other prerequisites ready by day 25",
+      "before": 26,
+      "after": 25,
+      "booked_test_retained_after": true
+    },
+    {
+      "case": "External controls ready on day 26",
+      "before": 26,
+      "after": 26,
+      "booked_test_retained_after": false
+    }
+  ]
+}

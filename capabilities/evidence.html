@@ -1,50 +1,32 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
     <title>Field observation and evidence · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Field observation and evidence</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Field observation and evidence</h1>
-        <p>Establish what someone observed, what it settles, and what the next person still needs to check.</p>
-      </div>
+        <p class="chapter-question">When the field and the drawing disagree, what can the team rely on?</p><p>Establish what someone observed, what it settles, and what the next person still needs to check.</p>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#establish-what-is-true">Mission Logic</a>:</strong> AP compares observations and sources to establish what a finding supports and what remains uncertain. The responsible person accepts the answer, or AP settles it within agreed checks; unresolved questions remain explicit.</p>
+      <div class="case-note"><strong>Case: the October tower</strong><p>This chapter examines one responsibility within the <a href="../map.html#tower-decision">introductory tower decision</a>. Its dates and decisions remain the same.</p></div></div>
       <div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#responsibility">Inputs and outputs</a
-            ><a href="#approach">Approach</a
-            ><a href="#execution">Measuring the tower opening</a
-            ><a href="#disagreement">When the drawing and field disagree</a
-            ><a href="#technology-stack">How the tools fit today</a
-            ><a href="#ownership">What Aura Pro takes over</a
-            ><a href="#checks">Client walkthrough</a
-            ><a href="#patterns">Where this capability is used</a
-            ><a href="#connections">Connected capabilities</a>
+            <strong>On this page</strong><a href="#responsibility">Inputs and outputs</a><a href="#approach">Approach</a><a href="#execution">Measuring the tower opening</a><a href="#disagreement">When the drawing and field disagree</a><a href="#technology-stack">How the tools fit today</a><a href="#ownership">What Aura Pro takes over</a><a href="#checks">Client walkthrough</a><a href="#patterns">Where this capability is used</a><a href="#connections">Connected capabilities</a>
           </nav>
         </aside>
         <article>
@@ -66,9 +48,8 @@
           </section>
           <div class="related" id="analysis">
             <h3>Across the architecture</h3>
-            <a href="integration.html"
-              >Construction tools, data ownership, and migration ↗</a
-            >
+            <a href="telemetry.html">Telemetry — Eyes and Ears →</a>
+            <a href="integration.html">Construction tools, data ownership, and migration ↗</a>
           </div>
           <section class="article-section" id="approach">
             <h2>Approach</h2>
@@ -151,9 +132,7 @@
                 route with two adjacent panels held out and confirms the
                 framed unit can pass. The reviewer confirms the revised opening
                 and temporary protection detail.</li>
-              <li><strong>Update the people using the finding.</strong> Aura Pro’s proposed role is to link the official response and
-                both observations to the bay, flag the one-panel plan as
-                infeasible, and send the checked alternative to the scheduler.
+              <li><strong>Update the people using the finding.</strong> Aura Pro links the official response and both observations to the bay, flags the one-panel plan as infeasible, and sends the checked alternative to the scheduler.
                 The original drawing, observed condition, and accepted detail
                 each retain their date and author. The scheduler can now test
                 the October 1 opening forecast. The GC executive owns the
@@ -176,7 +155,7 @@
             <p>
               The client uses Raken, Procore, and Sage. Confirm the active
               connectors and the project’s issued-drawing register with the
-              team. The following is a proposed fit for that toolset.
+              team. AP connects these records through the workflow below.
             </p>
             <dl class="io">
               <dt>Raken</dt>
@@ -212,14 +191,7 @@
             </p>
             <p>
               <strong>Then, take over field capture where the crew adopts it.</strong>
-              The app already has permission-checked media upload and retrieval.
-              Extend its capture form to guide the foreman through endpoints,
-              orientation, readings, and uncertainty. Keep authorized originals
-              in private object storage and revisioned observations and source
-              links in PostgreSQL. Give each offline entry a stable ID and show
-              it as pending until its upload is confirmed. A retry uses the same
-              ID. If a model reads the tape photo, retain the proposed value
-              alongside the image for the observer to check.
+              AP provides permission-checked media upload and retrieval. Its capture form guides the foreman through endpoints, orientation, readings, and uncertainty. AP keeps authorized originals in private object storage and revisioned observations and source links in PostgreSQL. Each offline entry has a stable ID and remains pending until its upload is confirmed. A retry uses the same ID. If a model reads the tape photo, AP retains the proposed value alongside the image for the observer to check.
             </p>
             <p>
               <strong>Transfer authorship by crew and record type.</strong>
@@ -250,61 +222,51 @@
           <section class="article-section" id="patterns">
             <h2>Where this capability is used</h2>
             <div class="entries">
-              <a class="entry" href="../patterns/restoration.html"
-                ><div>
+              <a class="entry" href="../patterns/restoration.html"><div>
                   <h3>Restoration and verification</h3>
                   <p>When can you stop?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/analogy.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/analogy.html"><div>
                   <h3>Analogical reasoning and transfer</h3>
                   <p>Does the lesson transfer?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/invention.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/invention.html"><div>
                   <h3>Invention and experimental search</h3>
                   <p>Which trial would teach you the most?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <section class="article-section" id="connections">
             <h2>Connected capabilities</h2>
             <div class="entries">
-              <a class="entry" href="world-model.html"
-                ><div>
+              <a class="entry" href="world-model.html"><div>
                   <h3>Project and asset model</h3>
                   <p>
                     Represent what exists, where it is, what depends on it, and
                     what is known as of a date.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="inquiry.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="inquiry.html"><div>
                   <h3>Reasoning and inquiry</h3>
                   <p>
                     Choose which question deserves attention and which method
                     can answer it.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <div class="related">
-            <h3>Continue through the capabilities</h3>
-            <a href="world-model.html">Project and asset model →</a>
+            <h3>Continue the capability reference</h3>
+            <p>A supported finding has a scope and a source. The project model connects it to the assets, work and decisions it can change.</p><a href="world-model.html">Next in the capability reference: Project and asset model →</a>
           </div>
         </article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

@@ -349,6 +349,19 @@ p + p {
 .browse {
   padding: 40px 0 65px;
 }
+#reading-path h2 {
+  margin-bottom: 16px;
+}
+#reading-path p,
+#reading-path ol {
+  max-width: 80ch;
+}
+#reading-path ol {
+  padding-left: 1.4em;
+}
+#reading-path li + li {
+  margin-top: 12px;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -715,3 +728,19 @@ footer {
     font-size: 3rem;
   }
 }
+
+/* Version 3: distinguish the reading path from optional reference material. */
+.reading-position {display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;padding:1rem 0;border-bottom:1px solid var(--line);font-size:.85rem;}
+.reading-position span {font-weight:700;margin-right:auto;}
+.reference-fold {border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:1.5rem 0;padding:.9rem 0;}
+.reference-fold > summary {cursor:pointer;font-weight:700;padding:.4rem 0;line-height:1.5;}
+.reference-fold[open] > summary {margin-bottom:1rem;}
+.case-note,.reference-guide {border-left:3px solid var(--line);padding:.75rem 1rem;margin:1.25rem 0;font-size:.92rem;}
+.case-note p {margin:.35rem 0 0;}
+.reference-guide a {display:block;margin-top:.5rem;}
+.route-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 2rem;}
+.route-grid h3 {margin-bottom:.4rem;}.route-grid p{margin-top:0;}
+.reading-list li {margin:.7rem 0;}.example-summary {max-width:62ch;}
+.edition {font-size:inherit;}[id] {scroll-margin-top:6rem;}
+@media(max-width:650px){.route-grid{grid-template-columns:1fr;}.reading-position{font-size:.8rem;}}
+@media print{.reading-position{display:none;}.reference-fold{border:0;}}

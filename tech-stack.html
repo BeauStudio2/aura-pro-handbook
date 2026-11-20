@@ -1,40 +1,32 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="How Aura Pro works with Procore, Raken, and Sage, and which workflows it can take over." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How Aura Pro works with Procore, Raken, and Sage, and which workflows it can take over.">
     <title>Tech stack · Aura Pro</title>
-    <link rel="stylesheet" href="assets/handbook.css" />
-  </head>
+    <link rel="stylesheet" href="assets/handbook.css">
+  <script src="assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="map.html#shared-map">11-step process</a>
-          <a href="patterns/index.html">Examples</a>
-          <a href="capabilities/index.html">Capabilities</a>
-          <a href="capabilities/construction-simulation.html">Construction simulation</a>
-          <a href="tech-stack.html" aria-current="page">Tech stack</a>
-          <a href="index.html#chapters">All chapters</a>
-        </nav>
+          <a href="map.html">Mission Logic</a><a href="patterns/index.html">Examples</a><a href="capabilities/index.html">Capabilities</a><a href="system-architecture.html">Architecture</a><a href="business-management.html">Business management</a><a href="capabilities/construction-simulation.html">Simulation</a><a href="tech-stack.html" aria-current="page">Tech stack</a><a href="index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main id="main" class="wrap">
       <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">Tech stack</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Main reading path · 7 of 7 · Adoption</span><a href="index.html#reading-path">Reading path</a><a href="index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Tech stack</h1>
         <p>Aura Pro connects the platforms a project uses so information recorded in one can guide work in another. Users keep control of their project data. They decide where the official record lives, who can use it, and what to share across systems.</p>
-        <p>The construction client uses Procore, Raken, and Sage today. The proposed Aura Pro workflow starts with exports the team reviews. These bring together field measurements from Raken, drawings and decisions from Procore, and costs from Sage. In the tower example, the team would combine those records with production rates from earlier jobs to compare two ways to install the air handler, forecast the cost and opening date for each, and send the approved sequence to the crew.</p>
-        <p>Over time, users choose which tasks Aura Pro takes on directly, from collecting observations to planning and coordinating the work. They can keep a function in the tool that serves them best and share just the information another team needs. The aim is a complete system for planning, carrying out, and learning from projects at any scale, from a repair one person handles to a development involving thousands.</p>
-      </div>
+        </div>
       <div class="layout">
         <aside>
           <nav class="contents" aria-label="On this page">
             <strong>On this page</strong>
-            <a href="#coordination">One tower decision</a>
+            <a href="#adoption-overview">Main path: Connect the work</a><a href="#coordination">One tower decision</a>
             <a href="#project-data">What the client shares and keeps</a>
             <a href="#transfer">Who approves a handoff?</a>
             <a href="#schedule">Schedule and forecasts</a>
@@ -45,7 +37,13 @@
           </nav>
         </aside>
         <article>
-          <section class="article-section" id="coordination">
+          <section class="article-section" id="adoption-overview"><h2>Connect the work, then move functions deliberately</h2>
+<p>The construction client uses Procore, Raken and Sage today. AP starts with exports the team reviews: drawings and formal decisions from Procore, field measurements and reports from Raken, and financial records from Sage. AP connects their identities, revisions and meaning so a field finding can inform a forecast and reach the people who can act.</p>
+<p>For the October tower, that means linking a clearance measurement to the drawing, the two installation sequences, the spending decision and the crew instruction. Using production rates from comparable jobs, AP forecasts each option’s cost and opening date and follows the approved sequence to the crew. People can trace what changed without rebuilding the same explanation in each tool. The official record for each function remains where the client designates it.</p>
+<p>When clearance checks move into AP, the team gains direct capture tied to the question, visible review status, and automatic identification of the forecasts affected by a correction. The client’s responsible lead approves the transfer, open records and permissions are reconciled, and the next official entry has a stated home. Moving a workflow does not give AP new autonomy.</p>
+<p>The client controls private material, sharing and portable exports. It can change platforms while retaining the permitted evidence and reasoning, keep a function in the tool that serves it best, and share only what another team needs. As AP takes on observation, planning and coordination, it supplies more of the complete system for projects of every scale, from a solo repair to a development involving thousands. Specialist tools remain replaceable.</p>
+<p>This completes the main reading path: objective, reasoning, examples, capabilities, architecture, value and adoption. The reference library on the home page offers the detail needed for the next question.</p>
+<p><a class="button" href="index.html#explore">Next: Choose a deeper reading route →</a></p></section><details class="reference-fold" id="tool-reference"><summary>Technical detail: records, handoffs and the tools behind the workflow</summary><section class="article-section" id="coordination">
             <h2>One tower decision</h2>
             <p>The foreman records a narrow opening in Raken. Aura Pro links
               that measurement to the issued drawing in Procore. The lift lead
@@ -73,25 +71,25 @@
           </section>
           <section class="article-section" id="project-data">
             <h2>What the client shares and keeps</h2>
-            <p>In the proposed workflow, the client chooses what each role can see.
+            <p>The client chooses what each role can see.
               For the air-handler decision, the scheduler gets the checked opening
               dimensions, the drawing revision, the testing dates, and the $4,000
               price for temporary protection. Those inputs are enough to compare the
               two sequences. Individual time cards stay in Raken, and wage rates and
               payroll stay within accounting. The foreman receives the approved
               instruction identifying which panels to hold and when to close them.</p>
-            <p>If the client switches platforms, it should be able to take the decision
+            <p>If the client switches platforms, it can take the decision
               and its evidence together. For this lift, that means the measurement
               and photo, the issued drawing revision, both forecasts with their
               assumptions and test dates, the signed change, the corresponding
-              Sage commitment, and the crew’s acknowledged instruction. The export should include the files the
+              Sage commitment, and the crew’s acknowledged instruction. The export includes the files the
               client is entitled to transfer and an index linking each record by
-              identifier, source, date, and revision. In the new platform, the
-              scheduler should be able to start at the approved two-bay lift and
+              identifier, source, date, and revision. In the new platform, the scheduler can start at the approved two-bay lift and
               trace why the team still expected to open on October 1. That is the test for a usable export.</p>
           </section>
           <section class="article-section" id="transfer">
             <h2>Who approves a handoff?</h2>
+            <p>The client also reviews whether the change improves outcomes or reduces effort enough to justify transition and ongoing costs. <a href="business-management.html#cost-to-use">The cost of obtaining useful intelligence</a> makes preparation, training, support, and reconciliation part of that comparison.</p>
             <p>The client names the person authorized to move each function. That
               person approves the scope, the switch date, and where the next official
               entry goes. Until that date, the team keeps using its current register.</p>
@@ -261,7 +259,7 @@
               <div>
                 <dt>When it moves or stays</dt>
                 <dd>
-                  Signed changes stay in Procore under the proposed handoff. Moving field
+                  Signed changes stay in Procore under this handoff. Moving field
                   instructions or spending checks leaves signature authority with the
                   signatories.
                 </dd>
@@ -288,9 +286,9 @@
               <div>
                 <dt>When it moves or stays</dt>
                 <dd>
-                  In Aura Pro the foreman could open the scheduler’s request
-                  for that exact bay and drawing revision, then answer it on site
-                  with one reading and photo. The scheduler could see immediately
+                  In Aura Pro the foreman opens the scheduler’s request
+                  for that exact bay and drawing revision, then answers it on site
+                  with one reading and photo. The scheduler sees immediately
                   which lift forecast needs another look, while the crew still has
                   time to hold the next panel. That saves matching a daily report
                   to the open question later. Move clearance checks when the crew can
@@ -407,20 +405,20 @@
           </section>
           <section class="article-section" id="platform">
             <h2>Inside Aura Pro</h2>
-            <p>The existing web app uses React, TypeScript, and TanStack. Supabase Auth identifies the participant. PostgreSQL stores project records and permissions, and private file storage holds evidence such as drawings and field photos.</p>
-            <p>The proposed planning service uses SimPy to model how work unfolds over time and OR-Tools to compare schedules under crew, equipment, and calendar constraints. The scheduler reviews the assumptions and forecasts. Connections to the three client tools can start with reviewed exports and use supported interfaces where the client has access.</p>
+            <p>The Aura Pro web app uses React, TypeScript, and TanStack. Supabase Auth identifies the participant. PostgreSQL stores project records and permissions, and private file storage holds evidence such as drawings and field photos.</p>
+            <p>The planning service uses SimPy to model how work unfolds over time and OR-Tools to compare schedules under crew, equipment, and calendar constraints. The scheduler reviews the assumptions and forecasts. Connections to the three client tools can start with reviewed exports and use supported interfaces where the client has access.</p>
             <p>For a whole building project, Aura Pro can call NVIDIA tools to check a lift route, compare delivery plans or test weather-sensitive work. The results feed back into the crew schedule, cost and opening forecast. <a href="capabilities/construction-simulation.html">Construction simulation architecture and NVIDIA assessment →</a></p>
             <div class="actions">
               <a class="under" href="capabilities/integration.html">Construction integration details →</a>
-              <a class="under" href="capabilities/index.html">The ten system capabilities →</a>
+              <a class="under" href="capabilities/index.html">The eleven system capabilities →</a>
             </div>
           </section>
-        </article>
+        </details><div class="related"><h3>Choose the next question</h3><a href="index.html#explore">Return to: Deeper reading routes →</a><a href="capabilities/integration.html">Technical detail: Construction tools and integration ↗</a><a href="capabilities/construction-simulation.html#nvidia">Technical detail: Where NVIDIA fits ↗</a></div></article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

@@ -1,51 +1,35 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
     <title>Verification and acceptance · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Verification and acceptance</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Verification and acceptance</h1>
-        <p>
+        <p class="chapter-question">What does this check establish, and what can proceed because of it?</p><p>
           Determine what a specific check establishes and who may accept the
           result.
         </p>
-      </div>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#step-10">Mission Logic</a>:</strong> The checker reports what a result establishes, and the responsible person accepts it for its supported scope. AP records what closes, what remains open, and which dependent actions are ready for authorized release. One person can both check and accept.</p>
+      <div class="reference-guide"><strong>Explore this capability in depth</strong><a href="../engineering-basis.html">Worked example: What calculations and checks establish ↗</a><a href="../simulation-execution.html#validation">Technical detail: Test a model and its recommendation ↗</a></div></div>
       <div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#responsibility">Inputs and outputs</a
-            ><a href="#approach">Approach</a
-            ><a href="#execution">How it works</a
-            ><a href="#technology-stack">Technology choices</a
-            ><a href="#ownership">Integration and native ownership</a
-            ><a href="#patterns">Where this capability is used</a
-            ><a href="#connections">Connected capabilities</a>
+            <strong>On this page</strong><a href="#responsibility">Inputs and outputs</a><a href="#approach">Approach</a><a href="#execution">How it works</a><a href="#technology-stack">Technology choices</a><a href="#ownership">Integration and native ownership</a><a href="#patterns">Where this capability is used</a><a href="#connections">Connected capabilities</a>
           </nav>
         </aside>
         <article>
@@ -66,9 +50,7 @@
           </section>
           <div class="related" id="analysis">
             <h3>Across the architecture</h3>
-            <a href="integration.html"
-              >Construction tools, data ownership, and migration ↗</a
-            >
+            <a href="integration.html">Construction tools, data ownership, and migration ↗</a>
           </div>
           <section class="article-section" id="approach">
             <h2>Approach</h2>
@@ -91,27 +73,21 @@
               what was accepted and known on the earlier date.
             </p>
           </section>
+          <p><a href="../engineering-basis.html#proof">Worked evidence and acceptance example →</a> Follow an air-handler calculation into a scoped airflow check, distinguishing calculated compatibility, installation acceptance, integrated performance, and occupancy.</p>
           <section class="article-section" id="technology-stack">
             <h2>Technology choices</h2>
+            <p>Acceptance establishes whether the agreed result was achieved. The <a href="../business-management.html#value">value review</a> separately examines its cost and benefit and what AP contributed. A passed check alone cannot establish a saving.</p>
             <p>
-              Use versioned criteria and check results in PostgreSQL,
-              access-controlled object storage for evidence, and deterministic
-              comparisons for units and tolerances. Link client inspection
-              records from the designated Procore project workflow.
+              AP stores versioned criteria and check results in PostgreSQL, keeps evidence in access-controlled object storage, and uses deterministic comparisons for units and tolerances. It links client inspection records from the designated Procore project workflow.
               Alternatives include a native mobile checklist and reviewed
-              inspector-signed document import. Use recognition models for draft
-              extraction with source references.
-              <a
-                href="https://supabase.com/docs/guides/database/postgres/row-level-security"
-                >Supabase row-level security</a
-              >
+              inspector-signed document import. Recognition models supply draft extractions with source references for review.
+              <a href="https://supabase.com/docs/guides/database/postgres/row-level-security">Supabase row-level security</a>
             </p>
           </section>
           <section class="article-section" id="ownership">
             <h2>Integration and native ownership</h2>
             <p>
-              Aura Pro can first assemble review packets and later own
-              acceptance for explicitly assigned checks. Keep external
+              AP assembles review packets around the client’s existing acceptance process. When the client assigns a check to AP, the responsible reviewer records acceptance there. Keep external
               professional or agency decisions with the appropriate issuer and
               retain their references. Test wrong-floor evidence, an unperformed
               check, and a superseded acceptance. None should silently release
@@ -121,60 +97,50 @@
           <section class="article-section" id="patterns">
             <h2>Where this capability is used</h2>
             <div class="entries">
-              <a class="entry" href="../patterns/restoration.html"
-                ><div>
+              <a class="entry" href="../patterns/restoration.html"><div>
                   <h3>Restoration and verification</h3>
                   <p>When can you stop?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/invention.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/invention.html"><div>
                   <h3>Invention and experimental search</h3>
                   <p>Which trial would teach you the most?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/operations.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/operations.html"><div>
                   <h3>Continuous operations and exception handling</h3>
                   <p>What needs attention now?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <section class="article-section" id="connections">
             <h2>Connected capabilities</h2>
             <div class="entries">
-              <a class="entry" href="evidence.html"
-                ><div>
+              <a class="entry" href="evidence.html"><div>
                   <h3>Field observation and evidence</h3>
                   <p>
                     Acquire the observation that can settle a physical question.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="learning.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="learning.html"><div>
                   <h3>Project memory and learning</h3>
                   <p>
                     Retain the reasons, evidence, and conditions that can
                     improve a later decision.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <div class="related">
-            <h3>Continue through the capabilities</h3>
-            <a href="learning.html">Project memory and learning →</a>
+            <h3>Continue the capability reference</h3>
+            <p>The accepted result settles a defined scope. Memory and learning preserve its reasoning and ask what should change next time.</p><a href="learning.html">Next in the capability reference: Project memory and learning →</a>
           </div>
         </article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

@@ -1,53 +1,148 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
     <title>System capabilities · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" aria-current="page">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html" aria-current="page">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">System capabilities</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Main reading path · 4 of 7 · Capabilities</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>System capabilities</h1>
         <p>
-          Ten proposed capabilities support the work described in the cognitive
-          map. Construction is the first client application.
+          Eleven capabilities work together to support <a href="../map.html">Mission Logic</a>: how AP reasons, acts, and learns. The eleven steps describe how work progresses; the capabilities describe what the platform contributes. Each capability can support several steps and reasoning patterns. Their matching counts do not imply a one-to-one mapping; Mission Logic spans them all. Construction is the first client application.
         </p>
       </div>
-      <div class="layout">
+      <p><a href="../architecture-reference.html#capabilities">Read the system architecture: the shared model and capability handoffs →</a></p>
+<div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#architecture">The first client application</a
-            ><a href="#understand">Intent and current state</a
-            ><a href="#reason">Reasoning and planning</a
-            ><a href="#deliver">Coordinating and checking work</a
-            ><a href="#retain">Continuity and access</a>
+            <strong>On this page</strong><a href="#together">How the capabilities work together</a><a href="#direction">Direction and authority</a><a href="#understand">Understanding current conditions</a><a href="#reason">Reasoning and planning</a><a href="#deliver">Coordinating and checking work</a><a href="#retain">Learning and collaboration</a><a href="#architecture">The first client application</a>
           </nav>
         </aside>
         <article>
-          <section class="article-section" id="architecture">
+          <section class="article-section" id="together">
+            <h2>How the capabilities work together</h2>
+          <p>The <a href="../business-management.html">business management view</a> uses these same capabilities to connect objectives, costs and benefits, performance measures, and portfolio decisions. People shape the priorities and alternatives throughout <a href="../map.html#human-partnership">Mission Logic</a>; AP supports their reasoning and follows the consequences.</p>
+            <p>These groups provide a reading order. In use, the capabilities work together and revisit one another as conditions change. Authority, learning and human interfaces apply throughout the work. Verification can settle a design trial or a field question long before the project is complete.</p>
+            <p>Consider the shipment in <a href="telemetry.html#observation-plan">Telemetry</a>. Tomorrow’s installation needs its material on the correct floor. One missing scan brings several capabilities into the same decision:</p>
+            <ol>
+              <li><strong>Establish the need and what to watch.</strong> <a href="intent-authority.html">Intent and authority</a> records the installation objective and who may change the sequence. <a href="planning.html">General planning and simulation</a> identifies the delivery dependency. <a href="telemetry.html">Telemetry</a> watches its progress and identifies the missing floor scan.</li>
+              <li><strong>Resolve the useful question.</strong> <a href="inquiry.html">Reasoning and inquiry</a> identifies the check that could change the crew’s next action. Telemetry obtains the receiver’s confirmation that the pallet is downstairs. <a href="evidence.html">Field observation and evidence</a> establishes which pallet and location the report supports. The <a href="world-model.html">project and asset model</a> connects that finding to the shipment, floor and installation task.</li>
+              <li><strong>Compare and authorize the response.</strong> <a href="logistics.html">Resources and logistics</a> identifies an available hoist slot; the lift lead confirms the load and handling time fit. Planning compares that lift with starting the crew on other ready work. The superintendent approves the revised sequence under the applicable authority.</li>
+              <li><strong>Carry out and check the work.</strong> <a href="execution.html">Work coordination and execution</a> carries the instruction to the lift lead and follows its acknowledgment and completion. Telemetry brings back the arrival record. <a href="verification.html">Verification and acceptance</a> records the installation lead’s check that the required quantity is present and usable before the crew starts.</li>
+              <li><strong>Improve the next decision.</strong> <a href="learning.html">Project memory and learning</a> compares forecast and actual timing and examines whether the missing information warrants a different observation plan. Across these exchanges, <a href="interfaces.html">human and agent interfaces</a> give each participant the evidence, question and permitted action relevant to their role.</li>
+            </ol>
+            <p>The connections work in both directions. A new finding updates the project model and can reopen an inquiry or invalidate a plan. A simulation identifies an assumption to observe. An acceptance check can trigger corrective work. Learning can add a useful watch or remove a redundant question. Integration with other platforms carries the source records and approved updates across those connections.</p>
+          </section>
+          <section class="article-section" id="direction">
+<h2>Direction and authority</h2>
+<p>Define the outcome and who can decide or act. These permissions apply to every capability, including how actively AP may participate.</p>
+<div class="entries"><a class="entry" href="intent-authority.html"><div>
+                  <h3>Intent and authority</h3>
+                  <p>
+                    Define the desired result, the decisions people retain, and
+                    the work they delegate.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a></div>
+</section>
+          <section class="article-section" id="understand">
+<h2>Understanding current conditions</h2>
+<p>Telemetry organizes observation and collection. Evidence establishes what an observation supports, including uncertainty and conflicting accounts. The project model keeps the resulting claims connected to assets, work and their dependencies.</p>
+<div class="entries"><a class="entry" href="telemetry.html"><div><h3>Telemetry — Eyes and Ears</h3><p>Decide what to observe, connect signals, expose gaps, and request the next useful check.</p></div><span aria-hidden="true">↗</span></a><a class="entry" href="evidence.html"><div>
+                  <h3>Field observation and evidence</h3>
+                  <p>
+                    Establish what an observation supports, its uncertainty, and which decision can rely on it.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="world-model.html"><div>
+                  <h3>Project and asset model</h3>
+                  <p>
+                    Represent what exists, where it is, what depends on it, and
+                    what is known as of a date.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a></div>
+</section>
+          <section class="article-section" id="reason">
+<h2>Reasoning and planning</h2>
+<p>Inquiry chooses which unresolved question matters and how to answer it. Planning generates and compares courses of action, evaluates their risks, and identifies assumptions that need checking. Either can send a new question back to observation.</p>
+<div class="entries"><a class="entry" href="inquiry.html"><div>
+                  <h3>Reasoning and inquiry</h3>
+                  <p>
+                    Choose which question deserves attention and which method
+                    can answer it.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="planning.html"><div>
+                  <h3>General planning and simulation</h3>
+                  <p>
+                    Compare ways to carry out any job and identify what to test
+                    before choosing a plan.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a></div>
+<p class="chapter-note">Construction application · <a href="construction-simulation.html">Whole-building simulation with NVIDIA</a></p>
+</section>
+          <section class="article-section" id="deliver">
+<h2>Coordinating and checking work</h2>
+<p>Planning explores possible resource combinations; logistics establishes what is available or committed. Execution coordinates authorized work. Verification determines whether a stated requirement has been met and who accepts the result. Evidence supports the finding on which that acceptance relies.</p>
+<div class="entries"><a class="entry" href="logistics.html"><div>
+                  <h3>Resources and logistics</h3>
+                  <p>
+                    Make the needed people, materials, equipment, and access
+                    available together.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="execution.html"><div>
+                  <h3>Work coordination and execution</h3>
+                  <p>
+                    Carry an authorized choice into physical work and follow it
+                    through handoffs.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="verification.html"><div>
+                  <h3>Verification and acceptance</h3>
+                  <p>
+                    Determine what a specific check establishes and who may
+                    accept the result.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a></div>
+</section>
+          <section class="article-section" id="retain">
+<h2>Learning and collaboration</h2>
+<p>Project memory preserves retrievable history and reasoning. Learning uses that history to improve models, questions and working practices from experience. Interfaces support the team’s participation in every capability. Both operate throughout the work, including before a plan is chosen.</p>
+<div class="entries"><a class="entry" href="learning.html"><div>
+                  <h3>Project memory and learning</h3>
+                  <p>
+                    Retrieve the project’s history and reasoning; learn with the team through observation,
+                    interviews, simulations and outcomes.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="interfaces.html"><div>
+                  <h3>Human and agent interfaces</h3>
+                  <p>
+                    Give each participant the information and actions
+                    appropriate to their role.
+                  </p>
+                </div>
+                <span aria-hidden="true">↗</span></a></div>
+<p class="chapter-note">Learning reference · <a href="historical-databases.html">Historical databases</a> supplies supporting sources.</p>
+</section>
+<section class="article-section" id="architecture">
             <h2>The first client application</h2>
             <p>
               On a small repair, one person can describe the problem, do the
@@ -58,143 +153,23 @@
             </p>
             <p>
               The construction client already uses Raken for field reports,
-              Procore for project decisions, and Sage for accounting. The
-              proposed design connects a finding in the field to the plan,
+              Procore for project decisions, and Sage for accounting. Aura Pro connects a finding in the field to the plan,
               the person authorized to act, and the instruction the crew
               receives. A workflow can move into Aura Pro when the client
               designates it as the place to do and record that work.
             </p>
             <div class="actions">
-              <a class="under" href="intent-authority.html">Start with intent and authority →</a>
-              <a class="under" href="construction-simulation.html">Whole-building simulation with NVIDIA →</a>
-              <a class="under" href="../tech-stack.html">Tech stack →</a>
+              <a class="under" href="intent-authority.html">Technical detail: Intent and authority →</a>
+              <a class="under" href="construction-simulation.html">Worked example: Whole-building simulation →</a>
+              <a class="under" href="../tech-stack.html">Technical detail: Tech stack →</a>
             </div>
           </section>
-          <section class="article-section" id="understand">
-            <h2>Intent and current state</h2>
-            <div class="entries">
-              <a class="entry" href="intent-authority.html"
-                ><div>
-                  <h3>Intent and authority</h3>
-                  <p>
-                    Define the desired result, the decisions people retain, and
-                    the work they delegate.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="evidence.html"
-                ><div>
-                  <h3>Field observation and evidence</h3>
-                  <p>
-                    Acquire the observation that can settle a physical question.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="world-model.html"
-                ><div>
-                  <h3>Project and asset model</h3>
-                  <p>
-                    Represent what exists, where it is, what depends on it, and
-                    what is known as of a date.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </section>
-          <section class="article-section" id="reason">
-            <h2>Reasoning and planning</h2>
-            <div class="entries">
-              <a class="entry" href="inquiry.html"
-                ><div>
-                  <h3>Reasoning and inquiry</h3>
-                  <p>
-                    Choose which question deserves attention and which method
-                    can answer it.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="planning.html"
-                ><div>
-                  <h3>General planning and simulation</h3>
-                  <p>
-                    Compare ways to carry out any job and identify what to test
-                    before choosing a plan.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              >
-            </div>
-            <p class="chapter-note">Construction application · <a href="construction-simulation.html">Whole-building simulation proposal with NVIDIA</a></p>
-          </section>
-          <section class="article-section" id="deliver">
-            <h2>Coordinating and checking work</h2>
-            <div class="entries">
-              <a class="entry" href="logistics.html"
-                ><div>
-                  <h3>Resources and logistics</h3>
-                  <p>
-                    Make the needed people, materials, equipment, and access
-                    available together.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="execution.html"
-                ><div>
-                  <h3>Work coordination and execution</h3>
-                  <p>
-                    Carry an authorized choice into physical work and follow it
-                    through handoffs.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="verification.html"
-                ><div>
-                  <h3>Verification and acceptance</h3>
-                  <p>
-                    Determine what a specific check establishes and who may
-                    accept the result.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </section>
-          <section class="article-section" id="retain">
-            <h2>Continuity and access</h2>
-            <div class="entries">
-              <a class="entry" href="learning.html"
-                ><div>
-                  <h3>Project memory and learning</h3>
-                  <p>
-                    Retain the reasons, evidence, and conditions that can
-                    improve a later decision.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="interfaces.html"
-                ><div>
-                  <h3>Human and agent interfaces</h3>
-                  <p>
-                    Give each participant the information and actions
-                    appropriate to their role.
-                  </p>
-                </div>
-                <span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </section>
-          <div class="related">
-            <h3>Related reading</h3>
-            <a class="" href="../map.html">The cognitive map ↗</a
-            ><a class="" href="../patterns/index.html">Reasoning patterns ↗</a>
-          </div>
-        </article>
+<div class="related"><h3>Continue the main reading path</h3><p>These responsibilities share the same evidence and decisions. The architecture explains how those connections remain dependable.</p><a href="../system-architecture.html">Next: System architecture →</a><a href="intent-authority.html">Technical detail: Read the capability series ↗</a><a href="construction-simulation.html">Worked example: Whole-building simulation ↗</a></div></article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

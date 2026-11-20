@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
+    <title>Historical databases · Aura Pro · Version 3</title>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <div class="bar">
+        <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+        <nav aria-label="Handbook">
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
+      </div>
+    </header>
+    <main class="wrap" id="main">
+
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="learning.html">Project memory and learning</a> / Historical databases</nav>
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
+        <h1>Historical databases</h1>
+        <p>Reference sources for questions about construction sequences, weather, traffic, costs, equipment and building operation. Each entry describes what the source contains and how AP tests its usefulness.</p>
+      </div>
+      <div class="layout"><aside><nav class="contents" aria-label="On this page"><strong>On this page</strong><a href="#sources">Sources and possible uses</a><a href="learning.html#databases">How databases contribute to learning</a></nav></aside><article>
+          <section class="article-section" id="sources">
+            <h2>Sources and possible uses</h2>
+            <p>Historical databases let AP learn beyond the projects a particular
+              team has completed. They can supply examples of work sequences,
+              ranges for uncertain conditions, cases worth asking a specialist
+              about, and independent data against which to test a model.
+              A weather history can generate plausible weeks for a simulation.
+              A schedule archive can suggest dependencies to investigate.
+              The client’s records and interviews help establish how those
+              conditions affected the actual work.</p>
+            <p>The sources below were reviewed on November 17, 2026. Their
+              documentation and access routes establish what is available.
+              AP checks completeness and comparability before adopting a learned rate or predictive model. The uses below describe how each source contributes when it meets the project’s requirements.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Historical databases and proposed uses">
+              <table>
+                <thead><tr><th>Source and historical evidence</th><th>What AP learns and what it checks</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Cambridge construction schedule archive.</strong> Approximately 300 construction schedules, supplied as a downloadable dataset under CC BY 4.0. <a href="https://www.repository.cam.ac.uk/items/6cb214a6-f52d-4846-b2de-3a2e2a34d431">Cambridge dataset</a></td>
+                    <td>Find recurring activity sequences and test schedule forecasts on held-out projects. Inspect which dates are planned, forecast or actual, how calendars are represented, and which projects resemble the current job. Crew-level explanations would need supporting records.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>NYC Capital Projects schedule history.</strong> Reporting periods, project IDs, completion dates, date types, variance and a field for the reason a completion forecast changed. Public download and API. <a href="https://data.cityofnewyork.us/City-Government/Capital-Projects-Dashboard-Citywide-Schedule-Histo/95tx-snak">Schedule History and Variance</a></td>
+                    <td>Study when forecasts move and whether early changes precede later delays. Check missing explanations and reporting lag. Public infrastructure and private towers can have different delivery conditions. Preserve each reporting snapshot to reproduce what was knowable then.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>NYC DOB filings and occupancy records.</strong> Job and building identifiers, filing status and characteristics, plus occupancy submission, status and issuance fields. Public download and API. <a href="https://data.cityofnewyork.us/Housing-Development/DOB-NOW-Build-Job-Application-Filings/w9ak-ipjd">Job applications</a> · <a href="https://data.cityofnewyork.us/Housing-Development/DOB-NOW-Certificate-of-Occupancy/pkdm-hqz6">Occupancy certificates</a></td>
+                    <td>Find comparable filings and administrative completion intervals. Match revisions and multiple filings to the correct building and scope. An issued certificate supplies an administrative endpoint. Client records establish the installation and test sequence that led to it.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>NOAA Global Hourly / ISD.</strong> Historical station observations of temperature, wind, gusts, pressure, visibility and precipitation, with bulk downloads. <a href="https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database">Global Hourly archive</a></td>
+                    <td>Replay weather sequences and estimate how often a proposed work window encounters unfavorable conditions. Keep consecutive weather observations together so storms can affect deliveries and lifts at once. Relate the station to site exposure and working height, and apply the actual method’s operating conditions.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Caltrans PeMS.</strong> More than ten years of archived California freeway information, including detectors, incidents and lane closures. An approved account is required. <a href="https://pems.dot.ca.gov/">PeMS</a></td>
+                    <td>Estimate travel-time variation by corridor, time and incident conditions for California work. Compare simulated dispatch with historical congestion. Check road coverage and data gaps. The site’s unloading queue requires separate observations.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>BLS Producer Price Index.</strong> Historical price indexes by industry and commodity, with public time-series downloads. <a href="https://www.bls.gov/ppi/databases/home.htm">PPI databases</a></td>
+                    <td>Explore material and equipment cost escalation. Match the index to the purchase, region where appropriate, and pricing period. Start from a dated quote or actual cost and account for the contract’s price terms.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>BLS Quarterly Census of Employment and Wages.</strong> Historical employment and wages by industry and geography, available as downloadable files. <a href="https://www.bls.gov/cew/downloadable-data-files.htm">QCEW history</a></td>
+                    <td>Study regional construction labor conditions and wage changes. Use them to frame staffing scenarios and questions for subcontractors. Availability of the crew or qualified operator on a specific shift still needs project-level evidence.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>EIA energy histories.</strong> Petroleum prices, including gasoline and diesel, alongside electricity and natural-gas series. Public API and downloads, with frequency varying by series. <a href="https://www.eia.gov/opendata/">EIA Open Data</a></td>
+                    <td>Replay fuel exposure for generators and transport or electricity costs during commissioning. Apply consumption, local contracts and surcharge formulas to the selected historical prices. Retain the series geography and publication frequency.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>FRED and ALFRED.</strong> Economic time series and, where available, their original releases and later revisions. API access and series-specific terms apply. <a href="https://fred.stlouisfed.org/docs/api/fred/alfred.html">ALFRED documentation</a></td>
+                    <td>Test financing and economic scenarios using information actually available on a historical decision date. ALFRED’s publication history helps prevent a later revision from leaking into a replay. Establish the project’s exposure before treating a market movement as consequential.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>OSHA investigation summaries.</strong> Searchable descriptions of investigated incidents, with dates, industries and inspection references. <a href="https://www.osha.gov/help/accident-investigation">Investigation database guide</a></td>
+                    <td>Find failure mechanisms, missing prerequisites and questions to add to a simulation or interview. Investigation cases are a selected population. To estimate frequency, AP also needs a comparable measure of how much work occurred without an incident.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>NASA Prognostics Data Repository.</strong> Bearing, battery and other degradation datasets, including laboratory experiments and explicitly simulated engine histories. Downloadable collections with attribution requirements. <a href="https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/">NASA repository</a></td>
+                    <td>Develop and test methods for recognizing change in sensor histories and forecasting degradation. Establish the measurement setup, loading and failure definition for each dataset. Applying a method to a construction pump requires validation on that equipment and its duty cycle.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Building Data Genome 2.</strong> Hourly meter measurements from 3,053 meters in 1,636 buildings during 2016–2017, with building and weather information. An open research repository provides data and its license. <a href="https://github.com/buds-lab/building-data-genome-project-2">Building Data Genome 2</a></td>
+                    <td>Learn operating patterns and test demand forecasts or unusual-consumption detection. Retain raw and cleaned-data distinctions. A strange meter reading prompts investigation into occupancy, equipment or the sensor itself.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>DOE Building Performance Database.</strong> Anonymized measured building energy and physical characteristics, with peer-group analysis through a web interface and API. <a href="https://www.energy.gov/cmei/buildings/building-performance-database-bpd">DOE database overview</a></td>
+                    <td>Compare a building with peers of similar type, size, climate and operation. Use the permitted aggregate comparisons to question an energy target or identify a building worth investigating. Preserve differences in occupancy and operating hours.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gordian RSMeans historical cost data.</strong> Commercial construction cost histories with geographic, material, labor and equipment detail. Access depends on the purchased product and terms. <a href="https://www.rsmeans.com/products/online/data-insights-cost-trends/data-insights-cost-trends-historical">Historical cost trends</a></td>
+                    <td>Supply estimating references and cost scenarios where the client’s history is thin. Distinguish estimating data from a contractor’s observed cost and productivity. Establish permitted machine use, model development and export before integrating licensed data.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>USGS earthquake catalog.</strong> Historical events searchable by time, location, depth and magnitude through a public service. <a href="https://earthquake.usgs.gov/fdsnws/event/1/">Earthquake catalog API</a></td>
+                    <td>Match a regional event with a local vibration trace and investigate possible causes. Keep measurement uncertainty and catalog revisions. Site motion and structural response need local measurements and the relevant engineering model.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Connect the sources through a question.</strong> Suppose a
+              planner says winter deliveries cause frequent pour delays. AP can
+              compare project delivery and placement records with local hourly
+              weather and an applicable traffic archive. It can ask whether the
+              effect came from transit, batching, unloading or a site closure.
+              Those explanations lead to different simulations and different
+              interview questions. A consistent association is a reason to
+              investigate the mechanism and test it on other comparable pours.</p>
+            <p>For each source, record the coverage, units, sampling interval,
+              missing data, revision history, access terms and whether it contains
+              observed, estimated or simulated values. Preserve dates and
+              identifiers when linking it to a project. Keep later outcomes out
+              of the inputs to a historical forecast. Test on separate projects
+              or time periods and compare with the team’s existing estimates.
+              Start with the databases that can change an identifiable decision,
+              then expand as new questions emerge.</p>
+            <p>For the building model, the closest starting sources are the schedule
+              archive, local filing and occupancy records, weather history, and
+              cost and labor series. Equipment and building-operation archives
+              extend that learning into maintenance and occupancy. These sources form a reference catalog. AP checks each source’s fitness for the client’s actual work before using it in a project model.</p>
+          </section>
+      <div class="related"><a href="learning.html">Return to Project memory and learning →</a></div>
+      </article></div>
+    </main>
+    <footer><div class="wrap foot"><span>Aura Pro <b>/</b> Product &amp; architecture handbook · Version 2<small class="edition"> · Version 3</small></span><a href="../index.html#chapters">All handbook chapters ↑</a></div></footer>
+  </body>
+</html>

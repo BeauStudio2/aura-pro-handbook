@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A working inventory of real-time inputs for Aura Pro, from a person's point of view to conditions across a supply network.">
+    <title>Telemetry — Eyes and Ears · Aura Pro</title>
+    <link rel="stylesheet" href="../assets/handbook.css">
+  <script src="../assets/reading.js" defer></script></head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast"><div class="bar">
+      <a class="brand" href="../index.html"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
+      <nav aria-label="Handbook">
+        <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
+    </div></header>
+    <main class="wrap" id="main">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Capabilities</a> / Telemetry</nav>
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
+        <h1>Telemetry — Eyes and Ears</h1>
+        <p class="chapter-question">What should AP watch, and when is another observation worth asking for?</p><p>When something changes, how does Aura Pro find out while there is still time to act? A foreman can point a camera at a bracket. A pump can report a fault while the building is empty. A road closure miles away can change which crew should work first. Each can answer an open question or reveal one nobody thought to ask.</p>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#decide-what-deserves-attention">Mission Logic</a>:</strong> AP uses the objective and open decisions to choose what to observe, within the team’s permissions. It connects incoming signals, exposes gaps, and identifies questions that need another look.</p>
+      </div>
+      <div class="layout"><aside><nav class="contents" aria-label="On this page">
+        <strong>On this page</strong><a href="#observation-plan">How AP decides what to observe</a><a href="#connections">Connecting signals into a shared picture</a><a href="#coverage">Recognizing gaps in what AP can see</a><a href="#next-observation">Asking for what is needed next</a><a href="#inputs">What can AP observe?</a><a href="#timing">When should AP listen?</a><a href="#decision">From signal to decision</a><a href="#attention">When to interrupt and whom to tell</a><a href="#learning">From observation to learning and back</a><a href="#control">Who controls collection?</a>
+      </nav></aside><article>
+        <section class="article-section" id="observation-plan">
+          <h2>How AP decides what to observe</h2>
+          <div class="case-note"><strong>Case: a shipment needed for tomorrow’s installation</strong><p>Follow the same shipment through the next four sections: what to observe, how records connect, what is missing, and who supplies the next useful check.</p></div><p>AP starts with the objective, the current state of the work, and the conditions the plan depends on. It identifies what could change success, which conditions are already observed, and which remain assumptions. The team can name something to watch. AP can also propose a watch or open an inquiry when information from authorized sources reveals an unexpected connection.</p>
+          <p>Suppose tomorrow's installation depends on a shipment reaching its floor before the crew starts. AP works backward through receiving, lifting, gate access and dispatch. It identifies what each existing source can establish, who can resolve a gap, and when the answer could still change the sequence. A carrier ETA covers the journey. It does not establish whether the material will reach the floor.</p>
+          <p>The resulting observation plan connects each important question to a source or requested check, a useful time to check it, and the person who needs the answer. AP prioritizes information that could change a choice or reveal a consequential failure. As the work changes, it revises those questions and proposes changes to collection within the team's permissions. For a sink repair, one photograph and an observed flow check may supply everything needed.</p>
+        </section>
+        <section class="article-section" id="connections">
+          <h2>Connecting signals into a shared picture</h2>
+          <p>AP connects observations to the same asset, material, location and task, retaining the source and time of each. In the installation example, a delivery ticket identifies the shipment and a gate record places its truck on site. A floor scan would identify a pallet at its destination. A forklift movement can help explain the journey between them, but needs a load reference or confirmation before AP attributes it to that shipment. Partial deliveries remain separate from the full order.</p>
+          <p>Where identifiers are missing, AP can suggest a match from time, location and appearance and ask the receiver to confirm it. The shared picture distinguishes confirmed connections from suggested ones. Correcting a match changes the affected readiness checks and forecasts while preserving the earlier interpretation and its sources.</p>
+          <p>Connections can also expose a developing problem. Slightly slower deliveries, declining installed quantities and repeated overtime may together threaten the next handoff even though no individual reading crosses an agreed threshold. AP compares the pattern with the planned work and investigates possible explanations: material shortages, harder work, access restrictions or late reporting. If the records leave the cause unresolved, AP asks the foreman, “Are crews waiting for material, or is installation taking longer once it arrives?” The foreman can identify another explanation or a combination. AP uses the answer to direct the next check: compare delivery and work-start times for material waits, or examine installation conditions and production records for slower work. It then tests how the supported explanation affects the wider sequence.</p>
+        </section>
+        <section class="article-section" id="coverage">
+          <h2>Recognizing gaps in what AP can see</h2>
+          <p>AP tracks the coverage and condition of its sources alongside their readings. The dashboard distinguishes:</p>
+          <ul>
+            <li><strong>Observed and unchanged.</strong> A recent check covers the relevant condition and found no change.</li>
+            <li><strong>Awaiting an update.</strong> The last observation remains dated; the expected next report has not arrived.</li>
+            <li><strong>Source unavailable or unreliable.</strong> A device is offline, a camera view is obstructed, or a measurement needs checking.</li>
+            <li><strong>Not covered.</strong> No available source observes this location or answers this question.</li>
+          </ul>
+          <p>A working gate camera still cannot establish that the shipment reached its floor. If the floor scan is missing, AP shows the last confirmed location and the unresolved readiness question. It checks whether reporting is delayed before concluding that the shipment is delayed. Forecasts depending on its location retain that uncertainty. A missing observation never becomes an automatic confirmation that the plan is on track.</p>
+        </section>
+        <section class="article-section" id="next-observation">
+          <h2>Asking for what is needed next</h2>
+          <p>AP chooses the next observation by asking which answer could change the decision, how quickly it could arrive, and what collecting it would require. It first checks available records. If a delayed floor scan arrives before AP needs to ask someone, it may settle the location question. The team's agreed checks could require that the scan identify the correct pallet and destination, be recent enough for this decision, and come from a source accepted for confirming location. When those checks pass and no later movement or conflicting evidence leaves the location unresolved, AP closes that question, links the evidence and updates the dashboard without asking anyone to repeat the check. Quantity, condition and authorization to start remain separate questions.</p>
+          <p>When the records cannot settle the question, AP can request another camera angle, an asset scan, an explanation or a measurement, or propose temporary monitoring when repeated observations would help. Each request states the question, why it matters, and when the answer is useful.</p>
+          <p>Here, however, no floor scan arrives. AP asks the receiver to confirm the pallet identity and location before the crew's release decision. The receiver finds it downstairs. AP records the confirmed location and compares a revised lift sequence with starting the crew on other ready work. Suppose AP identifies an available hoist slot before tomorrow's crew start, and the lift lead confirms that the load and handling time fit that slot. Using it would get the material to the floor without displacing another booked lift, allowing the installation to start as planned. The superintendent approves that sequence.</p>
+          <p>The lift lead carries it out, and AP updates the forecast and watches for arrival on the floor. The receiver records that arrival; the installation lead confirms the required quantity is present and usable and releases the crew under the agreed plan. AP closes the delivery watch and carries the actual timing into the next forecast.</p>
+          <p>If nobody can check in time, AP presents the remaining uncertainty and its consequences for the choice. The decision owner can proceed, wait or change the sequence. Closing one question leaves any separate checks or watches visible until their own conditions are met.</p>
+          <p>The result updates the shared picture and the affected simulations. A repeated gap may justify a proposed receiving check or a better source. The team decides whether that additional collection is worth its effort. <a href="learning.html">How those outcomes improve AP's next inquiry →</a></p>
+        </section>
+        <section class="article-section" id="inputs">
+          <h2>What can AP observe?</h2>
+          <p>AP groups inputs by what they describe and records how each signal arrived. Available sources depend on the project’s devices, connections, and permissions. One phone can supply a spoken explanation, a view of an obstruction, and a location estimate. Each answers a different question.</p>
+          <h3>People and firsthand accounts</h3>
+          <p>POV cameras on glasses, helmets or chest mounts, phone photos and video, microphones, operator voice notes, radio reports, marked-up images, customer complaints, crew requests and explicit instructions. A fault code can establish when a pump stopped. The mechanic can explain that it was deliberately isolated for service.</p>
+          <h3>Shared spaces and site activity</h3>
+          <p>Fixed security and gate cameras, access events, door contacts, occupancy and queue counters, time-lapse imagery, drone surveys, thermal cameras, LiDAR and depth scans. A gate camera can establish that a truck entered. The receiver or delivery ticket can establish which load was accepted.</p>
+          <h3>Mobile devices, position and movement</h3>
+          <p>Depending on the device and permissions, a phone, tablet or wearable can contribute GPS position and speed, accelerometer and gyroscope readings, compass heading, barometric pressure, light, proximity, depth, images and audio. Wi-Fi, Bluetooth beacons, UWB anchors and NFC taps can add local position or asset identity. Battery, connectivity and last contact describe the device itself. To establish which floor someone observed, pair a pressure change with a floor marker or asset scan. <a href="https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview">Android sensor inventory</a></p>
+          <h3>Equipment, buildings and utilities</h3>
+          <p>Machine controller states, fault codes, motor current, torque, speed, vibration, operating hours, fuel, battery charge, flow, pressure, valve position, leak detection, electrical meters, elevator status, building controls and utility outages. A pump can draw current against a closed valve. Pressure, flow and a valve check help distinguish that condition from normal operation.</p>
+          <h3>Materials, quantities and installed work</h3>
+          <p>Barcode and RFID scans, smart scales, weighbridge and batch tickets, concrete temperature, material moisture, survey points, laser measurements, progress images, tool counters, inspection and functional test results. Track ordered, delivered, installed and accepted quantities separately. A pallet scanned at the gate still has to reach its floor.</p>
+          <h3>Weather, ground and surroundings</h3>
+          <p>Barometric pressure, wind direction and gusts at working height, rain, temperature, humidity, lightning, visibility, smoke, particulates, noise, groundwater, flood and tide gauges, tilt, settlement, local vibration and regional seismic events. Compare a foundation sensor’s vibration trace with pile-driving times and earthquake bulletins. A nearby earthquake is a reason to investigate the structure; the local instrument and inspection establish what happened there. <a href="https://www.weather.gov/documentation/services-web-api">National Weather Service observations, forecasts and alerts</a> · <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS earthquake feeds</a></p>
+          <h3>Transport and supply networks</h3>
+          <p>Fleet GPS, dispatch status, traffic speeds, crashes and closures, bridge restrictions, transit interruptions, rail and port congestion, supplier production updates, carrier ETAs, dock reservations and delivery acceptance. A ten-minute delay matters very differently if the gate has spare capacity or the only hoist booking is about to expire.</p>
+          <h3>Project records, workforce and public decisions</h3>
+          <p>Crew rosters and check-ins, qualified operator availability, shift swaps, labor action, purchase orders, inventory, cash draws, drawing revisions, design questions, permit decisions, inspection bookings, service calls and customer demand. A canceled inspection changes the path to occupancy even when the site looks exactly as it did yesterday.</p>
+          <h3>Prices, markets and wider events</h3>
+          <p>Local fuel quotes, fuel-card transactions, diesel indexes, freight rates, steel and copper prices, electricity tariffs, exchange and interest rates, stock and sector prices, company filings, public hearings and emergency notices. Tie diesel to the carrier’s surcharge formula and the remaining trips. A supplier’s stock-price move might justify asking about a shipment. A confirmed dispatch or cancellation changes its status. Preserve the publication cadence of each source. A weekly regional price and today’s local quote answer different questions. <a href="https://www.eia.gov/petroleum/gasdiesel/">EIA gasoline and diesel updates</a></p>
+        </section>
+        <section class="article-section" id="timing">
+          <h2>When should AP listen?</h2>
+          <p>“Real time” depends on when a decision is still open. Wind during a lift can change within seconds. A road closure matters before dispatch. A revised fuel rate matters before the next commitment.</p>
+          <ul>
+            <li><strong>On demand.</strong> A person opens a POV session, records a voice note or takes one measurement. A short clip with the tap running may answer the entire question on a sink repair.</li>
+            <li><strong>On an event.</strong> A fault, delivery scan, permit change or price threshold prompts a check. A short trace around the event may be enough to explain it.</li>
+            <li><strong>Periodically or continuously.</strong> Sample where a trend matters and stream where a brief event could be missed. Have the instrument report loss of coverage. A silent leak detector with a dead battery leaves the condition unknown.</li>
+            <li><strong>Ahead of the event.</strong> Weather ensembles and traffic predictions describe possible futures. Keep the forecast and its issue time so the eventual outcome can be compared with what the team knew.</li>
+          </ul>
+        </section>
+        <section class="article-section" id="decision">
+          <h2>From signal to decision</h2>
+          <p><strong>A delivery is slipping.</strong> Traffic reports show a lane closure. Truck GPS places the delivery upstream and dispatch revises its ETA. AP compares the arrival range with the gate booking, hoist availability and the receiving crew’s shift. If all plausible arrivals fit, the scheduler leaves the plan in place. If some miss, AP asks dispatch for a firmer ETA and shows the superintendent which other work the crew could do. The superintendent chooses the sequence. The receiver records arrival and acceptance. The actual wait becomes evidence for the next simulation.</p>
+          <p><strong>A car-wash bay goes quiet.</strong> No sales for an hour could mean low demand. If other bays are busy and this pump reports a fault, AP can ask the attendant for a ten-second POV view of the panel. The attendant may explain that the bay was closed for cleaning. A human observation can prevent an unnecessary service call and correct AP’s understanding of the site.</p>
+          <p>For each source, keep the event time, reporting time, asset or location, units, uncertainty, and the decision it might change. Identify who can confirm it and how long it stays useful. Separate the reading from the interpretation. Two applications repeating the same carrier ETA still supply one estimate. If inputs conflict, keep both and ask for the check that could distinguish them.</p>
+        </section>
+        <section class="article-section" id="attention">
+          <h2>When to interrupt and whom to tell</h2>
+          <div class="case-note"><strong>Case: a stopped pump on a different pour</strong><p>This timing-and-routing example is separate from the dispatcher’s supply calculation in Learning and AI reasoning.</p></div><p>The team can tell AP what to watch, who owns the response, and when they want a call. AP can also open an inquiry when authorized sources reveal something nobody put on the watch list. A dispatch rule the team explicitly set keeps its agreed trigger and recipient. For a newly discovered issue, AP works out what waiting would cost.</p>
+          <ol>
+            <li><strong>Find the decision at stake.</strong> Trace the observation to a person, objective, commitment or assumption it could affect. Consider opportunities too. An earlier delivery might free a crane slot for another trade. If plausible explanations would all leave the plan unchanged, record the finding and move on.</li>
+            <li><strong>Establish the last useful time to speak.</strong> Identify when an option closes, then allow time for the recipient to check, decide and communicate. Compare that deadline with the next ordinary update. If waiting would lose an option or materially increase harm, delay or cost, interrupt while someone can still make a difference. An agreed immediate-response condition follows the project's designated channel.</li>
+            <li><strong>Match the message to the evidence.</strong> Check timestamps, independent sources and known exceptions while time allows. If one quick field check could settle the issue, ask the person who can perform it. When the potential consequence is serious and the deadline is near, state the uncertainty and ask for the appropriate immediate check. Routine findings can go into the next handoff with a time to revisit them.</li>
+            <li><strong>Route each request to the person who can answer it or act on it.</strong> Look up the current assignment, shift coverage and delegated authority. The witness may confirm the facts, the dispatcher may change a release, and the superintendent may decide between competing trades. Send each the evidence needed for their part. Notify downstream teams when their instructions or commitments change. If an urgent request goes unacknowledged, use the assigned backup in time for that person to act.</li>
+          </ol>
+          <p><strong>Six trucks at the gate.</strong> Suppose it is 10:00. Six trucks are waiting, the dashboard still shows the pour on schedule, and the next planning update is at 10:30. AP checks whether the trucks belong to this pour and whether loads are discharging. If the queue is planned and clearing at the expected rate, the dispatcher can keep working. If the unloading record is stale, the gate lead can answer one question: “Is the pump receiving loads now?”</p>
+          <p>Suppose the gate lead confirms that unloading has stopped. The next truck will be released at 10:12, and dispatch needs five minutes to hold it. That makes 10:07 the latest useful time to reach the dispatcher. AP sends the confirmed condition, the next release time, and the choice to hold or release the truck. If moving a crew or borrowing another trade's pump would help, AP routes that separate decision to the superintendent. It keeps one open issue and updates it when the facts change.</p>
+          <p>Afterward, compare the warning with the actual restart, wait and decision. Did the notice reach someone who could act? Did the lead time suffice? Did a local condition explain a false alarm? Use those answers to improve future timing and routing. If a recurring pattern deserves a standing watch, propose it to the team. <a href="../map.html#decide-what-deserves-attention">How Mission Logic decides what deserves attention</a></p>
+        </section>
+        <section class="article-section" id="learning">
+          <h2>From observation to learning and back</h2>
+          <p>Telemetry establishes what is happening, what remains unknown, and who needs the information. Learning examines what that experience should change about AP's models, questions and work with the team. Both can happen during the same encounter. Confirming the pallet's location updates the current project picture; comparing predicted and actual delivery times across comparable work can improve a forecast.</p>
+          <p id="dashboard">The dashboard connects observations and their sources with human explanations, the alternatives considered, predictions, the chosen action and its actual outcome. Learning uses that shared record, alongside historical data and interviews, to test what should carry forward. A supported lesson can change the next observation plan: which condition to watch, which record to check, or when to ask. Changes to collection and team procedures remain within the team's permissions.</p>
+          <p><a href="learning.html#approach">Follow a learning cycle on a different pour →</a> · <a href="learning.html#dashboard">How the team uses the shared dashboard record →</a></p>
+        </section>
+        <section class="article-section" id="control">
+          <h2>Who controls collection?</h2>
+          <p>The project sets the purpose, access, sharing and retention for each source. Someone contributing POV audio or video sees when capture starts and who can retrieve it, and can pause capture. A dispatcher may need a gate count, while a lift lead needs a particular image. Where the count answers the question, the camera can send the count and keep footage local.</p>
+          <p><a href="evidence.html">How a field observation becomes accepted evidence →</a></p>
+        </section>
+        <div class="related"><h3>Continue the capability reference</h3><p>Observations now have a question, source and recipient. Evidence determines what those observations actually establish.</p><a href="evidence.html">Next in the capability reference: Field observation and evidence →</a></div>
+      </article></div>
+    </main>
+    <footer><div class="wrap foot"><span>Aura Pro <b>/</b> Product &amp; architecture handbook · Version 2<small class="edition"> · Version 3</small></span><a href="../index.html#chapters">All handbook chapters ↑</a></div></footer>
+  </body>
+</html>

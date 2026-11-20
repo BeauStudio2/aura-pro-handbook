@@ -1,77 +1,71 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Aura Pro product and architecture handbook"
-    />
-    <title>The 11-step process and cognitive map · Aura Pro</title>
-    <link rel="stylesheet" href="assets/handbook.css" />
-  </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aura Pro product and architecture handbook">
+    <title>Mission Logic · Aura Pro</title>
+    <link rel="stylesheet" href="assets/handbook.css">
+    <link rel="stylesheet" href="assets/cognitive-map.css">
+  <script src="assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="#shared-map" aria-current="page">11-step process</a>
-          <a href="patterns/index.html">Examples</a>
-          <a href="capabilities/index.html">Capabilities</a>
-          <a href="capabilities/construction-simulation.html">Construction simulation</a>
-          <a href="tech-stack.html">Tech stack</a>
-          <a href="index.html#chapters">All chapters</a>
-        </nav>
+          <a href="map.html" aria-current="page">Mission Logic</a><a href="patterns/index.html">Examples</a><a href="capabilities/index.html">Capabilities</a><a href="system-architecture.html">Architecture</a><a href="business-management.html">Business management</a><a href="capabilities/construction-simulation.html">Simulation</a><a href="tech-stack.html">Tech stack</a><a href="index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main id="main" class="wrap">
-      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">11-step process</b></nav>
-      <div class="paperhead">
-        <h1>How Aura Pro works</h1>
-        <p>
-          The cognitive map starts with the 11-step process. A worked example follows one tower
-          team from an opening-day forecast to a field check and a revised plan.
-        </p>
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b aria-current="page">Mission Logic</b></nav>
+      <nav class="reading-position" aria-label="Reading position"><span>Main reading path · 2 of 7 · Mission Logic</span><a href="index.html#reading-path">Reading path</a><a href="index.html#explore">Deeper routes</a></nav><div class="paperhead">
+        <h1>Mission Logic</h1>
+        <p>How people and Aura Pro reason, act, and learn together.</p>
+        <p>Mission Logic is the shared reasoning process through which people and Aura Pro shape an objective, develop a solution, carry out the work, and learn from the result. AP makes evidence and consequences easier to understand; people contribute knowledge, create alternatives, guide simulations, and decide within their responsibilities. Together they revise the approach as work unfolds.</p>
+        <p><strong>Introductory path:</strong> Start with <a href="#human-partnership">how people and AP reason together</a>, then read <a href="#shared-map">the eleven-step process</a> and <a href="#tower-decision">one tower decision</a>, then explore the seven examples. <strong>Deeper reasoning:</strong> Continue to <a href="#deeper-reasoning">how AP chooses and manages its next move</a> when a question needs closer examination.</p>
       </div>
       <div class="layout">
         <aside>
           <nav class="contents" aria-label="On this page">
-            <strong>On this page</strong
-            ><a href="#shared-map">The 11-step process</a
-            ><a href="#tower-decision">One tower decision</a
-            ><a href="#layers">Obligation, question, and method</a
-            ><a href="#result">Who acts on a result?</a
-            ><a href="#decide-what-deserves-attention"
-              >Decide what deserves attention</a
-            ><a href="#choose-the-next-move">Choose the next move</a
-            ><a href="#establish-what-is-true">Establish what is true</a
-            ><a href="#generate-alternatives">Generate alternatives</a
-            ><a href="#manage-the-question-while-choosing-a-method"
-              >Manage the question while choosing a method</a
-            ><a href="#learn-from-the-outcome">Learn from the outcome</a
-            ><a href="#examples">The seven examples</a
-            ><a href="#review">Open architecture questions</a>
-          </nav>
+            <strong>On this page</strong><a href="#human-partnership">People and AP reason together</a><a href="#shared-map">Introductory path: The 11-step process</a><a href="#tower-decision">One tower decision</a><details class="reference-fold" id="toc-reasoning"><summary>Deeper reasoning sections</summary><a href="#deeper-reasoning">Deeper reasoning</a><a href="#layers">Obligation, question, and method</a><a href="#result">Who acts on a result?</a><a href="#decide-what-deserves-attention">Decide what deserves attention</a><a href="#choose-the-next-move">Choose the next move</a><a href="#establish-what-is-true">Establish what is true</a><a href="#generate-alternatives">Generate alternatives</a><a href="#manage-the-question-while-choosing-a-method">Manage the question while choosing a method</a><a href="#nesting-example">A nested inquiry</a><a href="#learn-from-the-outcome">Learn from the outcome</a><a href="#examples">The seven examples</a><a href="#review">Reviewing how Mission Logic works</a>
+          </details></nav>
         </aside>
         <article>
+          <section class="article-section" id="human-partnership">
+            <h2>People and AP reason together</h2>
+            <p>People bring purpose, experience and judgment. AP connects evidence, develops comparisons and follows consequences across the work. Together they shape the objective, create alternatives, guide simulations and interpret results. A human explanation gives AP a starting point to investigate; it is not automatically proof.</p><p>People can correct the model and redirect the work throughout the process. They <a href="capabilities/intent-authority.html#participation">set AP’s role and can withdraw it</a>. One person can fill every role on a small job; agreed routine checks need no repeated approval. <a href="#human-participation-detail">Technical detail: Human participation throughout the process ↗</a></p></section>
           <section class="article-section" id="shared-map">
+            <div class="label">Introductory path</div>
             <h2>The 11-step process</h2>
+            <p>Enter at the step the work needs now. Move forward when the next step has what it needs; return when evidence changes the question or plan. Project memory supplies context and receives findings throughout. People can wait for information or readiness, or stop the relevant inquiry or work, with responsibility and unresolved questions kept explicit.</p><figure class="diagram diagram-overview" id="process-diagram">
+              <figcaption><strong>People and AP · all 11 steps, return paths, and project memory</strong><a href="assets/map-process.svg">Open full-size map ↗</a></figcaption>
+              <p class="map-key">Read downward for the usual progression. Conditions beside each step explain the return routes; matching letters identify their ends. A bridge marks a crossing without a connection.</p><div class="diagram-scroll" tabindex="0" role="region" aria-label="Mission Logic: the 11-step process; scroll horizontally on smaller screens">
+                <img src="assets/map-process.svg" width="1310" height="1970" alt="People and AP collaborate at every step: people shape objectives, contribute experience, create alternatives, guide tests and simulations, decide, act, and learn. Eleven separate steps run from objective through current state, discovery, criteria, solutions, risk, testing, selection, execution, outcome evaluation and learning. Continuous return arrows connect source steps to destination boxes for intent, discovery, design or selection. Separate lanes and matching letter markers distinguish common return routes; conditions beside their source steps explain when to take each. A bridge marks the single crossing. Proceed from testing to selection when there is enough credible evidence to choose. Every step retrieves from and records to project memory. Requirements and real-world need are checked separately; simulations are assessed for the decision they support. Check current readiness between selection and execution. Move forward when the next step has what it needs, even if questions remain that do not prevent the decision. At any step, wait for information or readiness with an owner, trigger and deadline. Name the scope of any stop and the person authorized to decide it; other work continues unless also stopped.">
+              </div>
+            </figure>
+            <p><a class="under" href="#tower-decision">See this process in the tower decision →</a> Read the step descriptions below when a closer explanation is useful.</p>
+            <details class="reference-fold" id="step-details"><summary>Read map guidance, step descriptions and entry points</summary><h3>Reading and applying the map</h3><p>Each numbered box is a distinct step in the shared work of people and AP. The roles shown apply throughout; human participation is not a separate approval box. Read downward for the usual progression. Move forward when the next step has what it needs; unresolved questions may remain if they do not prevent that decision. Follow each colored return arrow from its source step to the destination box; matching letters identify both ends. Each route has its own lane, and a small bridge marks a crossing without a connection. Conditions beside the source steps explain when to take these common return paths. Move from testing to selection when there is enough credible evidence to choose. Enter at the step the work needs now. Project memory supplies context and receives new evidence throughout. At any step, wait for information or readiness with an owner, trigger and deadline. If stopping, name what stops and who is authorized to decide: closing an inquiry does not automatically stop a work package or the whole undertaking. Keep unresolved questions explicit.</p>
+            <h3>The steps in detail</h3>
+            <p>For closer reading: all eleven steps, followed by how AP uses existing knowledge and enters work already underway.</p>
             <ol>
-            <li><strong>Identify the objective or problem.</strong> State the objective and who owns it. Set a provisional success criterion: what observable result would count as success? Use it to guide the first assessment.</li>
-            <li><strong>Assess the current state.</strong> Establish current conditions, available resources, and constraints. For evidence that could change a decision, record its source, what it measures, and when it applies.</li>
-            <li><strong>Discovery.</strong> State what the evidence establishes and what remains unknown. Identify each choice that depends on the finding, who can make that choice, and which assumption needs another look.</li>
-            <li><strong>Define success and selection criteria.</strong> Confirm or revise the provisional criterion in light of the evidence. Specify how to check the outcome and how to compare viable solutions.</li>
-            <li><strong>Design possible solutions.</strong> Work backward from the desired outcome and forward from current conditions. Include the likely outcome of continuing on the current course.</li>
-            <li><strong>Evaluate the risk of each solution.</strong> Identify what could go wrong with each option, how likely it is, what the consequences would be, and what could reduce the risk.</li>
-            <li><strong>Test, compare, and refine.</strong> Test the assumption most likely to change the choice. The tester reports what the trial establishes. If the result distinguishes the options as expected, the decision owner can choose at 8. If it undermines the comparison itself, reopen that decision at 3.</li>
-            <li><strong>Select a solution and plan execution.</strong> The authorized decision-maker chooses a course. Agree on the sequence and resources, who will act, who will check the outcome, and who can accept the answer. For an agreed fallback, name its trigger and the person authorized to carry it out.</li>
-            <li><strong>Execute and monitor.</strong> The person doing the work compares actual conditions with the plan. Carry out an agreed response when its trigger occurs. Send a finding that puts a decision in doubt to the person who owns that decision while there is still time to act.</li>
-            <li><strong>Evaluate the outcome.</strong> The checker reports what passed, failed, or still needs a check. The person responsible for the question accepts the answer when the evidence meets its criterion and states what it settles. The same person can do both. A failed trial can settle its test question and leave the larger objective open.</li>
-            <li><strong>Record and learn.</strong> Keep the result with its source, the expected outcome, and the conditions actually observed. Record what each owner did with the finding. Later checks show whether the action worked and where the lesson applies.</li>
+            <li id="step-1"><strong>Identify the objective or problem.</strong> The person responsible describes the need and what matters. AP helps clarify the objective, who owns it, and a provisional success criterion: what observable result would count as success? That shared understanding guides the first assessment.</li>
+            <li id="step-2"><strong>Assess the current state.</strong> People contribute observations and practical context; AP connects them with records to establish current conditions, available resources, and constraints. For evidence that could change a decision, record its source, what it measures, and when it applies.</li>
+            <li id="step-3"><strong>Discovery.</strong> People and AP examine what the evidence establishes and what remains unknown. A person can explain an unexpected condition; AP compares that explanation with other evidence and suggests a useful check. Identify each choice that depends on the finding, who can make that choice, and which assumption needs another look.</li>
+            <li id="step-4"><strong>Define success and selection criteria.</strong> The objective owner confirms or revises the provisional criterion with input from affected people. AP makes the consequences and competing priorities visible. Distinguish the specified requirements from the real need they are intended to serve. Define checks for both conformance and usefulness under intended operating conditions, including integrated performance at the parent level. Specify how to compare viable solutions.</li>
+            <li id="step-5"><strong>Design possible solutions.</strong> People and AP work backward from the desired outcome and forward from current conditions. People contribute methods and possibilities from their experience; AP develops variations and traces their dependencies. Include the likely outcome of continuing on the current course.</li>
+            <li id="step-6"><strong>Evaluate the risk of each solution.</strong> AP and the people familiar with the work identify what could go wrong with each option, how likely it is, what the consequences would be, and what could reduce the risk. The team challenges assumptions and identifies risks the model has missed. Unsupported likelihoods remain explicit unknowns; the relevant decision owner judges acceptable exposure.</li>
+            <li id="step-7"><strong>Test, compare, and refine.</strong> People and AP choose a test of the assumption most likely to change the choice. The team shapes the simulations, changes assumptions, tries different responses, and interprets the comparison with AP. State competing predictions and what observation would distinguish them. The tester reports what the trial establishes and what remains unresolved. For a simulation, check whether its model, input evidence, uncertainty, and demonstrated accuracy support this particular decision; a preferred simulated option is not an observed outcome. If the result distinguishes the options as expected, the decision owner can choose at 8. If it undermines the comparison itself, reopen that decision at 3.</li>
+            <li id="step-8"><strong>Select a solution and plan execution.</strong> AP explains the alternatives, their consequences, and unresolved conditions. The authorized decision-maker chooses a course or asks for another comparison. Agree on the sequence and resources, who will act, who will check the outcome, and who can accept the answer. Name who checks readiness and releases each action, and the conditions that must be satisfied at release. For an agreed fallback, name its trigger and the person authorized to carry it out.</li>
+            <li id="step-9"><strong>Execute and monitor.</strong> Before release, the person named to check readiness confirms that the required people, equipment, materials, access, prerequisite results, and permission are actually in place for this action. A selected plan or promised resource is not current readiness. If a condition is missing, wait for it, follow an authorized fallback whose trigger is met, or return the changed decision to its owner. During work, people contribute observations and practical adjustments while AP compares actual conditions with the plan and traces consequences. Carry out agreed responses when their triggers occur, and report consequential findings while there is still time to act.</li>
+            <li id="step-10"><strong>Evaluate the outcome.</strong> AP assembles the comparison and evidence. The checker reports whether the result meets specified requirements (verification) and serves the real need under intended operating conditions (validation). At the parent level, check interactions and integrated performance; passing every child check does not establish that the whole works. The responsible person accepts the answer for its supported scope and states what remains unresolved. The same person can check and accept. A failed trial can settle its test question while the larger objective remains open.</li>
+            <li id="step-11"><strong>Record and learn.</strong> People and AP review the history recorded throughout the work: the result and its source, the expected outcome, the conditions observed, and what each owner did with the finding. Record what the person and AP each learned, whether their understanding changed, and when it will be tested again. Separate observed outcomes, supported explanations, and simulated alternatives. A successful result alone does not establish why it occurred. Preserve the evidence and limits of any proposed lesson separately from permission to use it. Later checks show where the lesson applies and whether the model remains useful for its stated decisions.</li>
             </ol>
+            <h3>Use what is already known</h3>
+            <p>Before opening another investigation, AP <a href="capabilities/learning.html#retrieval">retrieves relevant project history and reasoning</a>: what is already established, what was tried, why alternatives were rejected, and which questions remain unresolved. It checks whether the evidence still describes the present conditions and whether a lesson is applicable and approved for this use. People can add missing context or challenge whether a prior case applies. That history may supply the answer, suggest a method, or identify the particular gap worth investigating next. AP records findings and decisions as they occur; step 11 reviews and consolidates that history so the next decision can start from it.</p>
             <h3>Where work can skip ahead</h3>
-            <p>Start with the first decision or action still open. For a new objective, begin at step 1. For work already underway, carry forward the evidence, decisions, and permissions that still apply.</p>
+            <p>The person and AP start with the first decision or action still open. For a new objective, begin at step 1. For work already underway, carry forward the evidence, decisions, and permissions that still apply.</p>
+
             <ul>
             <li><strong>The objective is understood.</strong> If current conditions are missing, start at 2. If a finding already calls a decision into question, start at 3.</li>
             <li><strong>A proposal or test is ready for comparison.</strong> Enter at 7 with the criterion and assumptions it tests. If the evidence is already sufficient and a choice is due, the decision owner starts at 8.</li>
@@ -81,24 +75,11 @@
             <div class="actions">
               <a class="under" href="#tower-decision">Follow one tower decision →</a>
             </div>
-          </section>
+          </details></section>
           <section class="article-section" id="tower-decision">
-            <div class="label">Worked example</div>
+            <div class="label">Introductory path · Worked example</div>
             <h2>How will the tower crew get the air handler inside?</h2>
-            <p>
-              <strong>The owner’s representative sets October 1 as the target for lower-floor occupancy.</strong>
-              Aura Pro and the scheduler use the project schedule, crane bookings,
-              and production rates from comparable jobs to simulate two construction sequences.
-              Lifting the air handler before installing the façade gives the mechanical
-              crew open access, but leaves interior work exposed through winter.
-              Giving the façade crew the crane first encloses the floors sooner. The team
-              prefers that sequence because it protects interior work and keeps ventilation
-              testing on track to finish September 30. Aura Pro flags the
-              assumption behind that forecast for the foreman: the framed unit must
-              fit through the one bay left open. The foreman checks the clearance
-              while the crew can still leave out the adjoining panel.
-            </p>
-            <p>
+            <p>The <strong>air handler</strong> moves and conditions air for the building’s ventilation system. The <strong>façade</strong> is its exterior wall assembly. Here, a <strong>bay</strong> is one section of that wall where leaving a panel out creates an opening for the equipment lift.</p><div class="case-note"><strong>Case: the October tower</strong><p>An illustrative access and sequencing decision. The access alternatives support opening forecasts of October 1 or October 22. The equipment-strategy example elsewhere uses a separate week-numbered development.</p></div><h3>Begin with the outcome and compare paths</h3><p>The scheduler starts with a practical request: compare ways to enclose the building and install its ventilation equipment while preserving the opening target. AP brings the current schedule, relevant records and missing assumptions into one comparison. The team can correct an input or propose another method there.</p><p>The owner’s representative sets October 1 as the target for lower-floor occupancy. Aura Pro and the scheduler use the project schedule, crane bookings, and production rates from comparable jobs to simulate two construction sequences. The scheduler and trade leads shape the assumptions and can propose another method as they inspect the results.</p><p><strong>How AP contributes an option.</strong> To develop the façade-first sequence, AP combines the enclosure plan with a recorded method of retaining equipment access until after a lift. It proposes holding a panel out, then checks that candidate against the crane booking and testing dependency. The façade and lift leads qualify its applicability. The one-panel route is an assumption to test, not a fit established by the prior job.</p><p>Lifting the air handler before installing the façade gives the mechanical crew open access, but leaves interior work exposed through winter. Giving the façade crew the crane first encloses the floors sooner. The team prefers that sequence because it protects interior work and keeps ventilation testing on track to finish September 30. Aura Pro flags the assumption behind that forecast for the foreman: the framed unit must fit through the one bay left open. The foreman checks the clearance while the crew can still leave out the adjoining panel.</p><h3>Ask for the measurement that matters</h3><p>The foreman receives the specific opening and framed-load question, with the relevant drawing, measurement instructions and useful deadline.</p><p>
               <strong>The foreman brings back a measurement and an alternative.</strong>
               An installed bracket leaves 99½ inches clear. The foreman records the
               reading and photo in Raken and radios the superintendent. The lift lead
@@ -107,7 +88,7 @@
               holds the lift and sends the crew to the next approved bay. The foreman
               proposes leaving two panels out.
             </p>
-            <p>
+            <p>After the reading returns, the scheduler sees the failed assumption beside the affected dates. AP links the wider-opening proposal to temporary-protection methods for the design reviewer to assess, rather than asking the foreman to reconstruct the whole schedule.</p><h3>Choose a workable response</h3><p>
               <strong>The scheduler compares what each route does to opening day.</strong>
               The lift lead checks the wider route and confirms the framed unit can pass.
               Aura Pro reruns the schedule with two options. The other work
@@ -122,29 +103,38 @@
               opening and its temporary weather protection. The project manager prepares
               the $4,000 change in Procore.
             </p>
-            <p>
-              <strong>The project executive commits the money. The superintendent releases
-              the crew.</strong> The superintendent has $3,000 left in the delegated
-              allowance, so the general contractor’s project executive signs the change
-              and the subcontractor countersigns. The superintendent then issues the
-              revised instruction. The foreman acknowledges which panels to hold and
+            <h3>Commit, release and follow the result</h3><p>
+              <strong>The superintendent’s remaining $3,000 allowance cannot cover the $4,000 change.</strong>
+              The general contractor’s project executive signs the spending commitment
+              and the subcontractor countersigns. The superintendent then releases
+              the crew with the revised instruction. The foreman acknowledges which panels to hold and
               records the protection, lift, and close-in. The accountant verifies the
               commitment in Sage. The scheduler updates the forecast from actual progress,
               and the owner’s representative checks the actual occupancy date against
               October 1.
             </p>
-            <p>
+            <p>The project executive sees the exact commitment and its evidence; the foreman sees the released panel locations and lift sequence. AP follows the open acknowledgments and checks in between those interactions. On returning after a shift change, the incoming lead sees the current instruction, what was completed and what still needs acceptance.</p><h3>Keep the reasoning for later use</h3><p>
               Years later, a facilities manager planning a replacement can retrieve the
               frame dimensions, which panels were left out, and what the crew observed
               during the lift. That history tells the manager where a fresh survey is
-              needed.
+              needed. <a href="capabilities/learning.html#retrieval">See the answer AP retrieves and how it supports the replacement decision →</a>
             </p>
+            <p>This completes the introductory path through Mission Logic. Continue to the seven examples to see how the same process adapts to different work, or stay on this page for <a href="#deeper-reasoning">the deeper reasoning</a>.</p>
             <div class="actions">
-              <a class="under" href="tech-stack.html#coordination">How the team uses Procore, Raken, and Sage →</a>
-              <a class="under" href="patterns/index.html">Explore the seven examples →</a>
-              <a class="under" href="capabilities/construction-simulation.html">How the whole building is simulated →</a>
-              <a class="under" href="capabilities/index.html">Explore the ten system capabilities →</a>
+              <a class="under" href="patterns/index.html">Next: Explore the seven examples →</a>
+              <a class="under" href="tech-stack.html#coordination">Technical detail: How the team uses Procore, Raken, and Sage ↗</a>
+              <a class="under" href="capabilities/construction-simulation.html">Worked example: How the whole building is simulated ↗</a>
+              <a class="under" href="capabilities/index.html">Technical detail: The eleven system capabilities ↗</a>
             </div>
+          </section>
+          <details class="reference-fold" id="reasoning-reference"><summary>Technical detail: how AP chooses and manages the next move</summary><section class="article-section" id="deeper-reasoning">
+            <div class="label">Reference and deeper reasoning</div>
+            <h2>How people and AP choose the next move</h2>
+            <p>The sections below explain how people and AP work through the judgments behind the eleven steps: what deserves attention, which evidence is sufficient, who needs an answer, and when to continue, switch methods, nest a question, or reframe the goal. They are reference views of the same process, not extra stages every job must complete.</p>
+          <h3 id="human-participation-detail">Human participation throughout the process</h3><p>Human participation begins with the objective and continues through every step. People bring purpose, experience, practical knowledge, imagination, and judgment. AP brings relevant history, connected evidence, comparisons, and the ability to follow consequences across the whole undertaking. Each can reveal something the other has missed.</p>
+            <p>The person or team can correct an observation, explain a constraint, propose another method, change a simulation assumption, or question a recommendation. AP shows how that contribution changes the comparison and what still needs checking. People can also intervene during a simulation to explore a different response. Their direction governs work within their authority; their explanation remains a starting point for investigation rather than automatic proof.</p>
+            <p>Step 8 records the choice of a course. Human judgment also shapes the need at step 1, the criteria at step 4, the alternatives and tests at steps 5–7, and the interpretation of outcomes at steps 10–11. The relevant person participates where their knowledge or decision matters. On a solo task, one person can fill all of these roles. Agreed checks and delegated routine actions can proceed without asking that person to repeat an answer already established.</p>
+            <p>AP can recommend where to look next, while the team can direct attention to something the model does not yet understand. <a href="capabilities/intent-authority.html#participation">People set AP's role and can change or withdraw it</a>. <a href="business-management.html#objectives">The business management view</a> makes competing objectives and affected parties explicit.</p>
           </section>
           <section class="article-section" id="layers">
             <h2>Obligation, question, and method</h2>
@@ -153,8 +143,7 @@
               to create, change, understand, or sustain something. It can also
               begin with <strong>a finding</strong>: someone encounters a
               condition that calls a goal, an assumption, or an earlier result
-              into question. Either way, Aura Pro asks what decision this
-              could change and who is responsible for it.
+              into question. Either way, people and AP identify what decision this could change and who is responsible for it. AP can initiate a question within its agreed role; a person can redirect it or introduce a question the model has missed.
             </p>
             <p>
               At a car wash, the opening check finds a pump that will not start. The shift
@@ -162,12 +151,7 @@
               pump. Once the repaired bay passes a test wash, it can reopen. The next
               morning’s checks still come due.
             </p>
-            <div
-              class="table-scroll"
-              tabindex="0"
-              role="region"
-              aria-label="Scrollable comparison"
-            >
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable comparison">
               <table>
                 <thead>
                   <tr>
@@ -220,8 +204,9 @@
           </section>
           <section class="article-section" id="result">
             <h2>Who acts on a result?</h2>
+            <p>The three decision tables answer different questions. The table here identifies <strong>what a finding changes for each recipient</strong>: an agreed action, a fresh choice, or a reason to return to Discovery. <a href="#choose-the-next-move">Choose the next move</a> asks <strong>what is worthwhile now</strong>: investigate, act, wait, or stop. If investigation continues, <a href="#manage-the-question-while-choosing-a-method">manage the question and method</a> explains whether to continue, switch methods, nest a question, or reframe it. These judgments work together; they are not three additional stages every job must complete.</p>
             <h3>What does the finding settle, and for whom?</h3>
-            <p>The person responsible for the question compares the finding with its criterion. State the answer they accept, the conditions it applies to, and anything still unresolved. Close a question when the evidence settles it. If the evidence is inconclusive, keep the question open and state what the observation did establish. Keep the finding with its source at step 11.</p>
+            <p>The person responsible for the question compares the finding with its criterion. State the answer they accept, the conditions it applies to, and anything still unresolved. Close a question when the evidence settles it. If the evidence is inconclusive, state what the observation did establish and leave the answer explicitly unresolved. Continue or defer the inquiry when further evidence is worth obtaining. If further inquiry has too little value, its owner can stop it, recording why and returning the unresolved question to anyone whose decision depends on it. Stopping the inquiry does not mean its question was answered or the larger objective met. Keep the finding and this decision in project memory for review at step 11.</p>
             <h3>Who acts next, and why?</h3>
             <p>If the finite job is complete and nobody else needs to act, stop. Otherwise, consider each affected person separately. One finding can trigger an agreed response for one person and open an inquiry for another. Both can proceed as soon as they have what they need.</p>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Which action follows from the finding?">
@@ -249,26 +234,19 @@
             </table>
             </div>
             <p>An outstanding check stays with its checker. A result that has no present consequence can be kept with its source at 11. In shared work, Aura Pro identifies the recipient and keeps a handoff open until someone accepts the next action. On a solo job the same person can observe, decide, act, and check.</p>
-            <figure class="diagram">
+            <figure class="diagram diagram-support">
               <figcaption>
-                <strong>From a finding to the next decision</strong>
+                <strong>Supporting view: from a finding to the next decision</strong>
                 <a href="assets/map-shared.svg">Full-size diagram ↗</a>
               </figcaption>
-              <div
-                class="diagram-scroll"
-                tabindex="0"
-                role="region"
-                aria-label="From a finding to the next decision"
-              >
-                <img
-                  src="assets/map-shared.svg"
-                  alt="First establish what the finding settles, for whom, and under what conditions. Then identify any next actor. Each can follow an agreed action, make a choice, or return to Discovery for a specific unknown. Work can also end here."
-                />
+              <div class="diagram-scroll" tabindex="0" role="region" aria-label="From a finding to the next decision">
+                <img src="assets/map-shared.svg" alt="Establish what the finding settles, for whom, and under what conditions. Follow every applicable route: agreed action, fresh choice, discovery or no further action. Record each finding, decision and response in project memory.">
               </div>
             </figure>
           </section>
           <section class="article-section" id="decide-what-deserves-attention">
             <h2>Decide what deserves attention</h2>
+            <p>AP compares consequences, timing, and effort against the objectives people have set. The team contributes context, challenges the ranking, and resolves competing priorities. The same comparison can include effects on <a href="business-management.html#portfolio">other projects sharing the resource</a>.</p>
             <p>
               For an intent, identify the outcome and the first decision needed
               to advance it. For a finding, establish what was observed, where,
@@ -295,12 +273,8 @@
           </section>
           <section class="article-section" id="choose-the-next-move">
             <h2>Choose the next move</h2>
-            <div
-              class="table-scroll"
-              tabindex="0"
-              role="region"
-              aria-label="Scrollable comparison"
-            >
+            <p>AP makes the options and reasons visible to the person who owns the question or action. That person can investigate, act, wait, stop, or request a different comparison. AP carries out agreed routine checks within its delegated role and brings fresh judgments to the relevant person; the table does not require a new approval for every calculation.</p>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable comparison">
               <table>
                 <thead>
                   <tr>
@@ -339,31 +313,13 @@
                   </tr>
                   <tr>
                     <td><strong>Wait</strong></td>
-                    <td>
-                      A known event, measurement, approval, or scheduled visit
-                      will improve the choice, and delay is acceptable.
-                    </td>
-                    <td>
-                      Keep the question open with an owner, a trigger, and a
-                      latest useful decision time. If the deadline comes first,
-                      reconsider acting under uncertainty or take the tradeoff
-                      to the owner. Independent work continues.
-                    </td>
+                    <td>A known event or measurement can improve the choice, or agreed work is waiting for people, resources, access, permission, or another prerequisite. The delay remains acceptable.</td>
+                    <td>Keep the question or action pending with an owner, a trigger, and a latest useful time to resume. When the trigger arrives, confirm readiness for the assigned step. If the deadline comes first, reconsider the choice or take the tradeoff to its owner. Independent work continues.</td>
                   </tr>
                   <tr>
                     <td><strong>Stop</strong></td>
-                    <td>
-                      The criterion is met, an answer has been delivered, or
-                      further inquiry would have too little value. The owner may
-                      also withdraw the objective.
-                    </td>
-                    <td>
-                      Say which outcome applies. A verified result can close a
-                      finite obligation. An inconclusive inquiry can end with an
-                      explicit unknown returned to its parent. A standing
-                      obligation resumes observation. A withdrawn objective
-                      records why work ceased.
-                    </td>
+                    <td>The criterion is met, an answer has been delivered, or further inquiry would have too little value. The owner may also withdraw the objective.</td>
+                    <td>Name what stops—an inquiry, a work package, or the undertaking—and the person authorized to decide for that scope. Record who decided and why. A verified result can close a finite obligation; an inconclusive inquiry returns its explicit unknown to its parent. Standing obligations resume observation. Other work continues unless it is also stopped.</td>
                   </tr>
                 </tbody>
               </table>
@@ -371,6 +327,7 @@
           </section>
           <section class="article-section" id="establish-what-is-true">
             <h2>Establish what is true</h2>
+            <p>People explain what they observed and how the work actually behaves. AP connects their accounts to other sources, highlights conflicts, and helps choose the next check. A person’s experience can expose a missing condition; neither a confident human explanation nor a model output becomes a confirmed fact without its supporting evidence.</p>
             <p>
               Start with a claim precise enough to check: which object, in what
               state, at what place and time? Compare the sources against that
@@ -393,6 +350,7 @@
           </section>
           <section class="article-section" id="generate-alternatives">
             <h2>Generate alternatives</h2>
+            <p>People can sketch a different arrangement, suggest a method, or explain why an apparently efficient sequence will not work. AP develops the idea with them, traces consequences, and tests variations. A team member can reshape a simulation and see how the whole plan responds while the approved work remains unchanged.</p>
             <p>
               When familiar options all perform poorly, identify the constraint
               each encounters. Work backward from the effect that must be
@@ -411,22 +369,14 @@
               establishes what actually happened.
             </p>
           </section>
-          <section
-            class="article-section"
-            id="manage-the-question-while-choosing-a-method"
-          >
+          <section class="article-section" id="manage-the-question-while-choosing-a-method">
             <h2>Manage the question while choosing a method</h2>
             <p>
-              Use the <strong>answer owed</strong> to distinguish the moves. Use
+              AP shows the reason for changing the inquiry and what each route preserves. People contribute methods, correct the frame, and settle judgments within their role. Use the <strong>answer owed</strong> to distinguish the moves. Use
               the obligation's <strong>success criterion</strong> to recognize
               when the frame itself has changed.
             </p>
-            <div
-              class="table-scroll"
-              tabindex="0"
-              role="region"
-              aria-label="Scrollable comparison"
-            >
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable comparison">
               <table>
                 <thead>
                   <tr>
@@ -510,17 +460,23 @@
             <p>
               A <strong>reframe</strong> would occur if the owner withdrew the
               phased-opening requirement and chose a single opening for the
-              entire building. Aura Pro would revisit the sequencing
-              question and reconsider whether the early lift still merited
-              investigation. Discovering that one bay is too narrow changes the
+              entire building. Aura Pro revisits the sequencing question and reconsiders whether the early lift still merits investigation. Discovering that one bay is too narrow changes the
               means; the owner's hypothetical choice changes what the plan is
               trying to achieve.
             </p>
+            <p>The parent also owns checks that no child can settle alone. After installation, the tower’s system reviewers check ventilation with power and controls operating together. They verify specified performance and assess whether the occupied spaces meet the intended conditions of use. The owner’s representative judges occupancy against the agreed objective. A clear lift route settles access; it does not establish integrated building performance or satisfy the whole occupancy need.</p>
+            <figure class="diagram diagram-support" id="nesting-example">
+              <figcaption><strong>A nested inquiry: clearance inside the whole plan</strong><a href="assets/map-nesting.svg">Open full-size example ↗</a></figcaption>
+              <div class="diagram-scroll" tabindex="0" role="region" aria-label="A clearance inquiry nested inside the development plan; scroll horizontally on smaller screens">
+                <img src="assets/map-nesting.svg" width="1000" height="1060" alt="The scheduler's parent question asks which sequence can preserve October 1. A child checks whether the framed unit fits through one bay. The lift lead accepts that it cannot fit and closes that child. Its result returns to the still-open parent, which requests a wider-route check and compares sequences. Independent approved work continues. After execution, the parent checks integrated performance and the real occupancy need; child results alone do not establish success. Evidence and reasoning remain in shared project memory.">
+              </div>
+            </figure>
           </section>
           <section class="article-section" id="learn-from-the-outcome">
             <h2>Learn from the outcome</h2>
             <p>
-              Before a consequential choice, keep the expected result, the
+              People and AP learn from the same encounter. AP can improve a model or stop asking a redundant question; a person can revise a working assumption or discover a better method. The person confirms AP’s account of what they learned. <a href="capabilities/learning.html#dashboard">The learning dashboard keeps both accounts and their next checks</a>.
+            </p><p>Before a consequential choice, keep the expected result, the
               assumptions that support it, and what would count as success or
               failure. After the work or trial, compare that expectation with
               dated observations under the conditions that actually occurred.
@@ -540,6 +496,8 @@
               uncertainty, and scope to the relevant asset, method, or project
               so someone else can recover them years later.
             </p>
+            <p>A successful job does not by itself confirm the explanation AP predicted. Compare competing explanations with what was actually observed; an unchosen strategy remains simulated. Assess the model for the decision it is being used to support: check its implementation, compare relevant predictions with independent observations, and examine whether plausible input errors or omitted conditions change the recommendation. A model may support ranking installation sequences without supporting an exact occupancy date. Keep that limit with the recommendation and revisit it when conditions or intended use change.</p>
+            <p>Evidence and permission remain separate. A finding may support a local correction without establishing a general rule. The responsible person can authorize a proposed procedure provisionally while its wider benefit remains uncertain. AP preserves why the case was investigated, the supporting and contrary evidence, and who accepted, deferred, or rejected the proposed lesson, with their reasons and scope. Future use identifies the applicable lesson revision and stays within the permission granted; new evidence can reopen review. <a href="capabilities/learning.html#lesson-decisions">Project memory and learning shows a complete lesson decision →</a></p>
             <p>
               Learning also applies to attention. Did the observation
               distinguish the alternatives? Did it arrive while a choice was
@@ -601,39 +559,20 @@
             </div>
           </section>
           <section class="article-section" id="review">
-            <h2>Open architecture questions</h2>
-            <p>
-              The last design review identified three questions for further
-              work.
-            </p>
+            <h2>Reviewing how Mission Logic works</h2>
+            <p>AP and the team review how these principles work under the project’s actual conditions. The capability chapters describe the supporting methods; the questions below guide ongoing evaluation and adjustment. The team also checks whether AP makes its work easier to understand and direct, and whether the benefit justifies the effort of using it. <a href="business-management.html#value">Reviewing AP’s contribution →</a></p>
             <ul>
-              <li>
-                When a finding’s relevance is uncertain, what small check or
-                later observation should bring it back into consideration?
-              </li>
-              <li>
-                When two inquiries need the same person or resource, what would
-                be lost by doing either one second?
-              </li>
-              <li>
-                What can later evidence establish about a decision to act, wait,
-                or stop, given that only one path was taken?
-              </li>
+              <li><strong>Revisit uncertain relevance.</strong> <a href="capabilities/telemetry.html#attention">Telemetry</a> and <a href="capabilities/inquiry.html#approach">Reasoning and inquiry</a> describe consequence, timing, and inexpensive checks. The team sets triggers and review intervals for unresolved findings, then reviews missed issues and unnecessary interruptions with AP to adjust them.</li>
+              <li><strong>Allocate attention and shared resources.</strong> <a href="capabilities/logistics.html#approach">Resources and logistics</a> and <a href="capabilities/planning.html#approach">Planning</a> describe availability and competing work. AP compares the consequences of delaying each inquiry when both need the same person or resource. It presents unresolved tradeoffs to the person authorized to set priorities.</li>
+              <li><strong>Evaluate the reasoning behind a choice.</strong> <a href="capabilities/learning.html#approach">Learning</a> distinguishes actual outcomes, explanations, and simulated alternatives. AP tests changes to rules for acting, waiting, or stopping against independent cases and records what supports each change. Unchosen paths remain simulated; a successful chosen action alone does not establish that the alternatives were worse.</li>
             </ul>
           </section>
-          <div class="related">
-            <h3>Explore the map in practice</h3>
-            <a class="" href="patterns/index.html">Seven reasoning patterns ↗</a
-            ><a class="" href="capabilities/inquiry.html"
-              >Reasoning and inquiry capability ↗</a
-            >
-          </div>
-        </article>
+          </details><div class="related"><h3>Return to the main reading path</h3><a href="patterns/index.html">Return to: Seven examples →</a><a href="#deeper-reasoning">Technical detail: The judgments behind Mission Logic ↗</a></div></article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

@@ -1,51 +1,35 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
     <title>Resources and logistics · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Resources and logistics</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Resources and logistics</h1>
-        <p>
+        <p class="chapter-question">What must reach the work, in what condition, and with which people ready?</p><p>
           Make the needed people, materials, equipment, and access available
           together.
         </p>
-      </div>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#step-9">Mission Logic</a>:</strong> Resource owners confirm availability and commitments; AP connects them to the work’s prerequisites. The person responsible for release checks readiness and decides whether work can proceed, must wait, or needs a revised plan.</p>
+      <div class="case-note"><strong>Case: damaged component in the week-numbered development</strong><p>Follow the selected sectional air handler through delivery, damage and recovery. The <a href="../engineering-basis.html">engineering calculation</a> examines this recovery path; these weeks do not change the October tower example.</p></div></div>
       <div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#responsibility">Inputs and outputs</a
-            ><a href="#approach">Approach</a
-            ><a href="#execution">How it works</a
-            ><a href="#technology-stack">Technology choices</a
-            ><a href="#ownership">Integration and native ownership</a
-            ><a href="#patterns">Where this capability is used</a
-            ><a href="#connections">Connected capabilities</a>
+            <strong>On this page</strong><a href="#responsibility">Inputs and outputs</a><a href="#approach">Approach</a><a href="#execution">How it works</a><a href="#air-handler">From supplier to installation</a><a href="#damage">A damaged component</a><a href="#recovery">People, resources, and recovery</a><a href="#whole-plan">What changes in the whole plan</a><a href="#material-flow">Material identity and quantity</a><a href="#space-dispatch">Space, dispatch, and buffers</a><a href="#commitments">Reliable commitments</a><a href="#performance">Acceptance, performance, and learning</a><a href="#technology-stack">Technology choices</a><a href="#ownership">Integration and native ownership</a><a href="#patterns">Where this capability is used</a><a href="#connections">Connected capabilities</a>
           </nav>
         </aside>
         <article>
@@ -66,9 +50,7 @@
           </section>
           <div class="related" id="analysis">
             <h3>Across the architecture</h3>
-            <a href="integration.html"
-              >Construction tools, data ownership, and migration ↗</a
-            >
+            <a href="integration.html">Construction tools, data ownership, and migration ↗</a>
           </div>
           <section class="article-section" id="approach">
             <h2>Approach</h2>
@@ -91,39 +73,111 @@
               reference forward after posting.
             </p>
           </section>
+          <section class="article-section" id="air-handler">
+            <h2>From supplier to accepted installation</h2>
+            <p>Follow the sectional air handler selected in the <a href="work-package-model.html#new-evidence">whole-development decision</a>. This is an illustrative continuation of that example, with assumed events and durations rather than results from an actual simulation. It uses the same week numbers: delivery in week 9, assembly and connections in weeks 10–13, recovery time in week 14, ventilation testing in weeks 15–16, acceptance in week 17, and occupancy in week 18. It is separate from the introductory tower’s October opening example.</p>
+            <p>For this continuation, the team has completed the purchase-critical design and funding checks, placed the sectional order, and secured the week-15–16 testing block. Four modules, identified as M1–M4, form one air handler. Joining parts, controls, supports, approved instructions, and manufacturer attendance are separate prerequisites. AP connects them to the assembly package; receiving all four modules alone does not make that package ready.</p>
+            <div class="table-scroll" role="region" tabindex="0" aria-label="Air handler journey and responsible people"><table>
+              <thead><tr><th scope="col">Stage</th><th scope="col">Who acts</th><th scope="col">What AP connects and checks</th></tr></thead>
+              <tbody>
+                <tr><td>Design release and fabrication</td><td>The design reviewers accept interfaces. The procurement lead releases the approved configuration; the supplier confirms the production position and reports fabrication and factory-check results.</td><td>Each module’s configuration, dimensions, weight, production status, promised date, and supporting evidence. A purchase acknowledgment does not establish fabrication completion.</td></tr>
+                <tr><td>Prepare dispatch</td><td>The supplier identifies and packs the loads. The site logistics lead confirms receiving space, crew, handling equipment, and destination with their owners; the carrier dispatcher confirms the vehicle and delivery appointment.</td><td>Load order follows the unloading and assembly sequence. AP compares arrival ranges with the gate, unloading, internal movement, and floor-storage windows before the authorized dispatcher releases the truck.</td></tr>
+                <tr><td>Transport and receipt</td><td>The carrier reports progress. The receiver checks module identity, quantity, packaging, and observable condition against the order and records exceptions.</td><td>Dispatch, gate arrival, unloading, and receipt remain separate events. A signed receipt records custody and its qualifications; it does not establish installation readiness or waive a recorded defect.</td></tr>
+                <tr><td>Move to the workface</td><td>The lift lead checks the accepted handling method, current route, load and equipment limits. The superintendent releases the move; the handling crew carries it out.</td><td>The same hoist, handling crew, routes, and staging positions also serve other work. AP reserves the full handling interval, including setup and clearance, and follows each module to its confirmed destination.</td></tr>
+                <tr><td>Assemble and connect</td><td>The installation lead releases each ready task. Installers assemble under the accepted method; the manufacturer’s representative checks specified assembly conditions. Electricians and controls technicians complete their interfaces.</td><td>Complete kits and accepted prerequisites for each task, actual effort and waiting, shared crews, and the next handoff. Independent work can proceed while a blocked task remains open.</td></tr>
+                <tr><td>Accept the result</td><td>The named installation checker accepts the defined installation scope. The commissioning lead accepts readiness for integrated testing; system acceptance and the owner’s occupancy review follow their own criteria.</td><td>Installed quantity, installation acceptance, successful system testing, and occupancy readiness are different results. AP carries each result into its parent package without treating one as proof of all the others.</td></tr>
+              </tbody>
+            </table></div>
+          </section>
+          <section class="article-section" id="damage">
+            <h2>A damaged component changes the available choices</h2>
+            <p>During the week-9 receiving inspection, the receiver finds impact damage to a coil cassette inside M3. The receiver records photographs, serial numbers, the delivery exception, and where the module is held. M3 is physically present but unavailable for installation. The other three modules are checked separately; the report does not automatically reject them or clear them.</p>
+            <p>The installation lead holds work involving M3 and asks the supplier’s technical representative to establish the extent of damage. The procurement lead opens the supplier claim. AP connects both inquiries to the affected assembly tasks, the manufacturer’s attendance, and the testing deadline. Neither a photograph nor the shipping claim determines whether repair is technically acceptable.</p>
+            <p>In this example, inspection establishes that the cassette can be replaced under a manufacturer-approved method and that the casing and interfaces pass the specified checks. The design reviewer confirms that the replacement preserves the approved configuration. AP compares these responses with the team:</p>
+            <ul>
+              <li><strong>Replace all of M3.</strong> The supplier offers a complete module in week 12. Under the reviewed sequence, dependent assembly and connections then finish at the end of week 15. That misses the start of the secured two-week testing block. The next reported suitable block is weeks 19–20, subject to a fresh booking; acceptance in week 21 would support occupancy in week 22.</li>
+              <li><strong>Replace the damaged cassette on site.</strong> A compatible cassette can arrive at the start of week 10. The qualified service technician and required checks can release M3 by the end of that week. With independent work resequenced, the installation lead forecasts the air handler ready by the end of week 14. Testing can retain its weeks 15–16 slot if the other interfaces are also ready.</li>
+              <li><strong>Repair the damaged cassette.</strong> This remains an inquiry until the supplier provides an acceptable method, duration, and acceptance checks. AP does not assign it a favorable completion date merely because repair sounds quicker.</li>
+            </ul>
+            <p>AP conditionally recommends cassette replacement. The procurement lead confirms the specific part, dispatch commitment, claim terms, and return arrangement. The service provider confirms a qualified technician; the installation lead accepts the method and revised sequence. The authorized commercial decision-maker approves any additional expenditure and unresolved recovery exposure. The superintendent then releases the affected physical work after its actual prerequisites are met. Recommendation, financial commitment, and work release remain distinct.</p>
+          </section>
+          <section class="article-section" id="recovery">
+            <h2>People and resources move through the recovery</h2>
+            <p>The damage does not leave the whole installation crew idle. Under the reviewed method, M1, M2, and M4 can be positioned independently. The superintendent releases that work and the unaffected support preparation. Once those tasks finish, the foreman assigns the installers to a ready duct-support package in another area, with its own accepted drawings, access, materials, and release. AP records where they actually work; it does not charge the same hours to both packages.</p>
+            <p>The same team is also due to start another floor’s ductwork in week 14. Using that week to recover the air-handler installation would displace that assignment. AP shows the affected foreman and superintendent the conflict. In this example, they confirm that a separate available team can perform the ductwork within its existing window, at an additional cost approved before reassignment. Without that confirmed arrangement, AP carries the downstream delay into the forecast instead of assuming the recovery crew is free.</p>
+            <p>The replacement cassette travels in a dedicated protected load. The logistics lead obtains a receiving appointment and a handling slot that fit the checked load and route; the equipment owner confirms the booking. M3 remains in an accessible, protected holding position with room for the approved replacement work. The rejected cassette has a separate marked position so it cannot be mistaken for usable stock. These positions, their access, and the service work area consume capacity until released.</p>
+            <p>The original module movements already displaced two days of finish-material deliveries, leaving three days of flexibility in that work. The recovery handling displaces one additional day of finish-material deliveries. The finishes foreman agrees to that change after AP checks its successors, leaving two days of flexibility. The carrier and receiver acknowledge the revised appointments before the change becomes the working instruction. Deliveries already underway remain in the comparison as commitments, not freely movable calendar entries.</p>
+            <p>In the illustrative outcome, the cassette arrives at the start of week 10. The service technician replaces it; the designated checker records the specified results and releases M3 for assembly by the end of the week. The foreman recalls the installers at the agreed handoff. Inspection settles the replacement’s acceptance for assembly, not the performance of the complete ventilation system.</p>
+            <p>The supplier authorizes return of the damaged cassette. The receiver records its outbound identity and custody transfer; the carrier collects it in a confirmed slot after replacement acceptance. The commercial lead follows the claim through the agreed credit or settlement, and accounting reconciles the posting. Packaging and temporary handling equipment leave through scheduled movements too. AP closes the physical return, financial claim, and work-readiness questions separately.</p>
+          </section>
+          <section class="article-section" id="whole-plan">
+            <h2>What changes in the whole development plan</h2>
+            <p>AP recalculates the development from the current commitments and observed condition. It does not simply add the supplier’s delay to the occupancy date. Independent work, alternative crews, remaining space, recovery time, and fixed testing appointments determine how that delay propagates.</p>
+            <div class="table-scroll" role="region" tabindex="0" aria-label="Development forecast before and after the damaged component"><table>
+              <thead><tr><th scope="col">Condition</th><th scope="col">Before damage</th><th scope="col">After the approved recovery plan</th></tr></thead>
+              <tbody>
+                <tr><td>Air handler ready for testing</td><td>End of week 13.</td><td>End of week 14. The recovery week is consumed.</td></tr>
+                <tr><td>Finish-material deliveries</td><td>Two days moved; three days of flexibility remain.</td><td>One additional day moved; two days remain. Affected finishes still meet their required completion.</td></tr>
+                <tr><td>Shared installation team</td><td>Moves to another floor in week 14.</td><td>Stays with the air handler. A confirmed qualified team takes the other assignment; its cost and source of availability remain visible.</td></tr>
+                <tr><td>Testing and occupancy</td><td>Testing weeks 15–16; acceptance week 17; occupancy week 18.</td><td>Same dates, conditional on actual readiness at the start of week 15 and all other occupancy prerequisites. There is less room for another interruption.</td></tr>
+                <tr><td>Money and obligations</td><td>The sectional strategy’s existing cost and payment commitments.</td><td>Additional service, freight, handling, and crew costs; possible supplier recovery shown separately. Earlier cash outflow can precede a later credit.</td></tr>
+              </tbody>
+            </table></div>
+            <p>The earlier strategy comparison’s $200,000 additional cost remains its dated estimate, not an unchanged total after damage. AP adds the recovery’s incremental costs on the same basis, without counting the deposit again or treating an unsettled claim as received cash. It compares remaining choices using today’s cancellation terms and commitments; the original procurement options may no longer be available on their earlier terms.</p>
+            <p><a href="../engineering-basis.html#installation">Inspect the resource calculation behind the replacement-cassette path →</a> The engineering example supplies explicit effort and calendar assumptions for week-14 readiness and shows how compatibility and successful testing remain separate conditions.</p>
+            <p>The planner checks permanent utilities, electrical and controls interfaces, independent system tests, occupied areas and access, operating-team training, and final permissions alongside ventilation. Their <a href="work-package-model.html#occupancy">existing readiness conditions</a> still apply. The extra ductwork team must be available without silently borrowing capacity from another project. If that requires a transfer, the affected project and portfolio decision-makers see the displaced work before authorizing it.</p>
+            <p>The commissioning lead sets the last useful time to obtain a different testing arrangement, allowing for the provider’s booking notice. AP watches repair acceptance, remaining assembly and connection work, and that decision deadline. If the forecast no longer supports complete readiness for week 15, it brings the issue to the superintendent and commissioning lead while alternatives remain open. A missed block can move occupancy toward week 22 or later; weeks 19–20 are not guaranteed until secured, and every other prerequisite must be recomputed.</p>
+          </section>
+          <section class="article-section" id="material-flow">
+            <h2>Preserve material identity, quantity, and usability</h2>
+            <p>AP follows requirements through order lines, modules or lots, loads, storage positions, work-package allocations, installation, and acceptance. Each movement records quantity and units, origin, destination, time, condition, and the people handing over and receiving custody. Splitting a load or combining items into an assembly preserves those relationships.</p>
+            <p>At the damage finding, the picture is four modules received, three cleared for the permitted next tasks, and one held. A replacement cassette is a component of M3, not a fifth air-handler module. When it is fitted, the rejected cassette remains separately traceable until returned. Moving stock between floors changes location, not the project’s total quantity. Consuming joining parts transfers them into the assembly rather than making their history disappear.</p>
+            <p>AP distinguishes material physically present from material usable and unallocated for a particular task. The assembly kit includes the small parts and instructions that make the large modules useful. Shortages, substitutions, damage, reserved quantities, and unresolved inspections remain visible. A count discrepancy prompts reconciliation; AP does not invent stock to make a plan feasible.</p>
+          </section>
+          <section class="article-section" id="space-dispatch">
+            <h2>Manage space, dispatch, and deliberate buffers</h2>
+            <p>Space has a time window and a working purpose. AP connects each staging position to the item’s packed footprint, handling clearance, accessible unloading order, route, and accepted support or floor-loading conditions. Enough total area does not establish that the next item can be reached or turned. Where geometry controls the decision, the team checks it using a survey, layout, or <a href="construction-simulation.html#nvidia">appropriate specialist simulation</a>.</p>
+            <p>Before dispatch, AP checks the receiving combination and asks its owners to resolve gaps while the load can still be held. The dispatcher follows the agreed release rule or obtains a new decision. Options include holding at the supplier, splitting the delivery, using off-site storage, or changing the installation sequence. AP includes extra handling, storage, damage exposure, transport, and displaced work in the comparison.</p>
+            <p>A buffer is a deliberate use of time, stock, space, or spare capacity to absorb variation. The sectional plan’s week 14 is one such buffer; the damage consumes it. An off-site holding area could protect site access but add another handling operation. AP explains what each buffer protects, its cost, who controls it, and what changes when it is used. Keeping every truck or crew busy is not the objective if doing so blocks the work controlling completion.</p>
+          </section>
+          <section class="article-section" id="commitments">
+            <h2>Keep commitments reliable while the plan changes</h2>
+            <p>A supplier offer, tentative hold, confirmed reservation, dispatch release, and actual arrival are different states. AP keeps their conditions, expiry times, confirming parties, and evidence. Its internal calendar cannot by itself secure another company’s vehicle, technician, or equipment. The responsible person obtains the external confirmation and AP reconciles it with the project’s commitments.</p>
+            <p>When a plan changes, AP identifies reservations to retain, amend, or cancel and the people who must acknowledge revised instructions. It tracks issued requests whose receipt or effect is still unknown. Equipment breakdowns, expired holds, and missed acknowledgments reopen readiness rather than leaving an apparently valid booking in place.</p>
+            <p>The team sets which near-term work is committed and the conditions that justify disturbing it. AP compares the benefit of replanning with cancellation charges, lost preparation, remobilization, and disruption to other people’s work. It does not continually reshuffle a crew for small forecast improvements. A changed forecast is information; the authorized person’s decision and communicated release establish the changed working plan.</p>
+          </section>
+          <section class="article-section" id="performance">
+            <h2>Accept the result and learn from physical flow</h2>
+            <p>In the illustrative continuation, installation and its specified checks finish by the end of week 14. The commissioning lead accepts test readiness after confirming the other interfaces. Successful integrated testing in weeks 15–16, completed training and handover, and the required week-17 reviews support occupancy in week 18. AP records those outcomes as they occur; accepting the installation alone never closes the building’s occupancy question.</p>
+            <p>The dashboard connects each measure to its evidence, definition, and responsible reviewer:</p>
+            <ul>
+              <li><strong>Complete material at the workface when needed:</strong> the installation lead checks usable kits, not merely gate arrivals.</li>
+              <li><strong>Work ready at release:</strong> the superintendent reviews which prerequisites failed and which planned starts changed.</li>
+              <li><strong>Waiting, handling, and effort:</strong> the logistics lead reviews gate-to-unload and unload-to-destination times; foremen distinguish productive work, waiting, reassignment, and rework.</li>
+              <li><strong>Cost of recovery:</strong> the commercial lead follows freight, storage, extra handling, service, replacement crews, and settled recoveries without counting transfers twice.</li>
+              <li><strong>Whole-plan reliability:</strong> the planner compares dated forecasts with accepted results, consumed buffers, changed commitments, and displaced work.</li>
+            </ul>
+            <p>AP learns the actual receipt condition, replacement lead time, handling duration, productive effort, waiting, and acceptance results. The team learns whether the proposed independent work and crew handoff were practical. One damaged delivery does not establish a general supplier damage rate. Packaging records and inspections may justify a proposed additional check on the next comparable shipment; the team decides whether its value warrants the effort.</p>
+            <p>The whole-module replacement remains an unobserved alternative. Keeping week-18 occupancy does not prove that AP alone saved four weeks. The <a href="learning.html#dashboard">learning dashboard</a> preserves the human reasoning, AP’s predictions, actual outcomes, and the next occasion to test the lesson. For a sink repair, the same logic may require only a parts check and a successful repair; the detail grows with the decision.</p>
+          </section>
           <section class="article-section" id="technology-stack">
             <h2>Technology choices</h2>
+            <p>A resource shared across projects has one identity and one effective capacity. AP shows when reallocating it helps one undertaking and harms another. The relevant owners resolve the tradeoff and authorize changed commitments. <a href="../business-management.html#portfolio">A shared specialist team across two developments →</a></p>
             <p>
-              Map Procore procurement/change references and the confirmed Sage
-              job and cost-code structure into Aura Pro IDs. Use
-              transactional capacity reservations and an event queue. A reviewed
+              AP maps Procore procurement/change references and the confirmed Sage job and cost-code structure into its own IDs. Transactional capacity reservations and an event queue track resource commitments. A reviewed
               supplier CSV plus a local reservation calendar is a workable
-              alternative to live interfaces. For congested shared equipment,
-              reuse the planner's constraint solver rather than building a
-              second allocator.
-              <a
-                href="https://developers.procore.com/reference/rest/change-events?version=1.1"
-                >Procore change events</a
-              >
+              alternative to live interfaces. For congested shared equipment, AP uses the planner’s constraint solver to keep allocation consistent with the whole plan.
+              <a href="https://developers.procore.com/reference/rest/change-events?version=1.1">Procore change events</a>
               ·
-              <a
-                href="https://support.procore.com/products/online/user-guide/company-level/erp-integrations/sage-300-cre/financial-tools-guide"
-                >Procore–Sage 300 CRE guide</a
-              >
+              <a href="https://support.procore.com/products/online/user-guide/company-level/erp-integrations/sage-300-cre/financial-tools-guide">Procore–Sage 300 CRE guide</a>
               ·
-              <a
-                href="https://developers.google.com/optimization/scheduling/job_shop"
-                >OR-Tools resource scheduling</a
-              >
+              <a href="https://developers.google.com/optimization/scheduling/job_shop">OR-Tools resource scheduling</a>
             </p>
           </section>
           <section class="article-section" id="ownership">
             <h2>Integration and native ownership</h2>
             <p>
-              Begin with read-only availability and alerts in Aura Pro.
-              Take over reservations for a named resource when the
-              superintendent agrees which calendar wins and other schedulers
-              consume its updates. Test concurrent bookings and re-delivered
+              During initial adoption, AP reports availability and exceptions without changing reservations. It manages reservations for a named resource when the superintendent designates the authoritative calendar and other schedulers consume its updates. Test concurrent bookings and re-delivered
               supplier messages. One slot must have one effective commitment;
               earlier shipping promises remain traceable.
             </p>
@@ -131,55 +185,47 @@
           <section class="article-section" id="patterns">
             <h2>Where this capability is used</h2>
             <div class="entries">
-              <a class="entry" href="../patterns/operations.html"
-                ><div>
+              <a class="entry" href="../patterns/operations.html"><div>
                   <h3>Continuous operations and exception handling</h3>
                   <p>What needs attention now?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/hierarchical-planning.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/hierarchical-planning.html"><div>
                   <h3>Hierarchical planning under uncertainty</h3>
                   <p>Which detail changes the whole plan?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <section class="article-section" id="connections">
             <h2>Connected capabilities</h2>
             <div class="entries">
-              <a class="entry" href="planning.html"
-                ><div>
-                  <h3>Planning and simulation</h3>
+              <a class="entry" href="planning.html"><div>
+                  <h3>General planning and simulation</h3>
                   <p>
                     Compare feasible paths and identify the local unknown that
                     could change the whole plan.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="execution.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="execution.html"><div>
                   <h3>Work coordination and execution</h3>
                   <p>
                     Carry an authorized choice into physical work and follow it
                     through handoffs.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <div class="related">
-            <h3>Continue through the capabilities</h3>
-            <a href="execution.html">Work coordination and execution →</a>
+            <h3>Continue the capability reference</h3>
+            <p>Availability and commitments establish a feasible opportunity. Execution carries the released instruction through the people doing the work.</p><a href="execution.html">Next in the capability reference: Work coordination and execution →</a>
           </div>
         </article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

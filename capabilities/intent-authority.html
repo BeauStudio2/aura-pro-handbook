@@ -1,52 +1,35 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-      content="Aura Pro product and architecture handbook"
-      name="description"
-    />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Aura Pro product and architecture handbook" name="description">
     <title>Intent and authority · Aura Pro</title>
-    <link href="../assets/handbook.css" rel="stylesheet" />
-  </head>
+    <link href="../assets/handbook.css" rel="stylesheet">
+  <script src="../assets/reading.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="mast">
       <div class="bar">
         <a class="brand" href="../index.html" aria-label="Aura Pro handbook home"><span class="mark" aria-hidden="true"></span>Aura Pro</a>
         <nav aria-label="Handbook">
-          <a href="../map.html#shared-map">11-step process</a>
-          <a href="../patterns/index.html">Examples</a>
-          <a href="index.html" class="section-active" aria-current="true">Capabilities</a>
-          <a href="construction-simulation.html">Construction simulation</a>
-          <a href="../tech-stack.html">Tech stack</a>
-          <a href="../index.html#chapters">All chapters</a>
-        </nav>
+          <a href="../map.html">Mission Logic</a><a href="../patterns/index.html">Examples</a><a href="../capabilities/index.html">Capabilities</a><a href="../system-architecture.html">Architecture</a><a href="../business-management.html">Business management</a><a href="../capabilities/construction-simulation.html">Simulation</a><a href="../tech-stack.html">Tech stack</a><a href="../index.html#chapters">All chapters</a></nav>
       </div>
     </header>
     <main class="wrap" id="main">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="index.html">Capabilities</a> <span aria-hidden="true">/</span> <b aria-current="page">Intent and authority</b></nav>
-      <div class="paperhead">
+      <nav class="reading-position" aria-label="Reading position"><span>Technical reference</span><a href="../index.html#reading-path">Reading path</a><a href="../index.html#explore">Deeper routes</a></nav><div class="paperhead">
         <h1>Intent and authority</h1>
-        <p>
+        <p class="chapter-question">When should AP take a more active role, and who decides?</p><p>
           Define the desired result, the decisions people retain, and the work
           they delegate.
         </p>
-      </div>
+        <p class="mission-logic-connection"><strong>In <a href="../map.html#step-8">Mission Logic</a>:</strong> The team defines the objective, assigns decision rights, and names who may commit resources or release work. AP checks those permissions throughout the process.</p>
+      <div class="case-note"><strong>Case: the October tower</strong><p>This chapter examines one responsibility within the <a href="../map.html#tower-decision">introductory tower decision</a>. Its dates and decisions remain the same.</p></div></div>
       <div class="layout">
         <aside>
           <nav aria-label="On this page" class="contents">
-            <strong>On this page</strong
-            ><a href="#responsibility">Inputs and outputs</a
-            ><a href="#approach">Approach</a
-            ><a href="#execution">Who decides on the tower</a
-            ><a href="#ownership">What Aura Pro takes over</a
-            ><a href="#technology-stack">How the limit is enforced</a
-            ><a href="#checks">Acceptance and client walkthrough</a
-            ><a href="#patterns">Where this capability is used</a
-            ><a href="#connections">Connected capabilities</a>
+            <strong>On this page</strong><a href="#responsibility">Inputs and outputs</a><a href="#approach">Approach</a><a href="#participation">From quiet observation to recommendations</a><a href="#readiness">How the team decides AP is ready</a><a href="#withdrawal">Reducing or withdrawing authority</a><a href="#execution">Who decides on the tower</a><a href="#ownership">What Aura Pro takes over</a><a href="#technology-stack">How permissions and spending limits are enforced</a><a href="#checks">Acceptance and client walkthrough</a><a href="#patterns">Where this capability is used</a><a href="#connections">Connected capabilities</a>
           </nav>
         </aside>
         <article>
@@ -67,9 +50,7 @@
           </section>
           <div class="related" id="analysis">
             <h3>Across the architecture</h3>
-            <a href="integration.html"
-              >Construction tools, data ownership, and migration ↗</a
-            >
+            <a href="integration.html">Construction tools, data ownership, and migration ↗</a>
           </div>
           <section class="article-section" id="approach">
             <h2>Approach</h2>
@@ -101,13 +82,96 @@
               title alone supplies too little evidence to infer it.
             </p>
           </section>
+          <section class="article-section" id="participation">
+            <h2>From quiet observation to recommendations</h2>
+            <p>People shape the objective and the alternatives before a permission is needed. AP helps them explore consequences and explain competing priorities. The <a href="../business-management.html#objectives">business management view</a> connects these choices to beneficiaries, payers, and the parties whose agreement is required.</p>
+            <p>Learning can make AP more useful. A named person with the relevant
+              authority decides whether its role changes. Permission to observe,
+              ask a question, recommend a course, issue an instruction and commit
+              money each has its own scope. In a solo job, that person can be the
+              person doing the work.</p>
+            <p>Consider the concrete deliveries in <a href="learning.html#approach">Project memory and learning</a>.
+              In this example, the general contractor (GC) project executive authorizes the superintendent
+              to set AP's observation and recommendation role for those deliveries.
+              The superintendent initially permits AP to read selected tickets,
+              dispatch records and pump logs, save forecasts quietly, and bring
+              questions to an agreed review with the dispatcher. AP does not send
+              unsolicited dispatch recommendations during the pour. Existing
+              operational reporting and agreed immediate-response channels continue.</p>
+            <p>After reviewing its performance, the superintendent can permit AP
+              to raise release-or-hold recommendations directly with the dispatcher
+              for the named pours and shifts. The permission identifies the sources,
+              situations worth raising, recipient and backup, channel, effective
+              period and person who may amend it. The dispatcher acknowledges the
+              arrangement. AP shows the evidence, alternatives and last useful
+              decision time. The dispatcher still chooses whether to release the
+              truck. Changing the schedule, instructing a crew or spending money
+              requires the applicable separate authority.</p>
+          </section>
+          <section class="article-section" id="readiness">
+            <h2>How the team decides AP is ready</h2>
+            <p>Before reviewing results, the superintendent and dispatcher agree
+              what would make recommendations useful for this work. For example:
+              truck assignments must be checked, the recommendation must reach
+              the dispatcher before the release decision closes, and unresolved
+              inputs must be visible. They also agree how much unnecessary
+              interruption is acceptable and which misses would prevent expanded
+              use. These criteria belong to the proposed responsibility.</p>
+            <p>AP assembles its saved forecasts and proposed messages alongside
+              actual deliveries and the dispatcher's decisions. The dispatcher
+              checks operational relevance; the superintendent reviews readiness
+              against the agreed criteria. They examine ordinary deliveries,
+              disruptions, false alarms and missed problems, including work not
+              used to adjust the model. They compare with the team's existing
+              practice. A simulated alternative remains labeled as simulated;
+              one successful delivery does not establish its superiority.</p>
+            <p>The superintendent records the decision: retain quiet observation,
+              permit recommendations within a narrower scope, or allow the proposed
+              role. The record names the evidence reviewed, unresolved weaknesses,
+              scope, start time and next review date. The superintendent confirms
+              the scoped permission. In this example, the dispatcher's acknowledgment
+              is required before activation. AP shows the permission as pending until
+              both are recorded and the start time has arrived; it then shows the
+              role as active if the grant is still valid. A favorable AP assessment
+              alone changes no permission. Later results return to
+              <a href="learning.html#collaboration">Learning's evaluation of usefulness</a>.</p>
+          </section>
+          <section class="article-section" id="withdrawal">
+            <h2>Reducing or withdrawing authority</h2>
+            <p>The superintendent, or another person authorized to amend the grant,
+              can narrow the permitted pours, recipients or sources, return AP to
+              review-only participation, or withdraw the role. This can happen at
+              any time, including when the team changes its working arrangements.
+              The dispatcher can request a reduction; direct control to pause
+              recommendations can also be delegated explicitly.</p>
+            <p>Suppose a changed ticket process causes repeated assignment errors.
+              The superintendent returns AP to quiet observation for affected
+              deliveries and records the reason and effective time. Withdrawal takes effect at its recorded effective time without waiting for the recipient's acknowledgment. AP stops new
+              proactive recommendations in that scope, cancels queued sends and
+              recurring prompts that depend on the withdrawn permission, and shows
+              the changed role to the dispatcher. It may continue collecting records
+              and evaluating forecasts only within the permissions still in force.</p>
+            <p>A recommendation already delivered remains in the history. Its
+              record shows that AP's permission to make further recommendations
+              has ended; that does not by itself withdraw the earlier advice.
+              If the superintendent or another authorized reviewer withdraws or
+              supersedes that advice, the record identifies the affected recommendation,
+              reason and any replacement, and the dispatcher receives the update.
+              If the dispatcher has already released a
+              truck, withdrawing AP's role does not cancel that action. The dispatcher
+              checks the current situation and issues any revised direction. The
+              same distinction applies to an issued crew instruction or an executed
+              commitment. Restoring AP's active role requires a new authorized
+              decision based on reviewed evidence; improved scores do not restore it
+              automatically.</p>
+          </section>
           <section class="article-section" id="execution">
             <h2>Who decides on the tower</h2>
             <p>
               The façade crew is about to install the panel beside the opening
               reserved for an air handler. Can the superintendent leave both
               panels out and commit $4,000 for temporary weather protection?
-              In this worked example the general contractor (GC) bears the
+              In this worked example the GC bears the
               cost. The roles, grants, and Sage configuration are illustrative.
             </p>
             <ol>
@@ -190,8 +254,12 @@
           </section>
           <section class="article-section" id="ownership">
             <h2>What Aura Pro takes over</h2>
+            <p>Moving an official workflow into AP is separate from granting it
+              authority to decide or act. The team can issue and acknowledge
+              instructions in AP while the superintendent retains every crew-release
+              decision. Any expansion of AP's autonomy requires its own delegation.</p>
             <p>
-              <strong>Coordination.</strong> In the initial design Aura Pro owns the brief, links to source records, and routing.
+              <strong>Coordination.</strong> When the client starts with connected tools, Aura Pro owns the brief, links to source records, and routing.
               It can flag the superintendent’s apparent $3,000 balance and
               chase a missing signature or crew acknowledgment. Procore is
               where the team verifies and executes the subcontract change.
@@ -222,21 +290,20 @@
             </p>
           </section>
           <section class="article-section" id="technology-stack">
-            <h2>How the limit is enforced</h2>
+            <h2>How permissions and spending limits are enforced</h2>
+            <p>For observation and recommendations, AP checks the
+              current permission before collecting from a source, opening a request
+              or sending a message. A queued message retains its scope and permission
+              reference, and the sender rechecks that permission at dispatch. A
+              withdrawn, expired or narrowed grant blocks actions it no longer
+              covers, including retries. If current authority cannot be established,
+              the affected action waits. This enforces participation within AP;
+              instructions and commitments already issued through other tools still
+              require follow-up by their responsible people.</p>
             <p>
-              The existing TypeScript/TanStack app uses Supabase Auth and
-              PostgreSQL. Its decision command checks organization approval
-              rights and locks the individual request. Two requests against
-              the same allowance have different request records. Enforcing
-              the cumulative limit requires the following extension to the
-              app’s command.
+              The TypeScript/TanStack app uses Supabase Auth and PostgreSQL. Its decision command checks organization approval rights and locks the individual request. Two requests against the same allowance have different request records, so the command also locks their shared allowance when reserving funds. The checks below keep each decision within the current grant and available balance.
             </p>
-            <div
-              aria-label="Comparison"
-              class="table-scroll"
-              role="region"
-              tabindex="0"
-            >
+            <div aria-label="Comparison" class="table-scroll" role="region" tabindex="0">
               <table>
                 <thead>
                   <tr>
@@ -249,9 +316,7 @@
                   <tr>
                     <td>Capture and identity</td>
                     <td>
-                      A short editable brief and decision form. Authenticate the
-                      actor and resolve their current project membership
-                      server-side. Keep the client's role mapping explicit.
+                      A short editable brief and decision form. AP authenticates the actor and resolves their current project membership server-side, using the client’s explicit role mapping.
                     </td>
                     <td>
                       Another web client or an enterprise identity provider
@@ -261,15 +326,7 @@
                   <tr>
                     <td>Decision store and enforcement</td>
                     <td>
-                      PostgreSQL transactions for versioned briefs, grants,
-                      proposals, reservations, decisions, and an event journal.
-                      Enforce scoped reads with row-level security. Recheck
-                      the current grant, proposal revision, and limits while
-                      holding a lock on the shared allowance. Deduct existing
-                      commitments and open reservations before reserving the
-                      new amount. Save the decision and reservation together.
-                      On execution, convert that reservation to a commitment
-                      once. Release it on confirmed cancellation.
+                      PostgreSQL transactions store versioned briefs, grants, proposals, reservations, decisions, and an event journal. Row-level security enforces scoped reads. AP rechecks the current grant, proposal revision, and limits while holding a lock on the shared allowance. It deducts existing commitments and open reservations before reserving the new amount and saves the decision and reservation together. Execution converts that reservation to a commitment once; confirmed cancellation releases it.
                     </td>
                     <td>
                       Managed or self-hosted PostgreSQL with another auth
@@ -281,11 +338,7 @@
                   <tr>
                     <td>Integration delivery</td>
                     <td>
-                      Save the decision and outgoing message together. If a
-                      receipt is missing, look up the external change by its
-                      stable reference before retrying. Where the connector
-                      cannot establish the outcome, keep the reservation open
-                      and send the discrepancy to the project manager.
+                      AP saves the decision and outgoing message together. If a receipt is missing, it looks up the external change by its stable reference before retrying. Where the connector cannot establish the outcome, AP keeps the reservation open and sends the discrepancy to the project manager.
                     </td>
                     <td>
                       A durable workflow service can replace the database-backed
@@ -317,18 +370,22 @@
               outcome, rationale, and effective and recorded times. Store
               external documents by reference or authorized snapshot and check
               visibility on retrieval.
-              <a
-                href="https://supabase.com/docs/guides/database/postgres/row-level-security"
-                >Supabase row-level security</a
-              >
+              <a href="https://supabase.com/docs/guides/database/postgres/row-level-security">Supabase row-level security</a>
               ·
-              <a href="https://www.openpolicyagent.org/docs"
-                >Open Policy Agent</a
-              >
+              <a href="https://www.openpolicyagent.org/docs">Open Policy Agent</a>
             </p>
           </section>
           <section class="article-section" id="checks">
             <h2>Acceptance and client walkthrough</h2>
+            <p><strong>Walk through a change in AP's role.</strong> Start with quiet
+              observation and verify that a saved recommendation cannot send itself.
+              Authorize recommendations for one pour and dispatcher, then check that
+              an unrelated pour remains outside the grant. Queue a recommendation,
+              withdraw its permission before dispatch, and verify that neither the
+              send nor a later retry proceeds. Repeat with a narrower scope and an
+              expired grant. Confirm that the dispatcher sees the change, that an
+              already-issued truck release remains visible for human follow-up, and
+              that improved model results cannot reactivate the permission. These acceptance checks verify the workflow’s permission boundaries.</p>
             <p>
               <strong>Test the same two requests on both sides of the transfer.</strong>
               Give the superintendent $3,000 remaining and submit two $2,000
@@ -354,55 +411,47 @@
           <section class="article-section" id="patterns">
             <h2>Where this capability is used</h2>
             <div class="entries">
-              <a class="entry" href="../patterns/goal-discovery.html"
-                ><div>
+              <a class="entry" href="../patterns/goal-discovery.html"><div>
                   <h3>Goal discovery and revision</h3>
                   <p>What is worth preserving?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="../patterns/hierarchical-planning.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="../patterns/hierarchical-planning.html"><div>
                   <h3>Hierarchical planning under uncertainty</h3>
                   <p>Which detail changes the whole plan?</p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <section class="article-section" id="connections">
             <h2>Connected capabilities</h2>
             <div class="entries">
-              <a class="entry" href="execution.html"
-                ><div>
+              <a class="entry" href="execution.html"><div>
                   <h3>Work coordination and execution</h3>
                   <p>
                     Carry an authorized choice into physical work and follow it
                     through handoffs.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              ><a class="entry" href="verification.html"
-                ><div>
+                <span aria-hidden="true">↗</span></a><a class="entry" href="verification.html"><div>
                   <h3>Verification and acceptance</h3>
                   <p>
                     Determine what a specific check establishes and who may
                     accept the result.
                   </p>
                 </div>
-                <span aria-hidden="true">↗</span></a
-              >
+                <span aria-hidden="true">↗</span></a>
             </div>
           </section>
           <div class="related">
-            <h3>Continue through the capabilities</h3>
-            <a href="evidence.html">Field observation and evidence →</a>
+            <h3>Continue the capability reference</h3>
+            <p>A useful role needs a clear scope. The next capability establishes what AP observes within that scope.</p><a href="telemetry.html">Next in the capability reference: Telemetry — Eyes and Ears →</a>
           </div>
         </article>
       </div>
     </main>
     <footer>
       <div class="wrap foot">
-        <span>Aura Pro <b>/</b> Product &amp; architecture handbook</span>
+        <span>Aura Pro <b>/</b> Product &amp; architecture handbook<small class="edition"> · Version 3</small></span>
         <a href="../index.html#chapters">All handbook chapters ↑</a>
       </div>
     </footer>

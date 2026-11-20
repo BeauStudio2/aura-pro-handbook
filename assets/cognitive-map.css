@@ -1,0 +1,22 @@
+/* Keep the complete flow visible in the page; narrow screens can pan horizontally. */
+.diagram-overview .diagram-scroll,
+.diagram-support .diagram-scroll {
+  max-height: none;
+}
+.diagram-overview .diagram-scroll img,
+.diagram-support .diagram-scroll img {
+  min-width: 900px;
+}
+#shared-map > ol > li {
+  scroll-margin-top: 6rem;
+}
+/* Preserve label size with the added return-condition column. */
+.diagram-overview .diagram-scroll img {
+  min-width: 1100px;
+}
+@media print {
+  .diagram-overview .diagram-scroll img,
+  .diagram-support .diagram-scroll img {
+    min-width: 0;
+  }
+}
